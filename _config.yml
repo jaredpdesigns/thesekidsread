@@ -11,7 +11,7 @@ email: thesekidsread@gmail.com
 twitter: thesekidsread
 description: My kids and I read great books together.
 keywords: these kids read, jared pendergraft, kids books, great book for kids
-baseurl: "" 
+baseurl: "/these-kids-read" 
 url: "http://thesekidsread.com" # the base hostname & protocol for your site
 include: [".htaccess"]
 exclude: ["gulpfile.js"]
