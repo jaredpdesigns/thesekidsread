@@ -1,0 +1,41 @@
+# Site settings
+title: These Kids Read
+email: thesekidsread@gmail.com
+twitter: thesekidsread
+description: We read great books together.
+keywords: these kids read, jared pendergraft, kids books, great book for kids
+baseurl: "" # /these-kids-read
+url: "http://thesekidsread.com" # http://jaredpdesigns.github.io/these-kids-read
+keep_files: [.git, "CNAME"]
+exclude: ["README.md"]
+source: src
+destination: build
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: assets/css/_partials
+
+# Outputting
+permalink: /books/:categories/:title
+paginate_path: /page:num
+
+# Markdown Processors
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# Minification Stuffs
+jekyll-press:
+  exclude: 'feed.xml'
+  js_options: {}
+  css_options: {}
+  html_options: {}
+
+gems:
+- octopress-autoprefixer
+- jekyll-press
+- jekyll-sitemap

@@ -1,0 +1,204 @@
+// Typography
+
+html { font-size: 100%; }
+
+body {
+  @include type-serif;
+  color: $color-base;
+  background: $color-base-vapor;
+}
+
+h1, h2, h3, h4, h5 {
+  @include type-sans;
+  @include bold;
+}
+
+h1 { @include type-xxl; }
+
+h2 { @include type-xl; }
+
+h3 { @include type-l; }
+
+p, li, h4 { @include type-m; }
+
+p { @include type-serif; }
+
+h4 { font-weight: 600; }
+
+h5 { @include type-s; }
+
+b, strong { @include bold; }
+
+i, em { @include italic; }
+
+.type__align--center { @include type-center; }
+
+.type__align--left { @include type-left; }
+
+.type__align--right { @include type-right; }
+
+// Links
+
+a {
+  @include smooth;
+  color: $color-highlight;
+  &:hover { color: $color-highlight-dark; }
+}
+
+p > a:not(.btn) {
+  position: relative;
+  &:after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: $space-xs;
+    height: $space-xs/2;
+    opacity: 0;
+    background-color: $color-highlight-light;
+    @include smooth-pop;
+    @include bp(s) { content: ''; }
+  }
+  &:hover:after {
+    opacity: 1;
+    transform: translateY($space-xs/2);
+  }
+}
+
+// List Items
+
+ol, ul {
+  list-style-position: outside;
+  padding-left: $space-m;
+  @include bp(m) { padding-left: 0; }
+  li + li { @include oomph-small; }
+}
+ol li { list-style-type: decimal; }
+ul li { list-style-type: disc; }
+
+// Page Structure
+
+.wrapper { @include wrapper; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn, button, input[type="submit"] {
+  @include btn;
+  @include icon;
+  &.move--right svg, &.move--left svg { @include smooth-pop; }
+  &.move--right:hover svg { transform: translateX($space-xs/2); }
+  &.move--left:hover svg { transform: translateX(-$space-xs/2); }
+}
+
+hr {
+  border-bottom: $border-big $color-highlight-light;
+  border-radius: $space-xs/4;
+  width: $space-xl;
+  margin: 0 auto;
+  + h3, + * + hr { @include oomph-small; }
+  + h3 {
+    color: $color-base-ish;
+    @include type-center;
+  }
+}
+
+code {
+  @include type-s;
+  padding: $space-xs;
+  background-color: $color-highlight-ghost;
+  border: $border $color-highlight-light;
+  border-radius: $space-xs/2;
+  font-weight: normal;
+}
+
+header[role="main"] {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  background-color: rgba(#fff,0.9875);
+  border-bottom: $border $color-base-ghost;
+  section { @include wrapper-short; }
+}
+
+footer[role="main"] {
+  border-top: $border $color-base-ghost;
+  section {
+    @include wrapper-short;
+    @include type-center;
+  }
+}
+
+nav[role="main"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  a span {
+    @include bp(xs) { display: none; }
+  }
+}
+
+main:before {
+  content: '';
+  display: block;
+  height: 4.9375rem;
+  @include bp(xsl) { height: 3.4375rem; }
+  @include bp(s) { height: 3.875rem; }
+}
+
+.logo {
+  flex-basis: 100%;
+  @include type-center;
+  margin-bottom: $space-xs;
+  @include bp(xsl) {
+    flex-basis: auto;
+    margin-bottom: 0;
+  }
+  svg {
+    margin: 0 auto;
+    color: $color-highlight;
+    @include bp(s) {
+      height: 2.25rem;
+      width: 17.549375rem;
+    }
+  }
+}
+
+.linky {
+  @include type-sans;
+  @include all-caps;
+  @include icon;
+  font-weight: 600;
+  color: $color-base-ish;
+  &:hover { color: $color-highlight; }
+  svg { @include smooth-pop; }
+  &.follow:hover svg { transform: rotate(90deg); }
+  &.suggest:hover svg { transform: translateY(-($space-xs/2)); }
+  &.subscribe:hover svg, &.about:hover svg { transform: translate3d(0,0,0) scale(1.0625); }
+}
+
+.color__bg {
+  &--base { background-color: $color-base; }
+  &--base-dark { background-color: $color-base-dark; }
+  &--base-ish { background-color: $color-base-ish; }
+  &--base-mid { background-color: $color-base-mid; }
+  &--base-light { background-color: $color-base-light; }
+  &--base-ghost { background-color: $color-base-ghost; }
+  &--base-vapor { background-color: $color-base-vapor; }
+  &--highlight { background-color: $color-highlight; }
+  &--highlight-dark { background-color: $color-highlight-dark; }
+  &--highlight-ish { background-color: $color-highlight-ish; }
+  &--highlight-mid { background-color: $color-highlight-mid; }
+  &--highlight-light { background-color: $color-highlight-light; }
+  &--highlight-ghost { background-color: $color-highlight-ghost; }
+  &--highlight-vapor { background-color: $color-highlight-vapor; }
+  &--white { background-color: $color-bg; }
+}

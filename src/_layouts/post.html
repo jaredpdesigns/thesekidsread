@@ -1,0 +1,18 @@
+{% include header.html %}
+<section class="book-holder">
+  {% include book-detail.html %}
+  <nav role="books">
+    {% if page.next.url %}
+    <section class="next">
+      <a href="{{page.next.url | prepend: site.baseurl }}">{% include svg/arrow-circle-left.svg %}</a>
+    </section>
+    {% endif %}
+    {% if page.previous.url %}
+    <section class="prev">
+      <a href="{{page.previous.url | prepend: site.baseurl }}">{% include svg/arrow-circle-right.svg %}</a>
+    </section>
+    {% endif %}
+  </nav>
+</section>
+{% include related.html %}
+{% include footer.html %}
