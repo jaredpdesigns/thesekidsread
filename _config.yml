@@ -9,7 +9,7 @@ url: "http://thesekidsread.com" # http://jaredpdesigns.github.io/these-kids-read
 keep_files: [.git, "CNAME"]
 exclude: ["README.md"]
 source: src
-destination: build
+destination: docs
 
 # Build settings
 markdown: kramdown
@@ -28,14 +28,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-# Minification Stuffs
-jekyll-press:
-  exclude: 'feed.xml'
-  js_options: {}
-  css_options: {}
-  html_options: {}
-
 gems:
-- octopress-autoprefixer
-- jekyll-press
+- jekyll-autoprefixer
 - jekyll-sitemap
