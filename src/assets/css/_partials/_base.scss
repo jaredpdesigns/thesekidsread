@@ -97,6 +97,26 @@ figure {
   &.move--left:hover svg { transform: translateX(-$space-xs/2); }
 }
 
+input, input[type="email"], input[type="number"], input[type="password"],
+input[type="search"], input[type="tel"], input[type="text"], input[type="url"],
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="time"], input[type="week"], select, textarea {
+  @include type-sans;
+  @include type-m;
+  padding: $space-xs $space-s;
+  color: $color-base;
+  background-color: $color-bg;
+  border: $border $color-base-mid;
+  border-radius: $space-xs;
+  @include smooth;
+  &::-webkit-input-placeholder { color: $color-base-mid; }
+  &:hover { border-color: $color-base-ish; }
+  &:focus {
+    border-color: $color-highlight;
+    &::-webkit-input-placeholder { color: $color-base-ish; }
+  }
+}
+
 hr {
   border-bottom: $border-big $color-highlight-light;
   border-radius: $space-xs/4;
@@ -134,6 +154,7 @@ footer[role="main"] {
     @include wrapper-short;
     @include type-center;
   }
+  a { @include inline; }
 }
 
 nav[role="main"] {

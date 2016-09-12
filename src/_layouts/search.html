@@ -1,0 +1,24 @@
+{% include header.html %}
+<section id="booksearch" class="wrapper">
+  <section class="search__bar">
+    <input class="search__bar--input search" type="search" placeholder="Search for a Book" />
+    <button class="search__bar--sort sort" data-sort="book--title">Sort Title</button>
+    <button class="search__bar--sort sort" data-sort="book--author">Sort Author</button>
+  </section>
+  <section class="search__list list">
+  {% for post in site.posts %}
+  <a href="{{ post.url | prepend: site.baseurl }}" class="search__result book">
+    <h3 class="book--title">{{ post.title }}</h3>
+    <p class="book--author">{{ post.tags | join: '</span> & <span class="book--author--actual">' | prepend: 'by <span class="book--author--actual">' }}</span></p>
+  </article>
+  {% endfor %}
+  </section>
+</section>
+<script src="http://listjs.com/no-cdn/list.js"></script>
+<script>
+  var options = {
+    valueNames: [ 'book--title', 'book--author' ]
+  };
+  var userList = new List('booksearch', options);
+</script>
+{% include footer.html %}

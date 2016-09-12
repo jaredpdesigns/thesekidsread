@@ -1,0 +1,4 @@
+---
+layout: search
+class: search
+---

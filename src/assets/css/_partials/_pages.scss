@@ -211,6 +211,46 @@ nav[role="books"] {
   > * + * { @include oomph; }
 }
 
+.search__list { @include oomph-big; }
+
+.search__bar {
+  display: flex;
+  align-items: stretch;
+  &--input {
+    flex: 1;
+    @include bp(xsl) {
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+  &--sort {
+    margin: 0;
+    border-radius: 0;
+    @include bp(xs) { display: none; }
+    @include bp(xsl) { display: inline-block; }
+    &:last-of-type {
+      border-left: $border $color-highlight-ish;
+      border-top-right-radius: $space-xs;
+      border-bottom-right-radius: $space-xs;
+    }
+  }
+}
+
+.search__result {
+  @include type-left;
+  display: block;
+  position: relative;
+  padding: $space-s;
+  margin-top: 0 !important;
+  &:hover { background-color: $color-highlight-ghost; }
+  + .search__result { border-top: $border $color-base-ghost; }
+  .book--author { margin-top: 0; }
+}
+
+.search {
+  main + .search__result, footer .search__result { display: none; }
+}
+
 .styleguide main .wrapper {
   > * + *:not(hr + h3, hr + h3 + hr) { @include oomph; }
   > *:not(hr + h3, hr + h3 + hr) {
