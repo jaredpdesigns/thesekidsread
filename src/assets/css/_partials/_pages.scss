@@ -140,7 +140,9 @@ nav[role="books"] {
     @include oomph-big;
     @include bp(s) { flex-basis: $grid-1-2; }
     @include bp(m) { flex-basis: $grid-1-3; }
-    @include bp(ml) { flex-basis: $grid-1-4; } 
+    @include bp(ml) { flex-basis: $grid-1-4; }
+    display: none;
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4) { display: block; }
     figure {
       height: 10.5rem;
       @include bp(xl) { height: 15rem; }
