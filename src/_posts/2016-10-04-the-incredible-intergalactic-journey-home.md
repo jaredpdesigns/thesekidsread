@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title:  "The Little Girl Who Lost Her Name"
+title:  "The Incredible Intergalactic Journey Home"
 
 description: "Put in a child's name and address, and POW! A unique adventure, from outer space all the way home to their front door. Crammed with crazy characters and hilarious twists, it's a gift of galactic proportions, perfect for any boy or girl."
 
