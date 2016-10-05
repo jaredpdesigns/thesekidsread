@@ -1,1 +1,79 @@
-!function(t){var e,i={kitId:"fbk7qer",scriptTimeout:3e3,async:!0},n=t.documentElement,a=setTimeout(function(){n.className=n.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},i.scriptTimeout),o=t.createElement("script"),r=!1,s=t.getElementsByTagName("script")[0];n.className+=" wf-loading",o.src="https://use.typekit.net/"+i.kitId+".js",o.async=!0,o.onload=o.onreadystatechange=function(){if(e=this.readyState,!(r||e&&"complete"!=e&&"loaded"!=e)){r=!0,clearTimeout(a);try{Typekit.load(i)}catch(t){}}},s.parentNode.insertBefore(o,s)}(document),function(t){t.fn.unveil=function(e,i){function n(){var e=l.filter(function(){var e=t(this);if(!e.is(":hidden")){var i=o.scrollTop(),n=i+o.height(),a=e.offset().top,s=a+e.height();return s>=i-r&&n+r>=a}});a=e.trigger("unveil"),l=l.not(a)}var a,o=t(window),r=e||0,s=window.devicePixelRatio>1,c=s?"data-src-retina":"data-src",l=this;return this.one("unveil",function(){var t=this.getAttribute(c);t=t||this.getAttribute("data-src"),t&&(this.setAttribute("src",t),"function"==typeof i&&i.call(this))}),o.on("scroll.unveil resize.unveil lookup.unveil",n),n(),this}}(window.jQuery||window.Zepto),$(document).ready(function(){$("img").unveil(168,function(){$(this).load(function(){this.style.opacity=1})})}),function(t){t.extend({stayInWebApp:function(e){"standalone"in window.navigator&&window.navigator.standalone&&(e||(e="a"),t("body").delegate(e,"click",function(e){if(void 0==t(this).attr("target")||""==t(this).attr("target")||"_self"==t(this).attr("target")){var i=t(this).attr("href");i.match(/^http(s?)/g)||(e.preventDefault(),self.location=i)}}))}})}(jQuery),$(function(){$.stayInWebApp()});
+(function(d) {
+  var config = {
+    kitId: 'fbk7qer',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+/**
+ * jQuery Unveil
+ * A very lightweight jQuery plugin to lazy load images
+ * http://luis-almeida.github.com/unveil
+ *
+ * Licensed under the MIT license.
+ * Copyright 2013 Luís Almeida
+ * https://github.com/luis-almeida
+ */
+
+;(function($) {
+
+  $.fn.unveil = function(threshold, callback) {
+
+    var $w = $(window),
+        th = threshold || 0,
+        retina = window.devicePixelRatio > 1,
+        attrib = retina? "data-src-retina" : "data-src",
+        images = this,
+        loaded;
+
+    this.one("unveil", function() {
+      var source = this.getAttribute(attrib);
+      source = source || this.getAttribute("data-src");
+      if (source) {
+        this.setAttribute("src", source);
+        if (typeof callback === "function") callback.call(this);
+      }
+    });
+
+    function unveil() {
+      var inview = images.filter(function() {
+        var $e = $(this);
+        if ($e.is(":hidden")) return;
+
+        var wt = $w.scrollTop(),
+            wb = wt + $w.height(),
+            et = $e.offset().top,
+            eb = et + $e.height();
+
+        return eb >= wt - th && et <= wb + th;
+      });
+
+      loaded = inview.trigger("unveil");
+      images = images.not(loaded);
+    }
+
+    $w.on("scroll.unveil resize.unveil lookup.unveil", unveil);
+
+    unveil();
+
+    return this;
+
+  };
+
+})(window.jQuery || window.Zepto);
+
+
+$(document).ready(function() {
+  $('img').unveil(168,function() { $(this).load(function() { this.style.opacity = 1; } ); });
+});
+
+/*!
+ * jQuery stayInWebApp Plugin
+ * version: 0.4 (2012-06-19)
+ */
+(function($){$.extend({stayInWebApp:function(b){"standalone"in window.navigator&&window.navigator.standalone&&(b||(b="a"),$("body").delegate(b,"click",function(b){if($(this).attr("target")==void 0||$(this).attr("target")==""||$(this).attr("target")=="_self"){var c=$(this).attr("href");if(!c.match(/^http(s?)/g))b.preventDefault(),self.location=c}}))}})})(jQuery);
+
+$(function() {
+  $.stayInWebApp();
+});

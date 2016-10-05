@@ -1,4 +1,4 @@
-![{{ page.title }} cover art]({{ page.img }})
+![{{ page.title }} cover art]({{ page.img | replace:'../assets','http://thesekidsread.com/assets' }})
 
 {{ page.description }}
 
