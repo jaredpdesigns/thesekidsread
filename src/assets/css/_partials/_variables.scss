@@ -18,7 +18,7 @@ $type-sans:  "proxima-nova-soft", sans-serif;
 $type-serif: "bookmania", serif;
 $type-mono:  monospace;
 
-$color-highlight: #3498DB;
+$color-highlight: #B93CF6;
 
 // $color-highlight Tints & Shades
 $color-highlight-dark:   shade($color-highlight,12.5%);
@@ -28,7 +28,7 @@ $color-highlight-light:   tint($color-highlight,75%);
 $color-highlight-ghost:   tint($color-highlight,90%);
 $color-highlight-vapor:   tint($color-highlight,97.5%);
 
-$color-base: #445D6E;
+$color-base: #708090;
 
 // $color-base Tints & Shades
 $color-base-dark:   shade($color-base,10%);

@@ -16,18 +16,18 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{{ "/assets/img/touch-icon-ipad.png" | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" sizes="120x120" href="{{ "/assets/img/touch-icon-iphone-retina.png" | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" sizes="152x152" href="{{ "/assets/img/touch-icon-ipad-retina.png" | prepend: site.baseurl }}">
-  <link rel="mask-icon" href="{{ "/assets/img/website_icon.svg" | prepend: site.baseurl }}" color="#445D6E">
+  <link rel="mask-icon" href="{{ "/assets/img/website_icon.svg" | prepend: site.baseurl }}" color="#B93CF6">
   <meta property="og:site_name" content="{{ site.title }}"/>
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}"/>
   <meta property="og:url" content="{{ site.url }}"/>
-  <meta property="og:image" content="{% if page.img %}{{ page.img | replace:'../assets','http://thesekidsread.com/assets' }}{% else %}{{ "/assets/img/social.png" | prepend: site.url }}{% endif %}"/>
+  <meta property="og:image" content="{% if page.img %}{{ page.img | replace:'../assets','http://thesekidsread.com/assets' }}{% else %}{{ "/assets/img/social.jpg" | prepend: site.url }}{% endif %}"/>
   <meta name="twitter:card" content="photo">
   <meta name="twitter:creator" content="@{{ site.twitter }}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:domain" content="{{ site.url }}">
-  <meta name="twitter:image:src" content="{% if page.img %}{{ page.img | replace:'../assets','http://thesekidsread.com/assets' }}{% else %}{{ "/assets/img/social.png" | prepend: site.url }}{% endif %}">
+  <meta name="twitter:image:src" content="{% if page.img %}{{ page.img | replace:'../assets','http://thesekidsread.com/assets' }}{% else %}{{ "/assets/img/social.jpg" | prepend: site.url }}{% endif %}">
 </head>
 <body {% if page.class %}class="{{ page.class }}"{% endif %}>
 <header role="main">
