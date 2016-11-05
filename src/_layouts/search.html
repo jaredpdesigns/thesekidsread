@@ -2,8 +2,8 @@
 <section id="booksearch" class="wrapper">
   <section class="search__bar">
     <input class="search__bar--input search" placeholder="Search for a Book" />
-    <button class="search__bar--sort sort" data-sort="book--title">Sort Title</button>
-    <button class="search__bar--sort sort" data-sort="book--author">Sort Author</button>
+    <button class="search__bar--sort sort" data-sort="book--title">{% include svg/sort.svg %} Title</button>
+    <button class="search__bar--sort sort" data-sort="book--author">{% include svg/sort.svg %} Author</button>
   </section>
   <section class="search__list list">
   {% for post in site.posts %}
@@ -14,11 +14,4 @@
   {% endfor %}
   </section>
 </section>
-<script src="http://listjs.com/no-cdn/list.js"></script>
-<script>
-  var options = {
-    valueNames: [ 'book--title', 'book--author' ]
-  };
-  var userList = new List('booksearch', options);
-</script>
 {% include footer.html %}

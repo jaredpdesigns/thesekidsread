@@ -54,7 +54,7 @@ nav[role="books"] {
   figcaption { padding: $space-s; }
   .book--title {
     @include type-legible;
-    &:before,&:after { opacity: 0.75; }
+    &:before,&:after { opacity: 0.625; }
     &:before { content: "“"; }
     &:after { content: "”"; }
   }
@@ -118,9 +118,12 @@ nav[role="books"] {
       margin-top: 0;
     }
   }
-  .book--title:before {
-    @include bp(m) { margin-left: -0.875rem; }
-    @include bp(xl) { margin-left: -1rem; }
+  .book--title {
+    color: $color-highlight;
+    &:before {
+      @include bp(m) { margin-left: -0.875rem; }
+      @include bp(xl) { margin-left: -1rem; }
+    }
   }
   .book--description { @include type-left; }
   .book--description, .book--buy { @include oomph-big; }
@@ -244,6 +247,7 @@ nav[role="books"] {
   &--sort {
     margin: 0;
     border-radius: 0;
+    color: rgba($color-bg, 0.5);
     @include bp(xs) { display: none; }
     @include bp(xsl) { display: inline-block; }
     &:last-of-type {
@@ -251,6 +255,11 @@ nav[role="books"] {
       border-top-right-radius: $space-xs;
       border-bottom-right-radius: $space-xs;
     }
+    &.asc, &.desc {
+      background-color: $color-highlight-dark;
+      color: $color-bg;
+    }
+    &.desc svg { transform: rotate(180deg); }
   }
 }
 
