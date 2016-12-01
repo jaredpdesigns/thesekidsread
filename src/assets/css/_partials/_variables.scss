@@ -222,7 +222,8 @@ $border-big: 0.1875rem solid;
 
 @mixin inline {
   width: auto;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-left: 0;
   margin-right: $space-s - 0.1875rem;
   @include bp(ml) { margin-right: $space-m - 0.1875rem; }
@@ -236,7 +237,6 @@ $border-big: 0.1875rem solid;
   border: $border $color-highlight;
   color: $color-bg;
   padding: $space-xs;
-  padding-bottom: $space-xs/2;
   @include inline;
   @include smooth;
   border-radius: $space-xs;
@@ -253,20 +253,17 @@ $border-big: 0.1875rem solid;
     border-color: $color-base-ghost;
     &:hover { color: $color-highlight; }
   }
+  svg {
+    margin-left: $space-xs;
+    @include bp(s) { margin-left: $space-s; }
+  }
 }
 
 @mixin icon {
-  @include type-s;
   svg {
-    margin-left: $space-xs/2;
-    position: relative;
+    @include smooth-pop;
     max-height: $space-s + ($space-xs/2);
-    top: $space-xs/4;
-    @include bp(s) {
-      max-height: $space-s + $space-xs;
-      top: $space-xs/2;
-    }
-    path { fill: currentColor; }
+    @include bp(s) { max-height: $space-s + $space-xs; }
   }
 }
 

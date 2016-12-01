@@ -93,6 +93,11 @@ figure {
   @include btn;
   @include icon;
   &.move--right svg, &.move--left svg { @include smooth-pop; }
+  &.move--left svg {
+    margin-left: 0;
+    margin-right: $space-xs;
+    @include bp(s) { margin-right: $space-s; }
+  }
   &.move--right:hover svg { transform: translateX($space-xs/2); }
   &.move--left:hover svg { transform: translateX(-$space-xs/2); }
 }
@@ -145,7 +150,7 @@ header[role="main"] {
   top: 0;
   background-color: rgba(#fff,0.9875);
   border-bottom: $border $color-base-ghost;
-  section { @include wrapper-short; }
+  > section { @include wrapper-short; }
 }
 
 footer[role="main"] {
@@ -155,6 +160,13 @@ footer[role="main"] {
     @include type-center;
   }
   a { @include inline; }
+  .home & {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(#fff,0.9875);
+  }
 }
 
 nav[role="main"] {
@@ -165,6 +177,17 @@ nav[role="main"] {
   a span {
     @include bp(xs) { display: none; }
   }
+  .social {
+    display: flex;
+    align-items: center;
+  }
+  .social a {
+    + * {
+      margin-left: $space-s;
+      @include bp(xsl) { margin-left: $space-m; }
+    }
+    &:hover svg { transform: translate3d(0,0,0) scale(1.0625); }
+  }
 }
 
 main:before {
@@ -173,6 +196,12 @@ main:before {
   height: 4.9375rem;
   @include bp(xsl) { height: 3.4375rem; }
   @include bp(s) { height: 3.875rem; }
+}
+
+.home main:after {
+  content: '';
+  display: block;
+  height: 3rem;
 }
 
 .logo {
@@ -194,16 +223,20 @@ main:before {
 }
 
 .linky {
+  @include type-s;
   @include type-sans;
-  @include all-caps;
   @include icon;
+  display: inline-flex;
+  align-items: center;
   font-weight: 600;
   color: $color-base-ish;
   &:hover { color: $color-highlight; }
-  svg { @include smooth-pop; }
-  &.follow:hover svg { transform: rotate(90deg); }
+  &:hover svg { transform: translate3d(0,0,0) scale(1.0625); }
   &.suggest:hover svg { transform: translateY(-($space-xs/2)); }
-  &.subscribe:hover svg, &.about:hover svg { transform: translate3d(0,0,0) scale(1.0625); }
+  svg {
+    margin-left: $space-xs/4;
+    @include bp(xsl) { margin-left: $space-xs/2; }
+  }
 }
 
 .color__bg {

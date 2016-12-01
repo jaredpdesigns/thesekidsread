@@ -39,12 +39,14 @@ nav[role="books"] {
   @include type-center;
   + .book { @include bp(xs) { @include oomph; } }
   figure {
+    @include smooth;
     background: url('../img/loading.svg') no-repeat center center;
-    display: inline-block;
     min-height: $space-xl;
     background-color: $color-bg;
     box-shadow: 0 0.1875rem 0.375rem -0.1875rem rgba(#000,0.5);
-    @include smooth;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
     &:hover { box-shadow: 0 1.5rem 3rem -1.5rem rgba(#000,0.375); }
   }
   img {
@@ -70,10 +72,6 @@ nav[role="books"] {
 .home {
   .book {
     padding-top: $space-s;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     @include bp(xsl) {
       flex-basis: $grid-1-2;
       padding: $space-s;
@@ -82,8 +80,8 @@ nav[role="books"] {
     @include bp(l) { padding: $space-m; }
     @include bp(xl) { flex-basis: $grid-1-4; }
     figure {
-      max-height: 15rem;
-      @include bp(xl) { max-height: 22.5rem; }
+      height: 15rem;
+      @include bp(xl) { height: 22.5rem; }
       img { display: block; }
     }
     figcaption {
@@ -249,11 +247,18 @@ nav[role="books"] {
     border-radius: 0;
     color: rgba($color-bg, 0.5);
     @include bp(xs) { display: none; }
-    @include bp(xsl) { display: inline-block; }
+    @include bp(xsl) {
+      display: inline-flex;
+      align-items: center;
+    }
     &:last-of-type {
       border-left: $border $color-highlight-ish;
       border-top-right-radius: $space-xs;
       border-bottom-right-radius: $space-xs;
+    }
+    svg {
+      margin-right: $space-xs;
+      @include bp(s) { margin-right: $space-s; }
     }
     &.asc, &.desc {
       background-color: $color-highlight-dark;

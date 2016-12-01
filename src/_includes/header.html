@@ -34,9 +34,12 @@
   <section>
     <nav role="main">
       <a class="logo" href="{{ site.baseurl }}/">{% include svg/logo.svg %}</a>
-      <a class="about linky" href="{{ site.baseurl }}/about">About <span>Us</span> {% include svg/book.svg %}</a>
-      <a class="suggest linky" href="mailto:{{ site.email }}?subject=You should read this book next…">Suggest <span>a Book</span> {% include svg/suggest.svg %}</a>
-      <a class="follow linky" href="http://twitter.com/{{ site.twitter }}" target="_blank">Follow <span>Us</span> {% include svg/follow.svg %}</a>
+      <a class="about linky" href="{{ site.baseurl }}/about">About Us{% include svg/book.svg %}</a>
+      <a class="suggest linky" href="mailto:{{ site.email }}?subject=You should read this book next…">Suggest a Book{% include svg/suggest.svg %}</a>
+      <section class="social">
+        <a class="linky" href="https://twitter.com/{{ site.social }}" target="_blank">{% include svg/twitter.svg %}</a>
+        <a class="linky" href="https://facebook.com/{{ site.social }}" target="_blank">{% include svg/facebook.svg %}</a>
+      </section>
     </nav>
   </section>
 </header>
