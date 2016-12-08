@@ -11,41 +11,41 @@ class: styleguide
 
 ***
 
+`<h1>`
+
 # Headline 1
 
-`<h1>`
+`<h2>`
 
 ## Headline 2
 
-`<h2>` 
+`<h3>` 
 
 ### Headline 3
 
-`<h3>` 
+`<h4>` 
 
 #### Headline 4
 
-`<h4>` 
+`<h5>` 
 
 ##### Headline 5
 
-`<h5>`
+`<p>`
 
 Some lovely body copy including **bold** and *italic* text. Let’s also not forget [inline links](#), we use those in certain places, don’t we?
 
-`<p>`
+`<ul>`
 
 - Unordered List Item 1
 - Unordered List Item 2
 - Unordered List Item 3
 
-`<ul>`
+`<ol>`
 
 1. Ordered List Item 1
 2. Ordered List Item 2
 3. Ordered List Item 3
-
-`<ol>`
 
 ***
 
@@ -53,13 +53,13 @@ Some lovely body copy including **bold** and *italic* text. Let’s also not for
 
 ***
 
-<a class="btn move--right">Primary Button {% include svg/arrow-right.svg %}</a>
+`.btn`
 
-`.btn` with optional `.move--right` animation
+<a class="btn">Primary Button</a>
 
-<a class="btn btn--secondary move--left">{% include svg/arrow-left.svg %} Secondary Button</a>
+`.btn--secondary`
 
-`.btn--secondary` with optional `.move--left` animation
+<a class="btn btn--secondary">Secondary Button</a>
 
 ***
 
@@ -77,54 +77,78 @@ Icons on the site are from the excellent [Pictos Redux](http://pictos.cc) set by
 
 ***
 
-<span class="color__bg--base"></span>
-
 `.color__bg--base`
 
-<span class="color__bg--base-dark"></span>
+<span class="color color__bg--base"></span>
 
 `.color__bg--base-dark`
 
-<span class="color__bg--base-mid"></span>
+<span class="color color__bg--base-dark"></span>
 
-`.color__bg--base-mid`
+`.color__bg--base-75`
 
-<span class="color__bg--base-light"></span>
+<span class="color color__bg--base-75"></span>
 
-`.color__bg--base-light`
+`.color__bg--base-62`
 
-<span class="color__bg--base-ghost"></span>
+<span class="color color__bg--base-62"></span>
 
-`.color__bg--base-ghost`
+`.color__bg--base-50`
 
-<span class="color__bg--base-vapor"></span>
+<span class="color color__bg--base-50"></span>
 
-`.color__bg--base-vapor`
+`.color__bg--base-38`
 
-<span class="color__bg--highlight"></span>
+<span class="color color__bg--base-38"></span>
 
-`.color__bg--highlight`
+`.color__bg--base-25`
 
-<span class="color__bg--highlight-dark"></span>
+<span class="color color__bg--base-25"></span>
+
+`.color__bg--base-12`
+
+<span class="color color__bg--base-12"></span>
+
+`.color__bg--base-5`
+
+<span class="color color__bg--base-5"></span>
+
+`.color__bg--base-highlight`
+
+<span class="color color__bg--highlight"></span>
 
 `.color__bg--highlight-dark`
 
-<span class="color__bg--highlight-mid"></span>
+<span class="color color__bg--highlight-dark"></span>
 
-`.color__bg--highlight-mid`
+`.color__bg--highlight-75`
 
-<span class="color__bg--highlight-light"></span>
+<span class="color color__bg--highlight-75"></span>
 
-`.color__bg--highlight-light`
+`.color__bg--highlight-62`
 
-<span class="color__bg--highlight-ghost"></span>
+<span class="color color__bg--highlight-62"></span>
 
-`.color__bg--highlight-ghost`
+`.color__bg--highlight-50`
 
-<span class="color__bg--highlight-vapor"></span>
+<span class="color color__bg--highlight-50"></span>
 
-`.color__bg--highlight-vapor`
+`.color__bg--highlight-38`
 
-<span class="color__bg--white"></span>
+<span class="color color__bg--highlight-38"></span>
+
+`.color__bg--highlight-25`
+
+<span class="color color__bg--highlight-25"></span>
+
+`.color__bg--highlight-12`
+
+<span class="color color__bg--highlight-12"></span>
+
+`.color__bg--highlight-5`
+
+<span class="color color__bg--highlight-5"></span>
 
 `.color__bg--white`
+
+<span class="color color__bg--white"></span>

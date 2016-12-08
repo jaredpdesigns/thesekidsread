@@ -1,13 +1,11 @@
 <article class="book">
-  <figure>
+  <figure class="type__align--center">
     <a href="{{ post.url | prepend: site.baseurl }}">
       <img alt="{{ post.title }} cover art" data-src="{{ post.img }}">
     </a>
   </figure>
-  <figcaption>
-    <a href="{{ post.url | prepend: site.baseurl }}">
-      <h3 class="book--title">{{ post.title }}</h3>
-    </a>
-    <p class="book--author">{{ post.tags | join: '</span> & <span class="book--author--actual">' | prepend: 'by <span class="book--author--actual">' }}</span></p>
+  <figcaption class="type__align--center">
+    <h3 class="book__title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+    <p class="book__author">{{ post.tags | join: '</span> & <span class="book__author--actual">' | prepend: 'by <span class="book__author--actual">' }}</span></p>
   </figcaption>
 </article>
