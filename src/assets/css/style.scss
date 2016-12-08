@@ -1,13 +1,17 @@
 ---
 ---
 
-$type-sans:  "proxima-nova-soft", sans-serif;
+$type-sans:  "proxima-nova", sans-serif;
+$type-serif:  "proxima-nova-soft", sans-serif;
 
 $color-highlight: #00BFAF;
 
 @import "start";
 
 // Page Structure
+
+
+h1, h2, h3, h4, h5, .btn, .linky, .book__author--actual { @include type-serif; }
 
 h4 {
   @include type-caps;
