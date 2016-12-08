@@ -503,14 +503,10 @@ nav[role="secondary"] {
     color: #40cfc3; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     .logo {
-      -webkit-flex-basis: 100%;
-          -ms-flex-preferred-size: 100%;
-              flex-basis: 100%; } }
+      width: 100%; } }
   @media (min-width: 29rem) {
     .logo {
-      -webkit-flex-basis: auto;
-          -ms-flex-preferred-size: auto;
-              flex-basis: auto; } }
+      width: auto; } }
   .logo svg {
     width: auto; }
     @media (min-width: 47rem) {
@@ -529,6 +525,7 @@ footer[role="main"] {
     padding-bottom: 0; }
 
 main {
+  display: block;
   padding-top: 4.75rem;
   padding-bottom: 2.75rem; }
   @media (min-width: 29rem) {
@@ -596,7 +593,7 @@ main {
   line-height: 1.5;
   font-weight: 600;
   color: #809896;
-  min-height: 2.75rem; }
+  height: 2.75rem; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     .linky {
       font-size: 0.875rem;
@@ -620,7 +617,8 @@ main {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 600;
@@ -628,10 +626,13 @@ main {
   border: 0.0625rem solid #00BFAF;
   border-radius: 0.25rem;
   color: white;
-  min-height: 2.75rem; }
+  height: 2.75rem; }
   @media (min-width: 99rem) {
     .btn {
-      padding: 1rem; } }
+      padding-left: 1rem; } }
+  @media (min-width: 99rem) {
+    .btn {
+      padding-right: 1rem; } }
   @media (min-width: 1rem) and (max-width: 46rem) {
     .btn {
       font-size: 0.875rem;
@@ -713,24 +714,16 @@ main {
   box-shadow: 0 0.25rem 0.5rem -0.25rem rgba(0, 0, 0, 0.5); }
 
 .home .book, .related .book {
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; }
+  width: 100%; }
   @media (min-width: 29rem) {
     .home .book, .related .book {
-      -webkit-flex-basis: 50%;
-          -ms-flex-preferred-size: 50%;
-              flex-basis: 50%; } }
+      width: 50%; } }
   @media (min-width: 63rem) {
     .home .book, .related .book {
-      -webkit-flex-basis: 33.33333%;
-          -ms-flex-preferred-size: 33.33333%;
-              flex-basis: 33.33333%; } }
+      width: 33.33333%; } }
   @media (min-width: 99rem) {
     .home .book, .related .book {
-      -webkit-flex-basis: 25%;
-          -ms-flex-preferred-size: 25%;
-              flex-basis: 25%; } }
+      width: 25%; } }
   .home .book .loaded img, .related .book .loaded img {
     height: 10.5rem; }
     @media (min-width: 89rem) {
@@ -752,18 +745,14 @@ main {
 @media (min-width: 47rem) {
   .book--detail figure {
     padding-right: 1.5rem;
-    -webkit-flex-basis: 33.33333%;
-        -ms-flex-preferred-size: 33.33333%;
-            flex-basis: 33.33333%; } }
+    width: 33.33333%; } }
   @media (min-width: 47rem) and (min-width: 99rem) {
     .book--detail figure {
       padding-right: 2rem; } }
 
 @media (min-width: 79rem) {
   .book--detail figure {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; } }
+    width: 50%; } }
 .book--detail .loaded img {
   height: 15rem; }
   @media (min-width: 89rem) {
@@ -783,18 +772,14 @@ main {
 @media (min-width: 47rem) {
   .book--detail figcaption {
     padding-left: 1.5rem;
-    -webkit-flex-basis: 66.66667%;
-        -ms-flex-preferred-size: 66.66667%;
-            flex-basis: 66.66667%; } }
+    width: 66.66667%; } }
   @media (min-width: 47rem) and (min-width: 99rem) {
     .book--detail figcaption {
       padding-left: 2rem; } }
 
 @media (min-width: 79rem) {
   .book--detail figcaption {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%; } }
+    width: 50%; } }
 @media (min-width: 29rem) {
   .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
     max-width: 75%;
@@ -852,9 +837,7 @@ nav[role="books"] {
     .related {
       padding: 2rem; } }
   .related header, .related footer {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%; }
+    width: 100%; }
   .related header {
     padding-bottom: 1.5rem;
     color: #809896;
@@ -885,6 +868,7 @@ nav[role="books"] {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
   min-height: calc(100vh - 7.5rem);
   position: relative; }
   @media (min-width: 29rem) {

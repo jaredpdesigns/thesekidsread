@@ -1,7 +1,7 @@
 <article class="book">
   <figure class="type__align--center">
     <a href="{{ post.url | prepend: site.baseurl }}">
-      <img alt="{{ post.title }} cover art" data-src="{{ post.img }}">
+      <img alt="{{ post.title }} cover art" data-src="{{ post.img | replace: '_SL480_.jpg', '_SL240_.jpg' }}">
     </a>
   </figure>
   <figcaption class="type__align--center">

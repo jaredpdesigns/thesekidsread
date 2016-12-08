@@ -1,6 +1,6 @@
 <article class="book book--detail wrapper wrapper--bleed">
   <figure class="type__align--center">
-    <img alt="{{ page.title }} cover art" data-src="{{ page.img }}">
+    <img alt="{{ page.title }} cover art" data-src="{{ page.img | replace: '_SL480_.jpg', '_SL360_.jpg' }}">
   </figure>
   <figcaption>
     <h1 class="book__title">{{ page.title }}</h1>
