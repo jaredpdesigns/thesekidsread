@@ -458,6 +458,9 @@ header[role="main"] {
   width: 100%;
   border-bottom: 0.0625rem solid #e0e6e6;
   z-index: 3; }
+  @media (min-width: 1rem) and (max-width: 46rem) {
+    header[role="main"] .wrapper {
+      padding-bottom: 0; } }
 
 nav[role="main"] {
   display: -webkit-flex;
@@ -472,19 +475,6 @@ nav[role="main"] {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  @media (min-width: 1rem) and (max-width: 46rem) {
-    nav[role="main"] > *:not(.logo) {
-      margin-top: 0.5rem; } }
-  @media (min-width: 1rem) and (max-width: 46rem) and (min-width: 99rem) {
-    nav[role="main"] > *:not(.logo) {
-      margin-top: 1rem; } }
-
-  @media (min-width: 29rem) {
-    nav[role="main"] > *:not(.logo) {
-      margin-top: 0; } }
-  @media (min-width: 1rem) and (max-width: 46rem) {
-    nav[role="main"] .social {
-      height: 1.125rem; } }
   nav[role="main"] .social a {
     margin-left: 1rem; }
     @media (min-width: 99rem) {
@@ -534,16 +524,19 @@ footer[role="main"] {
   width: 100%;
   border-top: 0.0625rem solid #e0e6e6;
   z-index: 3; }
+  footer[role="main"] .wrapper {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 main {
-  padding-top: 4rem;
-  padding-bottom: 2.125rem; }
+  padding-top: 4.75rem;
+  padding-bottom: 2.75rem; }
   @media (min-width: 29rem) {
     main {
-      padding-top: 2.5rem; } }
+      padding-top: 2.75rem; } }
   @media (min-width: 47rem) {
     main {
-      padding-top: 3rem; } }
+      padding-top: 3.75rem; } }
 
 .wrapper {
   padding: 1.5rem;
@@ -602,7 +595,8 @@ main {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 600;
-  color: #809896; }
+  color: #809896;
+  min-height: 2.75rem; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     .linky {
       font-size: 0.875rem;
@@ -891,14 +885,14 @@ nav[role="books"] {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: calc(100vh - 6.125rem);
+  min-height: calc(100vh - 7.5rem);
   position: relative; }
   @media (min-width: 29rem) {
     .about__hero {
-      min-height: calc(100vh - 4.625rem); } }
+      min-height: calc(100vh - 5.5rem); } }
   @media (min-width: 47rem) {
     .about__hero {
-      min-height: calc(100vh - 5.5rem); } }
+      min-height: calc(100vh - 6.5rem); } }
   @media (min-width: 89rem) {
     .about__hero {
       background-position: center 25%; } }

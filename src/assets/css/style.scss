@@ -31,6 +31,9 @@ header[role="main"] {
   width: 100%;
   border-bottom: $border-s $color-base-12;
   z-index: 3;
+  .wrapper {
+    @include bp(xs) { padding-bottom: 0; }
+  }
 }
 
 nav[role="main"] {
@@ -38,11 +41,6 @@ nav[role="main"] {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  > *:not(.logo) {
-    @include bp(xs) { @include margin(xs); }
-    @include bp(xsl) { margin-top: 0; }
-  }
-  .social { @include bp(xs) { height: rem(18); } }
   .social a { @include margin(s,l); }
 }
 
@@ -71,13 +69,17 @@ footer[role="main"] {
   width: 100%;
   border-top: $border-s $color-base-12;
   z-index: 3;
+  .wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 main {
-  padding-top: rem(64);
-  padding-bottom: rem(34);
-  @include bp(xsl) { padding-top: rem(40); }
-  @include bp(s) { padding-top: rem(48); }
+  padding-top: rem(76);
+  padding-bottom: rem(44);
+  @include bp(xsl) { padding-top: rem(44); }
+  @include bp(s) { padding-top: rem(60); }
 }
 
 .wrapper {
@@ -107,6 +109,7 @@ main {
   @include type-s;
   font-weight: 600;
   color: $color-base-50;
+  min-height: rem(44);
   &:hover { color: $color-highlight; }
   svg { @include margin(xs,l); }
 }
@@ -277,10 +280,10 @@ nav[role="books"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: calc(100vh - 6.125rem);
+    min-height: calc(100vh - 7.5rem);
     position: relative;
-    @include bp(xsl) { min-height: calc(100vh - 4.625rem); }
-    @include bp(s) { min-height: calc(100vh - 5.5rem); }
+    @include bp(xsl) { min-height: calc(100vh - 5.5rem); }
+    @include bp(s) { min-height: calc(100vh - 6.5rem); }
     @include bp(ml) { background-position: center 25%; }
     &:before {
       @include fill;
