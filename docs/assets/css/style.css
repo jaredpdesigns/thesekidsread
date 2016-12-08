@@ -973,7 +973,8 @@ nav[role="books"] {
     border-color: #00BFAF; }
 .search .sort {
   transition: all 0.375s ease-in;
-  opacity: 0.5; }
+  opacity: 0.5;
+  height: auto; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     .search .sort {
       display: none; } }

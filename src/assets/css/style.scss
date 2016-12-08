@@ -341,6 +341,7 @@ nav[role="books"] {
   .sort {
     @include smooth;
     opacity: 0.5;
+    height: auto;
     @include bp(xs) { display: none; }
     @include bp(xsl) { display: inline-flex; }
     &:first-of-type { border-radius: 0; }
