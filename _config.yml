@@ -10,6 +10,7 @@ keep_files: [.git, "CNAME"]
 exclude: ["README.md"]
 source: src
 destination: docs
+host: 0.0.0.0
 
 # Build settings
 markdown: kramdown
