@@ -139,7 +139,7 @@ h1 {
   @media (min-width: 99rem) {
     h1 {
       font-size: 2.25rem;
-      line-height: 1.33333; } }
+      line-height: 1; } }
 
 h2 {
   font-size: 1.5rem;
@@ -776,6 +776,12 @@ main {
     margin: 0; } }
 .book--detail figcaption .book__description {
   text-align: left; }
+  @media (min-width: 47rem) {
+    .book--detail figcaption .book__description {
+      margin-top: 1.5rem; } }
+  @media (min-width: 47rem) and (min-width: 99rem) {
+    .book--detail figcaption .book__description {
+      margin-top: 2rem; } }
 
 nav[role="books"] {
   position: absolute;

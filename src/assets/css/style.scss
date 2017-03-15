@@ -225,7 +225,10 @@ main {
       @include type-legible;
       @include bp(s) { margin: 0; }
     }
-    .book__description { @include type-left; }
+    .book__description {
+      @include type-left;
+      @include bp(s) { @include margin(m, t); }
+    }
   }
 }
 
