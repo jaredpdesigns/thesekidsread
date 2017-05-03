@@ -2,7 +2,9 @@
 ---
 
 $type-sans:  "proxima-nova", sans-serif;
-$type-serif:  "proxima-nova-soft", sans-serif;
+$type-serif:  "proxima-soft", sans-serif;
+$type-condensed: "proxima-soft-condensed", sans-serif;
+@mixin type-condensed { font-family: $type-condensed; }
 
 $color-highlight: #00BFAF;
 
@@ -11,7 +13,8 @@ $color-highlight: #00BFAF;
 // Page Structure
 
 
-h1, h2, h3, h4, h5, .btn, .linky, .book__author--actual { @include type-serif; }
+h1, h2, h3, h4, h5 { @include type-serif; }
+.btn, .linky, .book__author--actual { @include type-condensed; }
 
 h4 {
   @include type-caps;

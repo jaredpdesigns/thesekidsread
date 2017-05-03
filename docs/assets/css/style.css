@@ -257,7 +257,7 @@ pre {
   font-family: "proxima-nova", sans-serif; }
 
 .type__style--serif {
-  font-family: "proxima-nova-soft", sans-serif; }
+  font-family: "proxima-soft", sans-serif; }
 
 .type__style--mono {
   font-family: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", "Courier", monospace; }
@@ -436,8 +436,11 @@ p a:not(.btn) {
 .color__type--white {
   color: white; }
 
-h1, h2, h3, h4, h5, .btn, .linky, .book__author--actual {
-  font-family: "proxima-nova-soft", sans-serif; }
+h1, h2, h3, h4, h5 {
+  font-family: "proxima-soft", sans-serif; }
+
+.btn, .linky, .book__author--actual {
+  font-family: "proxima-soft-condensed", sans-serif; }
 
 h4 {
   text-transform: uppercase;
