@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://use.typekit.net/fbk7qer.css");
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
@@ -131,7 +132,7 @@ html {
 
 h1 {
   font-size: 1.6875rem;
-  line-height: 1.33333; }
+  line-height: 1.3333333333; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     h1 {
       font-size: 1.5rem;
@@ -147,19 +148,19 @@ h2 {
   @media (min-width: 1rem) and (max-width: 46rem) {
     h2 {
       font-size: 1.375rem;
-      line-height: 1.63636; } }
+      line-height: 1.6363636364; } }
   @media (min-width: 99rem) {
     h2 {
       font-size: 1.6875rem;
-      line-height: 1.33333; } }
+      line-height: 1.3333333333; } }
 
 h3 {
   font-size: 1.375rem;
-  line-height: 1.09091; }
+  line-height: 1.0909090909; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     h3 {
       font-size: 1.125rem;
-      line-height: 1.33333; } }
+      line-height: 1.3333333333; } }
   @media (min-width: 99rem) {
     h3 {
       font-size: 1.5rem;
@@ -175,7 +176,7 @@ p, li {
   @media (min-width: 99rem) {
     p, li {
       font-size: 1.375rem;
-      line-height: 1.63636; } }
+      line-height: 1.6363636364; } }
 
 h4 {
   font-size: 1rem;
@@ -183,19 +184,19 @@ h4 {
   @media (min-width: 1rem) and (max-width: 46rem) {
     h4 {
       font-size: 0.875rem;
-      line-height: 1.14286; } }
+      line-height: 1.1428571429; } }
   @media (min-width: 99rem) {
     h4 {
       font-size: 1.125rem;
-      line-height: 1.33333; } }
+      line-height: 1.3333333333; } }
 
 h5 {
   font-size: 0.875rem;
-  line-height: 1.14286; }
+  line-height: 1.1428571429; }
   @media (min-width: 1rem) and (max-width: 46rem) {
     h5 {
       font-size: 0.75rem;
-      line-height: 1.33333; } }
+      line-height: 1.3333333333; } }
   @media (min-width: 99rem) {
     h5 {
       font-size: 1rem;
@@ -244,7 +245,7 @@ pre {
   @media (min-width: 99rem) {
     pre {
       font-size: 1.375rem;
-      line-height: 1.63636; } }
+      line-height: 1.6363636364; } }
   @media (min-width: 99rem) {
     pre {
       padding: 1.5rem; } }
@@ -589,11 +590,11 @@ main {
   @media (min-width: 1rem) and (max-width: 46rem) {
     .linky {
       font-size: 0.875rem;
-      line-height: 1.14286; } }
+      line-height: 1.1428571429; } }
   @media (min-width: 99rem) {
     .linky {
       font-size: 1.125rem;
-      line-height: 1.33333; } }
+      line-height: 1.3333333333; } }
   .linky:hover {
     color: #00BFAF; }
   .linky svg {
@@ -626,11 +627,11 @@ main {
   @media (min-width: 1rem) and (max-width: 46rem) {
     .btn {
       font-size: 0.875rem;
-      line-height: 1.14286; } }
+      line-height: 1.1428571429; } }
   @media (min-width: 99rem) {
     .btn {
       font-size: 1.125rem;
-      line-height: 1.33333; } }
+      line-height: 1.3333333333; } }
   .btn:hover {
     background-color: #40cfc3; }
   .btn svg {
@@ -707,7 +708,7 @@ main {
       width: 50%; } }
   @media (min-width: 63rem) {
     .home .book, .related .book {
-      width: 33.33333%; } }
+      width: 33.3333333333%; } }
   @media (min-width: 99rem) {
     .home .book, .related .book {
       width: 25%; } }
@@ -731,7 +732,7 @@ main {
 @media (min-width: 47rem) {
   .book--detail figure {
     padding-right: 1.5rem;
-    width: 33.33333%; } }
+    width: 33.3333333333%; } }
   @media (min-width: 47rem) and (min-width: 99rem) {
     .book--detail figure {
       padding-right: 2rem; } }
@@ -758,7 +759,7 @@ main {
 @media (min-width: 47rem) {
   .book--detail figcaption {
     padding-left: 1.5rem;
-    width: 66.66667%; } }
+    width: 66.6666666667%; } }
   @media (min-width: 47rem) and (min-width: 99rem) {
     .book--detail figcaption {
       padding-left: 2rem; } }
@@ -939,7 +940,7 @@ nav[role="books"] {
   @media (min-width: 99rem) {
     .search input {
       font-size: 1.375rem;
-      line-height: 1.63636; } }
+      line-height: 1.6363636364; } }
   @media (min-width: 29rem) {
     .search input {
       border-top-right-radius: 0;

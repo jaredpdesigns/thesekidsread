@@ -1,7 +1,6 @@
 ---
 ---
 
-{% include_relative _partials/typekit.js %}
 {% include_relative _partials/unveil.js %}
 
 $(document).ready(function() { $('img').unveil(240,function() { $(this).load(function() { $(this).parent().addClass('loaded'); } ); }); });
