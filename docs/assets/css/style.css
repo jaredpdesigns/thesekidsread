@@ -688,14 +688,15 @@ main {
 .book figure a {
   display: inline-block; }
   .book figure a:hover img {
-    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.25); }
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.125rem); }
 .book img {
   background-color: white;
   background-image: url("../img/loading.svg");
   background-position: center center;
   background-repeat: no-repeat;
-  height: 3.75rem;
-  width: 3.75rem; }
+  min-height: 3.75rem;
+  min-width: 3.75rem; }
 .book .loaded img {
   transition: all 0.5s cubic-bezier(0.5, 0.1, 0, 1.2);
   width: auto;
@@ -712,11 +713,24 @@ main {
   @media (min-width: 99rem) {
     .home .book, .related .book {
       width: 25%; } }
-  .home .book .loaded img, .related .book .loaded img {
+  .home .book .loaded, .related .book .loaded {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     height: 10.5rem; }
     @media (min-width: 89rem) {
-      .home .book .loaded img, .related .book .loaded img {
+      .home .book .loaded, .related .book .loaded {
         height: 15rem; } }
+    .home .book .loaded img, .related .book .loaded img {
+      max-height: 10.5rem;
+      max-width: 10.5rem; }
+      @media (min-width: 89rem) {
+        .home .book .loaded img, .related .book .loaded img {
+          max-height: 15rem;
+          max-width: 15rem; } }
   .home .book figcaption, .related .book figcaption {
     padding: 1rem; }
     @media (min-width: 99rem) {
