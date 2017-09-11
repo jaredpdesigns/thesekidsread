@@ -662,7 +662,7 @@ main {
     color: #80dfd7; }
   .book__title:before {
     content: "“";
-    margin-left: -0.5rem; }
+    margin-left: -0.75rem; }
   .book__title:after {
     content: "”"; }
 .book__author {
@@ -739,15 +739,18 @@ main {
   .home .book__title:before, .related .book__title:before {
     margin-left: 0; }
 
-@media (min-width: 47rem) {
+@media (min-width: 63rem) {
   .book--detail {
+    -ms-flex-align: center;
+        align-items: center;
     display: -ms-flexbox;
-    display: flex; } }
-@media (min-width: 47rem) {
+    display: flex;
+    width: 100%; } }
+@media (min-width: 63rem) {
   .book--detail figure {
     padding-right: 1.5rem;
     width: 33.3333333333%; } }
-  @media (min-width: 47rem) and (min-width: 99rem) {
+  @media (min-width: 63rem) and (min-width: 99rem) {
     .book--detail figure {
       padding-right: 2rem; } }
 
@@ -755,48 +758,48 @@ main {
   .book--detail figure {
     width: 50%; } }
 .book--detail .loaded img {
-  height: 15rem; }
-  @media (min-width: 89rem) {
+  max-height: 15rem; }
+  @media (min-width: 47rem) {
     .book--detail .loaded img {
-      height: 22.5rem; } }
-@media (min-width: 1rem) and (max-width: 46rem) {
-  .book--detail figcaption {
-    margin-top: 1.5rem;
-    text-align: center; } }
-  @media (min-width: 1rem) and (max-width: 46rem) and (min-width: 99rem) {
+      max-height: auto; } }
+.book--detail figcaption {
+  margin-top: 1.5rem;
+  text-align: center; }
+  @media (min-width: 99rem) {
     .book--detail figcaption {
       margin-top: 2rem; } }
-@media (min-width: 1rem) and (max-width: 46rem) {
-    .book--detail figcaption img {
-      margin-left: auto;
-      margin-right: auto; } }
-@media (min-width: 47rem) {
-  .book--detail figcaption {
-    padding-left: 1.5rem;
-    width: 66.6666666667%; } }
-  @media (min-width: 47rem) and (min-width: 99rem) {
+  .book--detail figcaption img {
+    margin-left: auto;
+    margin-right: auto; }
+  @media (min-width: 63rem) {
+    .book--detail figcaption {
+      padding-left: 1.5rem;
+      margin-top: 0;
+      text-align: left;
+      width: 66.6666666667%; } }
+  @media (min-width: 63rem) and (min-width: 99rem) {
     .book--detail figcaption {
       padding-left: 2rem; } }
 
-@media (min-width: 79rem) {
-  .book--detail figcaption {
-    width: 50%; } }
-@media (min-width: 29rem) {
-  .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
-    max-width: 75%;
-    margin-left: auto;
-    margin-right: auto; } }
-@media (min-width: 99rem) {
-  .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
-    max-width: 62.5%; } }
-@media (min-width: 47rem) {
-  .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
-    margin: 0; } }
-.book--detail figcaption .book__description {
-  text-align: left; }
-  @media (min-width: 47rem) {
-    .book--detail figcaption .book__description {
-      margin-top: 1.5rem; } }
+  @media (min-width: 79rem) {
+    .book--detail figcaption {
+      width: 50%; } }
+  @media (min-width: 29rem) {
+    .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 99rem) {
+    .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
+      max-width: 62.5%; } }
+  @media (min-width: 63rem) {
+    .book--detail figcaption .book__title, .book--detail figcaption .book__author, .book--detail figcaption .book__description {
+      margin: 0; } }
+  .book--detail figcaption .book__description {
+    text-align: left; }
+    @media (min-width: 47rem) {
+      .book--detail figcaption .book__description {
+        margin-top: 1.5rem; } }
   @media (min-width: 47rem) and (min-width: 99rem) {
     .book--detail figcaption .book__description {
       margin-top: 2rem; } }

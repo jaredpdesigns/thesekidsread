@@ -7,7 +7,7 @@ description: "#"
 
 img: "#._SL480_.jpg"
 
-buy: "http://amzn.com/#"
+buy: "http://a.co/#"
 
 tags:
 - #
