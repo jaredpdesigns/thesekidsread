@@ -1,6 +1,10 @@
 ---
 ---
 
+*:focus {
+  outline: none;
+}
+
 @import url("https://use.typekit.net/fbk7qer.css");
 
 $type-sans:  "proxima-nova", sans-serif;
@@ -58,7 +62,7 @@ nav[role="secondary"] {
 
 .logo {
   color: $color-highlight;
-  &:hover { color: $color-highlight-75; }
+  &:hover, &:focus { color: $color-highlight-75; }
   @include bp(xs) { width: 100%; }
   @include bp(xsl) { width: auto; }
   svg {
@@ -113,10 +117,11 @@ main {
 .linky {
   @include inline;
   @include type-s;
+  @include type-caps;
   font-weight: 600;
   color: $color-base-50;
   height: rem(44);
-  &:hover { color: $color-highlight; }
+  &:hover, &:focus { color: $color-highlight; }
   svg { @include margin(xs,l); }
 }
 
@@ -125,19 +130,20 @@ main {
   @include padding(xs, l);
   @include padding(xs, r);
   @include type-s;
+  @include type-caps;
   font-weight: 600;
   background-color: $color-highlight;
   border: $border-s $color-highlight;
   border-radius: $space-xxs;
   color: $color-tint;
   height: rem(44);
-  &:hover { background-color: $color-highlight-75; }
+  &:hover, &:focus { background-color: $color-highlight-75; }
   svg { @include margin(xs,l); }
   &--secondary {
     background-color: $color-tint;
     border-color: $color-base-12;
     color: $color-base-50;
-    &:hover {
+    &:hover, &:focus {
       background-color: $color-tint;
       border-color: $color-base-38;
       color: $color-base-75;
@@ -154,6 +160,7 @@ main {
   }
   &__title {
     color: $color-highlight;
+    a:focus { text-decoration: underline !important; }
     &:before, &:after { color: $color-highlight-50; }
     &:before {
       content: "“";
@@ -173,7 +180,7 @@ main {
   .btn { @include margin(m); }
   figure a {
     display: inline-block;
-    &:hover img {
+    &:hover img, &:focus img {
       box-shadow: 0 rem(16) rem(32) rem(-16) rgba($color-shade, 0.25);
       transform: translateY(-0.125rem);
     }
@@ -232,7 +239,7 @@ main {
   }
   .loaded img {
     max-height: rem(240);
-    @include bp(s) { max-height: auto; }
+    @include bp(ml) { max-height: rem(360); }
   }
   figcaption {
     @include margin(m);
@@ -275,9 +282,9 @@ nav[role="books"] {
     border-radius: 50%;
     box-shadow: 0 rem(4) rem(8) rem(-4) rgba($color-shade,0.25);
     color: $color-base-50;
-    &:hover { color: $color-highlight; }
-    &.next:hover { transform: translateX(-$space-xs); }
-    &.prev:hover { transform: translateX($space-xs); }
+    &:hover, &:focus { color: $color-highlight; }
+    &.next:hover, &.next:focus { transform: translateX(-$space-xs); }
+    &.prev:hover, &.prev:focus { transform: translateX($space-xs); }
   }
   svg {
     height: rem(44);
@@ -319,7 +326,7 @@ nav[role="books"] {
     &:before {
       @include fill;
       content: '';
-      background-color: rgba($color-highlight,0.75);
+      background-color: rgba($color-highlight,0.5);
     }
     .wrapper {
       position: relative;
@@ -394,7 +401,7 @@ nav[role="books"] {
     @include padding(m);
     @include smooth;
     display: block;
-    &:hover { background-color: $color-tint; }
+    &:hover, &:focus { background-color: $color-tint; }
     + * { border-top: $border-s $color-base-12; }
   }
 }
