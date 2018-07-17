@@ -4,7 +4,7 @@
       :title="'Great books by ' + author + ' | These Kids Read'"
       :description="'A collection of great books by ' + author"
       :keywords="author"
-      :url="'thesekidsread.com/author/' + author"
+      :url="'thesekidsread.com/#/author/' + author"
     />
     <header>
       <h1 class="author">Great books by <span class="author__name">{{ author }}</span></h1>

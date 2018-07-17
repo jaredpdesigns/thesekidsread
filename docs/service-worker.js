@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.55705a03fb733889dd5f81a360d2bc9f.js"
+  "/precache-manifest.83974451f73b9db5114ddfb28821bb9c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "these-kids-read"});

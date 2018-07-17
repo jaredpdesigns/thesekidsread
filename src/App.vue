@@ -3,7 +3,7 @@
     <header role="main">
       <router-link to="/" class="logo" replace><Icon name="logo"/></router-link>
       <nav>
-        <router-link to="/about/">
+        <router-link to="/about">
           About
           <Icon name="book" :size="14"/>
         </router-link>
