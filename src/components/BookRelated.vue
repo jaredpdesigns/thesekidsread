@@ -2,6 +2,7 @@
   <li class="book">
     <router-link :to="'/books/' + slug">
       <figure>
+        <Icon v-if="!loaded" name="book" :size="16"/>
         <transition name="fade">
           <img @load="onLoaded" v-show="loaded" :src="scale(img)" :alt="'Cover image for “' + title + '”'"/>
         </transition>
@@ -14,8 +15,10 @@
   </li>
 </template>
 <script>
+import Icon from '@/components/Icon.vue'
 export default {
   name: 'BookRelated',
+  components: { Icon },
   data() { return {
     loaded: false
   }},
@@ -53,7 +56,8 @@ export default {
   }
   figure {
     @include smooth;
-    height: rem(160);
+    color: var(--base-light);
+    img { max-height: rem(160); }
   }
   figcaption {
     padding-top: rem(16);

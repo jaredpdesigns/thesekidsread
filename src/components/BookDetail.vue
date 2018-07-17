@@ -1,6 +1,7 @@
 <template>
   <section class="book">
     <figure>
+      <Icon v-if="!loaded" name="book" :size="16"/>
       <transition name="fade">
         <img @load="onLoaded" v-show="loaded" :src="img" :alt="'Cover image for “' + title + '”'"/>
       </transition>
@@ -61,10 +62,15 @@ export default {
     }
   }
   figure {
+    align-self: stretch;
+    color: var(--base-light);
     text-align: center;
     img {
-      max-height: rem(480);
-      max-width: rem(480);
+      max-height: rem(240);
+      @include breakpoint(m) {
+        max-height: rem(480);
+        max-width: rem(480);
+      }
     }
   }
   figcaption {

@@ -195,7 +195,8 @@ header[role="main"] {
     color: var(--highlight);
     display: inline-flex;
     justify-content: center;
-    @include breakpoint(xs) { flex-grow: 1; }
+    width: 100%;
+    @include breakpoint(xsl) { width: auto; }
     &:focus {
       transform: scale(1.03125);
     }

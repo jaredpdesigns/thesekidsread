@@ -2,6 +2,7 @@
   <section class="book">
     <router-link :to="'/books/' + slug">
       <figure>
+        <Icon v-if="!loaded" name="book" :size="16"/>
         <transition name="fade">
           <img @load="onLoaded" v-show="loaded" :src="scale(img)" :alt="'Cover image for “' + title + '”'"/>
         </transition>
@@ -14,8 +15,10 @@
   </section>
 </template>
 <script>
+import Icon from '@/components/Icon.vue'
 export default {
   name: 'BookHome',
+  components: { Icon },
   data() { return {
     loaded: false
   }},
@@ -49,7 +52,8 @@ export default {
   }
   figure {
     @include smooth;
-    height: rem(240);
+    color: var(--base-light);
+    img { max-height: rem(240); }
   }
   figcaption {
     padding: rem(16);

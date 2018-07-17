@@ -2,7 +2,7 @@
   <section class="search">
     <section class="searchInput">
       <Icon name="search" :size="16"/>
-      <input type="text" placeholder="Search…" v-model="search"/>
+      <input type="text" placeholder="Search…" v-model="search" autocomplete="off"/>
       <button @click="clearSearch"><Icon name="cancel" :size="14"/></button>
     </section>
     <ul v-if="results.length > 0">
@@ -25,8 +25,8 @@ export default {
         let search = this.search
         return _.filter(array, book => Object.keys(book).some(key => book[key].toString().toLowerCase().includes(search)))
       }
-      else return ''
-    },
+      else { return '' }
+    }
   },
   data(){ return {
     search: ''
@@ -67,6 +67,7 @@ export default {
   }
   > .icon { color: var(--base-upper); }
   input {
+    font-family: inherit;
     height: rem(32);
     margin-left: rem(8);
     width: 100%;
