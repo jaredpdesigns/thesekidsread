@@ -50,6 +50,7 @@ article header {
   padding: rem(32);
   position: relative;
   text-shadow: 0 0.0625rem 0.125rem rgba(black,0.5);
+  @include breakpoint(xs-only) { background-position: 40% center; }
   @include breakpoint(xsl) { min-height: calc(100vh - 7em); }
   @include breakpoint(m) { min-height: calc(100vh - 4.5em); }
   &:before {

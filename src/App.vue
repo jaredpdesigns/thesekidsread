@@ -11,10 +11,10 @@
           Suggest
           <Icon name="suggest" :size="14"/>
         </a>
-        <a href="#" target="_blank">
+        <a href="https://twitter.com/thesekidsread" target="_blank">
           <Icon name="twitter" :size="20"/>
         </a>
-        <a href="#" target="_blank">
+        <a href="https://www.facebook.com/thesekidsread/" target="_blank">
           <Icon name="facebook" :size="20"/>
         </a>
       </nav>

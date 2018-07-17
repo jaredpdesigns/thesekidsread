@@ -1,5 +1,29 @@
 export const books = [
   {
+    title: "Nightlights",
+    description: "Every night, tiny stars appear out of the darkness in little Sandy’s bedroom. She catches them and creates wonderful creatures to play with until she falls asleep, and in the morning brings them back to life in the whimsical drawings that cover her room. One day, Morpie, a mysterious pale girl, appears at school. And she knows all about Sandy’s drawings...",
+    author: ["Lorena Alvarez"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61UdxTYLO4L._SL480_.jpg",
+    buy: "http://a.co/8ctc5mA", 
+    slug: "nightlights"
+  },
+  {
+    title: "Little Robot",
+    description: "When a little girl finds an adorable robot in the woods, she presses a button and accidentally activates him for the first time. Now, she finally has a friend. But the big, bad robots are coming to collect the little guy for nefarious purposes, and it’s all up to a five-year-old armed only with a wrench and a fierce loyalty to her mechanical friend to save the day!",
+    author: ["Ben Hatke"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61-VC4BwrnL._SL480_.jpg",
+    buy: "http://a.co/hJAerir", 
+    slug: "little-robot"
+  },
+  {
+    title: "The Halloween Kid",
+    description: "No siree, Halloween won’t be canceled anytime soon, not while the Halloween Kid’s around. With a rootin’ tootin’ Halloween monster–shootin’ text and retro-modern illustrations, The Halloween Kid will lasso in readers both young and old. Because who doesn’t love a hero who defends the right to trick or treat? Yee-Ha-lloween!",
+    author: ["Rhode Montijo"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61rhNuisnnL._SL480_.jpg",
+    buy: "http://a.co/bDxPSbI", 
+    slug: "the-halloween-kid"
+  },
+  {
     title: "Whoops!",
     description: "This is the cat, the dog, and the mouse. Here’s the old lady in the tumble-down house. She has a spell to make them all well…but she just can’t find the right one! Whoops! In this hilariously chaotic escapade, three animals are desperate to make the right noises.",
     author: ["Suzi Moore", "Russell Ayto"],
