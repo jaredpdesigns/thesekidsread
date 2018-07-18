@@ -5,7 +5,7 @@
       :description="'“' + book.title + '” is a great book by ' + authorsJoined"
       :keywords="book.title + ',' + book.author"
       :image="book.img"
-      :url="'thesekidsread.com/#/books/' + book.slug"
+      :url="'thesekidsread.com/books/' + book.slug"
     />
     <Book v-for="book in filtered" :key="book.title" :authors="book.author" :buy="book.buy" :description="book.description" :img="book.img" :title="book.title"/>
     <aside v-if="related.length > 0">

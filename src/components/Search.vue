@@ -2,7 +2,7 @@
   <section class="search">
     <section class="searchInput">
       <Icon name="search" :size="16"/>
-      <input type="text" placeholder="Search…" v-model="search" autocomplete="off"/>
+      <input type="text" placeholder="Search…" v-model="search"/>
       <button @click="clearSearch"><Icon name="cancel" :size="14"/></button>
     </section>
     <ul v-if="results.length > 0">

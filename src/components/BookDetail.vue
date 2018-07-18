@@ -58,7 +58,7 @@ export default {
     padding: rem(16);
     @include breakpoint(s) {
       flex-basis: 50%;
-      flex-shrink: 1;
+      flex-shrink: 0;
     }
   }
   figure {

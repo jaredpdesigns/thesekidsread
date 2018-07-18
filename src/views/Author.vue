@@ -4,7 +4,7 @@
       :title="'Great books by ' + author + ' | These Kids Read'"
       :description="'A collection of great books by ' + author"
       :keywords="author"
-      :url="'thesekidsread.com/#/author/' + author"
+      :url="'thesekidsread.com/author/' + authorSlug"
     />
     <header>
       <h1 class="author">Great books by <span class="author__name">{{ author }}</span></h1>
@@ -27,7 +27,7 @@ export default {
     books() { return this.$store.state.books },
     filtered() {
       let array = this.books
-      let search = this.author
+      let search = this.authorFull
       return _.filter(array, book => { return _.flatten(book.author).indexOf(search) !== -1 })
     }
   },
