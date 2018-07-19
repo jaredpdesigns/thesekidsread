@@ -1243,7 +1243,7 @@ export const books = [
     title: "The Monstore",
     description: "At the back of Frankensweet’s Candy Shoppe, under the last box of sour gumballs, there’s a trapdoor. Knock five times fast, hand over a bag of squirmy worms, and you can crawl inside The Monstore. The Monstore is the place to go for all of your monsterly needs. Which is perfect, since Zack definitely has a monsterly need. The problem? His pesky little sister, Gracie, who never pays attention to that “Keep Out” sign on Zack’s door—the one he has made especially for her. But when Zack’s monsters don’t exactly work as planned, he soon finds out that the Monstore has a few rules: No Refunds. No exchanges. No exceptions.",
     author: ["Tara Lazar", "James Burks"],
-    img: "http://ecx.images-amazon.com/images/I/71HdbAku6WL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/71HdbAku6WL._SL480_.jpg",
     buy: "http://amzn.com/1442420170", 
     slug: "the-monstore"
   },
@@ -1267,7 +1267,7 @@ export const books = [
     title: "My Dog, Bob",
     description: "Like all dogs, Bob likes breakfast, riding in the family car, and digging for bones. But unlike other dogs, Bob cooks breakfast for himself and his family, drives the family car and digs for dinosaur bones with a paleontologist. When the girl next door challenges Bob s owner to a contest to see whose dog is best, Bob doesn’t sit, fetch or speak on command. Bob loses. I’m sorry, Bob says as the girl and her dog march off in triumph. But to make up for his deficiencies, Bob makes pizza for the family.",
     author: ["Richard Torrey"],
-    img: "http://ecx.images-amazon.com/images/I/71wR9ygZNqL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/71wR9ygZNqL._SL480_.jpg",
     buy: "http://amzn.com/0823433862", 
     slug: "my-dog-bob"
   },
@@ -1275,7 +1275,7 @@ export const books = [
     title: "Hooray for Amanda and Her Alligator",
     description: "6 1/2 stories about 2 surprising friends. Having a stuffed alligator for a best friend can be surprising. Sometimes Amanda surprises her alligator with books. Sometimes Alligator surprises Amanda by eating them. But what happens when Amanda brings home a special—and not entirely welcome—surprise? The result might be unexpected indeed.",
     author: ["Mo Willems"],
-    img: "http://ecx.images-amazon.com/images/I/513bbVZbGTL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/513bbVZbGTL._SL480_.jpg",
     buy: "http://amzn.com/006200400X", 
     slug: "hooray-for-amanda-and-her-alligator"
   },
@@ -2811,7 +2811,7 @@ export const books = [
     title: "Toot",
     description: "Everybody does it: Kitty, Doggie, Daddy—even Mommy! And when Leslie Patricelli’s beloved bald baby does it while running, it sounds like a train. This frank and very funny look at a certain noisy body function is perfectly suited to the youngest of listeners, while their giggling older siblings will be happy to read it aloud.",
     author: ["Leslie Patricelli"],
-    img: "http://ecx.images-amazon.com/images/I/51V4Ey49-oL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51V4Ey49-oL._SL480_.jpg",
     buy: "http://amzn.com/0763663212", 
     slug: "toot"
   },
@@ -2819,7 +2819,7 @@ export const books = [
     title: "This Is Not My Hat",
     description: "When a tiny fish shoots into view wearing a round blue topper (which happens to fit him perfectly), trouble could be following close behind. So it’s a good thing that enormous fish won’t wake up. And even if he does, it’s not like he’ll ever know what happened. Visual humor swims to the fore as the best-selling Jon Klassen follows his breakout debut with another deadpan-funny tale.",
     author: ["Jon Klassen"],
-    img: "http://ecx.images-amazon.com/images/I/31ciJTLue2L._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/31ciJTLue2L._SL480_.jpg",
     buy: "http://amzn.com/0763655996", 
     slug: "this-is-not-my-hat"
   },
@@ -2835,7 +2835,7 @@ export const books = [
     title: "The Snowy Day",
     description: "No book has captured the magic and sense of possibility of the first snowfall better than The Snowy Day. Universal in its appeal, the story has become a favorite of millions, as it reveals a child’s wonder at a new world, and the hope of capturing and keeping that wonder forever. The adventures of a little boy in the city on a very snowy day.",
     author: ["Ezra Jack Keats"],
-    img: "http://ecx.images-amazon.com/images/I/51jvfaRNFYL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51jvfaRNFYL._SL480_.jpg",
     buy: "http://amzn.com/0140501827", 
     slug: "the-snowy-day"
   },
@@ -2851,7 +2851,7 @@ export const books = [
     title: "The Day the Crayons Quit",
     description: "Poor Duncan just wants to color. But when he opens his box of crayons, he finds only letters, all saying the same thing: His crayons have had enough! They quit! Beige Crayon is tired of playing second fiddle to Brown Crayon. Black wants to be used for more than just outlining. Blue needs a break from coloring all those bodies of water. And Orange and Yellow are no longer speaking—each believes he is the true color of the sun.",
     author: ["Drew Daywalt"],
-    img: "http://ecx.images-amazon.com/images/I/51HoHYJv6TL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51HoHYJv6TL._SL480_.jpg",
     buy: "http://amzn.com/0399255370", 
     slug: "the-day-the-crayons-quit"
   },
@@ -2867,7 +2867,7 @@ export const books = [
     title: "Olivia",
     description: "Olivia is an absolute delight! A gorgeous little pig who likes to dress-up, sing songs, dance, think, snooze (sometimes) and is even quite good at building sandcastles. Her days are filled with the wonderful minutia that makes up a small child’s life and, at the end of them, when she snuggles up in bed and her mother reads her a story (or three) Olivia the little pig, feels very full of love.",
     author: ["Ian Falconer"],
-    img: "http://ecx.images-amazon.com/images/I/410E4S3D33L._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/410E4S3D33L._SL480_.jpg",
     buy: "http://amzn.com/0689860889", 
     slug: "olivia"
   },
@@ -2875,7 +2875,7 @@ export const books = [
     title: "Olivia Saves the Circus",
     description: "When all of the performers at the circus are out sick with ear infections, it’s up to Olivia to save the day! That’s no problem for Olivia, of course, because she knows how to do everything. From lion taming to trampoline jumping, unicycling to tight-rope walking, Olivia is the ultimate performer—with the ultimate imagination.",
     author: ["Ian Falconer"],
-    img: "http://ecx.images-amazon.com/images/I/51IIV6mY0IL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51IIV6mY0IL._SL480_.jpg",
     buy: "http://amzn.com/1442412879", 
     slug: "olivia-saves-the-circus"
   },
@@ -2891,7 +2891,7 @@ export const books = [
     title: "Nighty Night, Little Green Monster",
     description: "Children will love this monsterously fun story, featuring die-cuts on every spread. With each turn of the page, readers reveal Little Green Monster’s little yellow eyes, his little red mouth, and even a cute, tiny white monster tooth. Then, when the stars begin to appear, it’s time for bed…so, nighty night, little yellow eyes. Nighty night, little red mouth. Nighty night, cute little white tooth. Sweet dreams!",
     author: ["Ed Emberley"],
-    img: "http://ecx.images-amazon.com/images/I/713VlHynkKL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/713VlHynkKL._SL480_.jpg",
     buy: "http://amzn.com/0316210412", 
     slug: "nighty-night-little-green-monster"
   },
@@ -2899,7 +2899,7 @@ export const books = [
     title: "Maple",
     description: "When Maple is tiny, her parents plant a maple tree in her honor. She and her tree grow up together, and even though a tree doesn’t always make an ideal playmate, it doesn’t mind when Maple is in the mood to be loud—which is often. Then Maple becomes a big sister, and finds that babies have their loud days, too. Fortunately, Maple and her beloved tree know just what the baby needs.",
     author: ["Lori Nichols"],
-    img: "http://ecx.images-amazon.com/images/I/81RSl2BUsdL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81RSl2BUsdL._SL480_.jpg",
     buy: "http://amzn.com/039916085X", 
     slug: "maple"
   },
@@ -2907,7 +2907,7 @@ export const books = [
     title: "Jamberry",
     description: "Hatberry, Shoeberry, In my canoeberry, Under the bridge, And over the dam, Looking for berries Berries for jam. They’re off…a boy and an endearing, rhyme-spouting bear, who squires him through a fantastic world of berries. And their adventure comes to a razzamatazz finale under a starberry sky. A young boy and a bear joyously romp through the land of berries where there are raspberry rabbits and a brassberry band with elephants skating on strawberry jam!",
     author: ["Bruce Degen"],
-    img: "http://ecx.images-amazon.com/images/I/61q4yITYrPL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61q4yITYrPL._SL480_.jpg",
     buy: "http://amzn.com/0694006513", 
     slug: "jamberry"
   },
@@ -2931,7 +2931,7 @@ export const books = [
     title: "Goodnight Moon",
     description: "In a great green room, tucked away in bed, is a little bunny. “Goodnight room, goodnight moon.” And to all the familiar things in the softly lit room—to the picture of the three little bears sitting in chairs, to the clocks and his socks, to the mittens and the kittens, to everything one by one—he says goodnight.",
     author: ["Margaret Wise Brown", "Clement Hurd"],
-    img: "http://ecx.images-amazon.com/images/I/51%2BmV1XUUQL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51%2BmV1XUUQL._SL480_.jpg",
     buy: "http://amzn.com/0694003611", 
     slug: "goodnight-moon"
   },
@@ -2939,7 +2939,7 @@ export const books = [
     title: "Go Away, Big Green Monster!",
     description: "Caldecott Award-winning author-artist Ed Emberley has created an ingenious way for children to chase away their nighttime fears. Kids can turn the pages of this die-cut book and watch the Big Green Monster grow. Then, when they’re ready to show him who’s in charge, they’ll turn the remaining pages and watch him disappear! This lavish reissue features dramatic die-cut eyes and sparkling foil on the cover.",
     author: ["Ed Emberley"],
-    img: "http://ecx.images-amazon.com/images/I/51XMV5wCq3L._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51XMV5wCq3L._SL480_.jpg",
     buy: "http://amzn.com/0316236535", 
     slug: "go-away-big-green-monster"
   },
@@ -2955,7 +2955,7 @@ export const books = [
     title: "First Book of Sushi",
     description: "Miso in my sippy cup, tofu in my bowl! From tekka maki to wasabi, tasty treats await young readers in this colorful, rhyming ode to Japanese cuisine. With pages full of tummy-tempting foods, the books in the World Snacks series are a delicious way to introduce even the littlest eaters to cuisines from all around the globe.",
     author: ["Amy Wilson Sanger"],
-    img: "http://ecx.images-amazon.com/images/I/61aE2yITvgL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61aE2yITvgL._SL480_.jpg",
     buy: "http://amzn.com/1582460507", 
     slug: "first-book-of-sushi"
   },
@@ -2971,7 +2971,7 @@ export const books = [
     title: "ABCs",
     description: "A classic ABC board book featuring the colorful wildlife illustrations of Charley Harper. Young children can learn their ABC’s through the delightful and graphic images of animals created by American illustrator Charley Harper. This small gem is sure to become a classic, and is a beautifully designed and educational book for Harper fans, both young and old.",
     author: ["Charley Harper"],
-    img: "http://ecx.images-amazon.com/images/I/51-HMt4EG4L._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51-HMt4EG4L._SL480_.jpg",
     buy: "http://amzn.com/193442921X", 
     slug: "abcs"
   },
@@ -2979,7 +2979,7 @@ export const books = [
     title: "123s",
     description: "A classic 123 counting book featuring the colorful wildlife illustrations of Charley Harper. Young children can learn how to count to ten, through the delightful and graphic images of animals created by American illustrator Charley Harper. This small gem is sure to become a classic, and is a beautifully designed and educational book for Harper fans, both young and old.",
     author: ["Charley Harper"],
-    img: "http://ecx.images-amazon.com/images/I/51qzuHvMY9L._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51qzuHvMY9L._SL480_.jpg",
     buy: "http://amzn.com/1934429228", 
     slug: "123s"
   },
@@ -2987,7 +2987,7 @@ export const books = [
     title: "The Little Old Man Who Could Not Read",
     description: "An old toymaker never wanted to learn to read until his wife went away on a visit and he had to do the grocery shopping by himself.",
     author: ["Irma Simonton Black", "Seymour Fleishman"],
-    img: "http://ecx.images-amazon.com/images/I/81UlTNxNPyL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81UlTNxNPyL._SL480_.jpg",
     buy: "http://amzn.com/1930900848", 
     slug: "the-little-old-man-who-could-not-read"
   },
@@ -2995,7 +2995,7 @@ export const books = [
     title: "Steam Train, Dream Train",
     description: "The dream train pulls into the station, and one by one the train cars are loaded: polar bears pack the reefer car with ice cream, elephants fill the tanker cars with paints, tortoises stock the auto rack with race cars, bouncy kangaroos stuff the hopper car with balls. Sweet and silly dreams are guaranteed for any budding train enthusiasts!",
     author: ["Sherri Duskey Rinker", "Tom Lichtenheld"],
-    img: "http://d.gr-assets.com/books/1368425217l/15791057.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61-i4G0DdaL._SL480_.jpg",
     buy: "http://amzn.com/1452109206", 
     slug: "steam-train-dream-train"
   },
@@ -3003,7 +3003,7 @@ export const books = [
     title: "Pinkalicious",
     description: "More than anything, Pinkalicious loves pink, especially pink cupcakes. Her parents warn her not to eat too many of them, but when Pinkalicious does…she turns pink! What to do? This sparkling picture book, filled with such favorites as pink bubble gum, pink peonies, pink cotton candy, and pink fairy princess dresses, celebrates all things pink while showing that being yourself is best of all.",
     author: ["Victoria Kann", "Elizabeth Kann"],
-    img: "http://ecx.images-amazon.com/images/I/81ipXUjrENL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81ipXUjrENL._SL480_.jpg",
     buy: "http://amzn.com/0060776390", 
     slug: "pinkalicious"
   },
@@ -3011,7 +3011,7 @@ export const books = [
     title: "Pink",
     description: "Lily loves all things pink—her boots, her bicycle, the food she eats—but she has no one to share them with. She tries to play with an assortment of animals but the snail is too slow, the chicken is too silly, and the goat eats her clothes. Then along comes a perfect friend, who is perfectly pink! The whimsical illustrations perfectly match the deceptively simple text, and children will love spotting Lily’s special friend on every spread. The result is a delightful exploration of misunderstanding, friendship, and obsession, without ever mentioning the word “pink”.",
     author: ["Janet A. Holmes", "Jonathan Bentley"],
-    img: "http://ecx.images-amazon.com/images/I/51r2Mg7-2WL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51r2Mg7-2WL._SL480_.jpg",
     buy: "http://amzn.com/1921894105", 
     slug: "pink"
   },
@@ -3019,15 +3019,16 @@ export const books = [
     title: "Goodnight, Goodnight Construction Site",
     description: "As the sun sets behind the big construction site, all the hardworking trucks get ready to say goodnight. One by one, Crane Truck, Cement Mixer, Dump Truck, Bulldozer, and Excavator finish their work and lie down to rest—so they’ll be ready for another day of rough and tough construction play! With irresistible artwork by best-selling illustrator Tom Lichtenheld and sweet, rhyming text, this book will have truck lovers of all ages begging for more.",
     author: ["Sherri Duskey Rinker", "Tom Lichtenheld"],
-    img: "http://d.gr-assets.com/books/1348749660l/9676990.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61c7hni0MdL._SL480_.jpg",
     buy: "http://amzn.com/0811877825", 
     slug: "goodnight-goodnight-construction-site"
   },
+
   {
     title: "Eli No!",
     description: "Eli is a sweet black dog with a knack for getting into huge messes. He makes his disastrous way through the house and the yard, at every turn disobeying his owners, who each time repeat with mounting exasperation, “Eli, no!” At the end of the day, there’s only one important question left to answer: Do his owners still love him? Of course, in this case the answer is “Eli, yes!” Eli and his antics are depicted in clean, graphic spreads with a fresh and modern palette. Readers will enjoy adding their voices to the call of “Eli, no!”",
     author: ["Katie Kirk"],
-    img: "http://ecx.images-amazon.com/images/I/41TjlTIIrDL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/41TjlTIIrDL._SL480_.jpg",
     buy: "http://amzn.com/0810989646", 
     slug: "eli-no"
   },
@@ -3035,7 +3036,7 @@ export const books = [
     title: "Alice In Wonderland (A Colors Primer)",
     description: "Follow the white rabbit down the hole and drink from the purple bottle to meet an orange cat, a blue caterpillar, a mad hatter with a brown hat, and the queen of red hearts in Alice In Wonderland (A Colors Primer). Kids will love Alison Oliver’s colorful and cheeky illustrations bringing life to Little Master Carroll’s beloved children’s classic.",
     author: ["Jennifer Adams"],
-    img: "http://ecx.images-amazon.com/images/I/51x1Ugu2CpL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51x1Ugu2CpL._SL480_.jpg",
     buy: "http://amzn.com/1423624777", 
     slug: "alice-in-wonderland-a-colors-primer"
   },
@@ -3043,7 +3044,7 @@ export const books = [
     title: "Tikki Tikki Tembo",
     description: "Three decades and more than one million copies later children still love hearing about the boy with the long name who fell down the well. Arlene Mosel and Blair Lent’s classic re-creation of an ancient Chinese folktale has hooked legions of children, teachers, and parents, who return, generation after generation, to learn about the danger of having such an honorable name as Tikki tikki tembo-no sa rembo-chari bari ruchi-pip peri pembo.",
     author: ["Arlene Mosel"],
-    img: "http://ecx.images-amazon.com/images/I/51bv-C2%2BhqL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51bv-C2%2BhqL._SL480_.jpg",
     buy: "http://amzn.com/0312367481", 
     slug: "tikki-tikki-tembo"
   },
@@ -3051,7 +3052,7 @@ export const books = [
     title: "Richard Scarry’s What to People Do All Day?",
     description: "Welcome to Richard Scarry’s Busytown! Home to Huckle Cat, Lowly Worm, Goldbug, and more, preschoolers can tour the town on an adventure of discovery and see what fire fighters, construction workers, doctors, pilots, train conductors, and farmers, do all day! And now, this unabridged version of the original classic includes a detailed character map on the end papers!",
     author: ["Richard Scarry"],
-    img: "http://ecx.images-amazon.com/images/I/61yL3D5RVBL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61yL3D5RVBL._SL480_.jpg",
     buy: "http://amzn.com/0553520598", 
     slug: "richard-scarry-s-what-to-people-do-all-day"
   },
@@ -3059,7 +3060,7 @@ export const books = [
     title: "Richard Scarry’s Cars and Trucks and Things That Go",
     description: "The station wagon, the tow truck, the garbage truck and the bulldozer. Every manner of machinery that moves is riotously depicted in this classic favorite. As the pig family head to the beach for a picnic, they encounter every vehicle known, from the forklift to the locomotive, and many vehicles that are not as common, from the pumpkin car to the broom-o-cycle. Each detailed spread provides tremendous opportunity to make up stories and describe situations. Will Officer Flossy catch Dingo? Will Rollo Rabbit catch his runaway steamroller? And with literally hundreds of things to look at, youngsters will spend hours trying to find Goldbug on every page.",
     author: ["Richard Scarry"],
-    img: "http://ecx.images-amazon.com/images/I/61Ks7h4QMbL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61Ks7h4QMbL._SL480_.jpg",
     buy: "http://amzn.com/0307157857", 
     slug: "richard-scarry-s-cars-and-trucks-and-things-that-go"
   },
@@ -3067,7 +3068,7 @@ export const books = [
     title: "Panique à la Chocolaterie!",
     description: "When George and the man with the yellow hat stop to shop at a chocolate factory store, George becomes curious about how chocolates are made. Though he begins to follow the factory tour, George is soon off on his own to investigate.",
     author: ["Margret and H.A. Rey"],
-    img: "http://ecx.images-amazon.com/images/I/5102QGJFHFL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/5102QGJFHFL._SL480_.jpg",
     buy: "http://amzn.com/2092501658", 
     slug: "panique-à-la-chocolaterie"
   },
@@ -3075,7 +3076,7 @@ export const books = [
     title: "The Odd One Out",
     description: "Which bird has caught the worm? Where is the queasy monkey? And can you spot the scaredy-cat? Never has a search-and-find game been so pleasing to the eye. Each spread features fun rhyming couplets, beautiful and complexly patterned artwork, and a hidden surprise.",
     author: ["Britta Teckentrup"],
-    img: "http://ecx.images-amazon.com/images/I/51CeOKIjwsL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51CeOKIjwsL._SL480_.jpg",
     buy: "http://amzn.com/0763671274", 
     slug: "the-odd-one-out"
   },
@@ -3083,7 +3084,7 @@ export const books = [
     title: "The Five Chinese Brothers",
     description: "The classic picture-story about five clever brothers, each with a different extraordinary ability, has been in print for over 50 years.",
     author: ["Claire Suchet Bishop", "Kurt Wiese"],
-    img: "http://ecx.images-amazon.com/images/I/51BUDvWdpQL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51BUDvWdpQL._SL480_.jpg",
     buy: "http://amzn.com/0698113578", 
     slug: "the-five-chinese-brothers"
   },
@@ -3091,7 +3092,7 @@ export const books = [
     title: "Creature ABC",
     description: "An elegant addition to any library, this deluxe alphabet book features 120 pages of Andrew Zuckerman’s breathtaking wildlife photography. From alligator to zebra, each featured animal boasts two striking studio portraits against a clean white background, offering a unique up-close view of the animal kingdom. Readers are treated to a helpful glossary at the end for extra information. From the sleek beauty of a smiling hippo to the powerful majesty of a roaring lion, this gorgeous ebook is both a stunning work of art and a ferociously fun way for young animal-lovers to learn their ABCs.",
     author: ["Andrew Zuckerman"],
-    img: "http://ecx.images-amazon.com/images/I/61ZKcdJeutL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/61ZKcdJeutL._SL480_.jpg",
     buy: "http://amzn.com/0811869784", 
     slug: "creature-abc"
   },
@@ -3099,7 +3100,7 @@ export const books = [
     title: "ABCs of Yoga for Kids",
     description: "The ABCs of Yoga for Kids uses the alphabet, rhyming vignettes, and colorful illustrations to introduce children to yoga in a kid-friendly way. Each of the 56 different poses featured in the book delightfully promote flexibility, strength, and coordination while encouraging children to incorporate healthy activity into their daily lives.",
     author: ["Teresa Power"],
-    img: "http://ecx.images-amazon.com/images/I/71W8BUMNLML._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/71W8BUMNLML._SL480_.jpg",
     buy: "http://amzn.com/0982258704", 
     slug: "abcs-of-yoga-for-kids"
   },
@@ -3107,7 +3108,7 @@ export const books = [
     title: "This is the Way to the Moon",
     description: "In This is the Way to the Moon, first published in 1963, Sasek rockets readers to Cape Canaveral—the space capital of the world, a science-fiction-turned-fact spot on the Florida coast—with a nostalgic look at the electronic brains that put our man up into space and brought him down again. Also included are the updated statistics about the lunar landing and a mini history of NASA’s space program.",
     author: ["Miroslav Sasek"],
-    img: "http://ecx.images-amazon.com/images/I/51tDzBk2ZDL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51tDzBk2ZDL._SL480_.jpg",
     buy: "http://amzn.com/0789318423", 
     slug: "this-is-the-way-to-the-moon"
   },
@@ -3115,7 +3116,7 @@ export const books = [
     title: "This is San Francisco",
     description: "Let the rumbling cable car tell you the story! And what a story: From the crookedest street in the world to the Peking ducks in Chinatown, San Francisco is easily one of the world’s most enchanting cities. Illustrator Miroslav Sasek captures both the breathtaking landscape and the cosmopolitan flavor of the City by the Bay in This is San Francisco. First published in 1962, Sasek’s jaunty, colorful illustrations will still dazzle kids and adults alike.",
     author: ["Miroslav Sasek"],
-    img: "http://ecx.images-amazon.com/images/I/81ZVtDsHoSL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/81ZVtDsHoSL._SL480_.jpg",
     buy: "http://amzn.com/0789309629", 
     slug: "this-is-san-francisco"
   },
@@ -3123,7 +3124,7 @@ export const books = [
     title: "Seasons",
     description: "In this graphically stunning picture book, Blexbolex explores the cyclical nature of time by looking at the seasons. Using objects, landscapes, activities, and different types of people that are associated with each season (such as a skier, a swimmer, a roasted chestnut seller), Blexbolex evokes the sense of permanency given to life by its cyclical nature, despite the fact that time is always passing. The purpose of this book is to encourage observation of the world around us and lead the reader to form all sorts of logical and imaginative associations having to do with the seasons, the cycles of life, and time.",
     author: ["Blexbolex"],
-    img: "http://ecx.images-amazon.com/images/I/51xIniVxYsL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51xIniVxYsL._SL480_.jpg",
     buy: "http://amzn.com/1592700950", 
     slug: "seasons"
   },
@@ -3131,7 +3132,7 @@ export const books = [
     title: "People",
     description: "Mother and father, dancers and warriors, gardener and farmer, hypnotist and genie…All sorts of people appear in People, linked together in ways that begin to emerge page after page. Real, mythic, and imaginary types inhabit this extraordinary, gorgeously rendered world, referring to each other through form and function. Like Blexbolex’s earlier book Seasons, this is a conceptual book, where the connections between the images are both clear and subtle.",
     author: ["Blexbolex"],
-    img: "http://ecx.images-amazon.com/images/I/41Vdkx7nCTL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/41Vdkx7nCTL._SL480_.jpg",
     buy: "http://amzn.com/1592701108", 
     slug: "people"
   },
@@ -3139,7 +3140,7 @@ export const books = [
     title: "Pantone: Colors",
     description: "This artful first colors book introduces children to 9 basic colors and 20 shades of each. Readers will immerse themselves in the concept that one color name actually refers to a variety of dark, light, and in-between tones. Young children will begin by simply naming the colors of the monochromatic images and will soon grow to select their favorite and least-favorite shades. Pantone: Colors is a visually pleasing way to expand the colors conversation and develop a child’s sense of visual discrimination.",
     author: ["Pantone"],
-    img: "http://ecx.images-amazon.com/images/I/41Ua0hzQFXL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/41Ua0hzQFXL._SL480_.jpg",
     buy: "http://amzn.com/1419701800", 
     slug: "pantone-colors"
   },
@@ -3147,8 +3148,8 @@ export const books = [
     title: "Everybody Bonjours!",
     description: "Shop a fancy France-y store. Eat a pretty petit four. Discover! Sightsee! Explore! On this fun and friendly tour, everybody says “Bonjour!” Whether at a soccer stadium (“players scoring”), a crêpe stand (“batter pouring”), or strolling the Champs d’Elysee (where folks “bonjour” in every store), a little girl and her family are welcomed everywhere with the signature French greeting. Jump into these pages and enjoy the trip! Through lilting words and lively images, Everybody Bonjours welcomes young reader-travelers to a Paris that isn’t just for artists, grown-ups, and dreamers—it’s for kids!",
     author: ["Leslie Kimmelman"],
-    img: "http://ecx.images-amazon.com/images/I/51Z58DyTMJL._SL480_.jpg",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51Z58DyTMJL._SL480_.jpg",
     buy: "http://amzn.com/0553507826", 
     slug: "everybody-bonjours"
-  },
+  }
 ]
