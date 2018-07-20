@@ -5,7 +5,7 @@
       <input type="text" placeholder="Search…" v-model="search"/>
       <button @click="clearSearch"><Icon name="cancel" :size="14"/></button>
     </section>
-    <ul v-if="results.length > 0">
+    <ul v-if="search">
       <Book v-for="book in results" :key="book.title" :authors="book.author" :img="book.img" :slug="book.slug" :title="book.title" @click.native="clearSearch" />
     </ul>
   </section>
@@ -20,12 +20,12 @@ export default {
   computed: {
     books() { return this.$store.state.books },
     results() {
+      const array = this.books
+      let search = this.search.toLowerCase()
       if(this.search) {
-        let array = this.books
-        let search = this.search
         return _.filter(array, book => Object.keys(book).some(key => book[key].toString().toLowerCase().includes(search)))
       }
-      else { return '' }
+      else { return [] }
     }
   },
   data(){ return {

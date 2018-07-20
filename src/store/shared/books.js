@@ -1,4 +1,76 @@
 export const books = [
+  // {
+  //   title: "#",
+  //   description: "#",
+  //   author: ["#"],
+  //   img: "https://images-na.ssl-images-amazon.com/images/I/#._SL480_.jpg",
+  //   buy: "http://a.co/#", 
+  //   slug: "#"
+  // },
+  {
+    title: "The Day the Crayons Came Home",
+    description: "I’m not sure what it is about this kid Duncan, but his crayons sure are a colorful bunch of characters! Having soothed the hurt feelings of one group who threatened to quit, Duncan now faces a whole new group of crayons asking to be rescued. From Maroon Crayon, who was lost beneath the sofa cushions and then broken in two after Dad sat on him; to poor Turquoise, whose head is now stuck to one of Duncan’s stinky socks after they both ended up in the dryer together; to Pea Green, who knows darn well that no kid likes peas and who ran away—each and every crayon has a woeful tale to tell and a plea to be brought home to the crayon box.",
+    author: ["Drew Daywalt", "Oliver Jeffers"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/51p5uuKdGZL._SL480_.jpg",
+    buy: "http://a.co/9s3u7Hp", 
+    slug: "the-day-the-crayons-came-home"
+  },
+  {
+    title: "A Place to Read",
+    description: "When I want to read, what I really, really need, is a place to sit…just for a bit. Somewhere comfy, NOT itchy-fuzzy, somewhere quiet, NOT buzz-buzzy.",
+    author: ["Leigh Hodgkinson"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61lM5FRjP7L._SL480_.jpg",
+    buy: "http://a.co/80T4DJp", 
+    slug: "a-place-to-read"
+  },
+  {
+    title: "Life",
+    description: "Life begins small, then grows… There are so many wonderful things about life, both in good times and in times of struggle. Through the eyes of the world’s animals—including elephants, monkeys, whales, and more.",
+    author: ["Cyntia Rylant", "Brendan Wenzel"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61zNx5Tv8TL._SL480_.jpg",
+    buy: "http://a.co/74fB1VI", 
+    slug: "life"
+  },
+  {
+    title: "This Beautiful Day",
+    description: "Why spend a rainy day inside? As three children embrace a grey day, they seems to beckon the bright as they jump, splash, and dance outside, chasing the rain away. The day’s palette shifts from greys to a hint of blue, then more blue. Then green! Then yellow! Until the day is a technicolor extravaganza that would make Mary Poppins proud. A joyous homage to the power of a positive attitude.",
+    author: ["Richard Jackson", "Suzy Lee"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/51s9hZdUo4L._SL480_.jpg",
+    buy: "http://a.co/5TAoJAA", 
+    slug: "this-beautiful-day"
+  },
+  {
+    title: "Morris Mole",
+    description: "Meet Morris Mole—he has always been a little bit different. When the moles are running low on food, it’s up to clever Morris to save the day. With a little help from an unexpected friend and a lot of digging, Morris learns that even the smallest creatures can do big things.",
+    author: ["Dan Yaccarino"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61BxFHDLw1L._SL480_.jpg",
+    buy: "http://a.co/63gkElS", 
+    slug: "morris-mole"
+  },
+  {
+    title: "Before & After",
+    description: "Graphic artist Jean Jullien insightfully and comically depicts a set of clever and surprising before-and-after two-frame narratives, each progressed by a page turn. From pale skin to sunburned skin, dirty to clean, long hair to short hair (to long again).",
+    author: ["Jean Jullien"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/51OgL4Q2KtL._SL480_.jpg",
+    buy: "http://a.co/1zMbP43", 
+    slug: "before-and-after"
+  },
+  {
+    title: "Town Is by the Sea",
+    description: "A young boy wakes up to the sound of the sea, visits his grandfather’s grave after lunch and comes home to a simple family dinner, but all the while his mind strays to his father digging for coal deep down under the sea.",
+    author: ["Joanne Schwartz", "Sydney Smith"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/61cOLYxwe6L._SL480_.jpg",
+    buy: "http://a.co/2ui0vje", 
+    slug: "town-is-by-the-sea"
+  },
+  {
+    title: "Henry and the Chalk Dragon",
+    description: "In the town of Squashbuckle, just about anything can happen, and when Henry Penwhistle draws a mighty Chalk Dragon on his door, the dragon does what Henry least expects—it runs away. Now Henry’s art is out in the world for everyone to see, and it’s causing trouble for him and his schoolmates Oscar and Jade. If they don’t stop it, the entire town could be doomed! To vanquish the threat of a rampaging Chalk Dragon, Sir Henry Penwhistle, Knight of La Muncha Elementary School, is going to have to do more than just catch his art—he’s going to have to let his imagination run wild. And THAT takes bravery.",
+    author: ["Jennifer Trafton", "Benjamin Schipper"],
+    img: "https://images-na.ssl-images-amazon.com/images/I/51pagMzujnL._SL480_.jpg",
+    buy: "http://a.co/hvHPXne", 
+    slug: "henry-and-the-chalk-dragon"
+  },
   {
     title: "Nightlights",
     description: "Every night, tiny stars appear out of the darkness in little Sandy’s bedroom. She catches them and creates wonderful creatures to play with until she falls asleep, and in the morning brings them back to life in the whimsical drawings that cover her room. One day, Morpie, a mysterious pale girl, appears at school. And she knows all about Sandy’s drawings...",
