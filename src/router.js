@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from './views/About.vue'
-import Author from './views/Author.vue'
-import Book from './views/Book.vue'
-import Home from './views/Home.vue'
-import Error from './views/Error.vue'
+const About = () => import('@/views/About')
+const Author = () => import('@/views/Author')
+const Book = () => import('@/views/Book')
+const Error = () => import('@/views/Error')
+const Home = () => import('@/views/Home')
 
 Vue.use(Router)
 
