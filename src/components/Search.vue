@@ -1,10 +1,10 @@
 <template>
   <section class="search">
-    <section class="searchInput">
+    <label for="search" class="searchInput">
       <Icon name="search" :size="16"/>
-      <input type="text" placeholder="Search…" v-model="search"/>
-      <button @click="clearSearch"><Icon name="cancel" :size="14"/></button>
-    </section>
+      <input id="search" type="text" placeholder="Search…" v-model="search"/>
+      <button @click="clearSearch" title="Clear search results"><Icon name="cancel" :size="14"/></button>
+    </label>
     <ul v-if="search">
       <Book v-for="book in results" :key="book.title" :authors="book.author" :img="book.img" :slug="book.slug" :title="book.title" @click.native="clearSearch" />
     </ul>
