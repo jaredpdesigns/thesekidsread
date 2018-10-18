@@ -4,7 +4,7 @@
       :title="'Great books by ' + author + ' | These Kids Read'"
       :description="'A collection of great books by ' + author"
       :keywords="author"
-      :url="'thesekidsread.com/author/' + authorSlug"
+      :url="'https://thesekidsread.com/author/' + authorSlug"
     />
     <header>
       <h1 class="author">Great books by <span class="author__name">{{ author }}</span></h1>
@@ -17,32 +17,40 @@
   </main>
 </template>
 <script>
-import {_} from 'vue-underscore'
-import Book from '@/components/BookHome.vue'
+import { _ } from "vue-underscore";
+import Book from "@/components/BookHome.vue";
 export default {
-  name: 'Author',
+  name: "Author",
   components: { Book },
   computed: {
-    author() { return this.authorFull },
-    books() { return this.$store.state.books },
+    author() {
+      return this.authorFull;
+    },
+    books() {
+      return this.$store.state.books;
+    },
     filtered() {
-      let array = this.books
-      let search = this.authorFull
-      return _.filter(array, book => { return _.flatten(book.author).indexOf(search) !== -1 })
+      let array = this.books;
+      let search = this.authorFull;
+      return _.filter(array, book => {
+        return _.flatten(book.author).indexOf(search) !== -1;
+      });
     }
   },
   props: {
-    authorSlug: '',
-    authorFull: ''
+    authorSlug: "",
+    authorFull: ""
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 header {
   padding: rem(32);
   text-align: center;
-  h1 { font-weight: normal; }
+  h1 {
+    font-weight: normal;
+  }
 }
 .books {
   align-items: flex-start;

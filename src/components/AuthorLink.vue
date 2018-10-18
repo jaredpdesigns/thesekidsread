@@ -5,28 +5,28 @@
 </template>
 <script>
 export default {
-  name: 'AuthorLink',
+  name: "AuthorLink",
   methods: {
     slugify(thing) {
-      let slug
-      let lower = thing.toLowerCase()
-      slug = lower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, 'e')
-      slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, 'a')
-      slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, 'o')
-      slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, 'u')
-      slug = slug.replace(/đ/gi, 'd')
-      slug = slug.replace(/\s*$/g, '')
-      slug = slug.replace(/\s+/g, '-')
-      return slug
+      let slug;
+      let lower = thing.toLowerCase();
+      slug = lower.replace(/e|é|è|ẽ|ẻ|ẹ|ê|ế|ề|ễ|ể|ệ/gi, "e");
+      slug = slug.replace(/a|á|à|ã|ả|ạ|ă|ắ|ằ|ẵ|ẳ|ặ|â|ấ|ầ|ẫ|ẩ|ậ/gi, "a");
+      slug = slug.replace(/o|ó|ò|õ|ỏ|ọ|ô|ố|ồ|ỗ|ổ|ộ|ơ|ớ|ờ|ỡ|ở|ợ/gi, "o");
+      slug = slug.replace(/u|ú|ù|ũ|ủ|ụ|ư|ứ|ừ|ữ|ử|ự/gi, "u");
+      slug = slug.replace(/đ/gi, "d");
+      slug = slug.replace(/\s*$/g, "");
+      slug = slug.replace(/\s+/g, "-");
+      return slug;
     }
   },
   props: {
-    author: ''
+    author: ""
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .book {
   align-items: flex-start;
   display: flex;
@@ -44,7 +44,9 @@ export default {
   }
   figure {
     text-align: center;
-    img { max-height: rem(540); }
+    img {
+      max-height: rem(540);
+    }
   }
   figcaption {
     align-items: center;
@@ -55,14 +57,20 @@ export default {
       max-width: rem(640);
       width: 100%;
     }
-    > * + * { margin-top: rem(24); }
+    > * + * {
+      margin-top: rem(24);
+    }
   }
-  .title:before { margin-left: rem(-12); }
+  .title:before {
+    margin-left: rem(-12);
+  }
   .author {
     font-size: rem(24);
     line-height: rem(32);
     margin-top: rem(8);
   }
-  .button .icon { margin-left: rem(8); }
+  .button .icon {
+    margin-left: rem(8);
+  }
 }
 </style>

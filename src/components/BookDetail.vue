@@ -24,28 +24,32 @@
   </section>
 </template>
 <script>
-import AuthorLink from '@/components/AuthorLink.vue'
-import Icon from '@/components/Icon.vue'
+import AuthorLink from "@/components/AuthorLink.vue";
+import Icon from "@/components/Icon.vue";
 export default {
-  name: 'BookDetail',
+  name: "BookDetail",
   components: { AuthorLink, Icon },
-  data() { return {
-    loaded: false
-  }},
+  data() {
+    return {
+      loaded: false
+    };
+  },
   methods: {
-    onLoaded() { this.loaded = true }
+    onLoaded() {
+      this.loaded = true;
+    }
   },
   props: {
-    authors: '',
-    buy: '',
-    description: '',
-    img: '',
-    title: ''
+    authors: "",
+    buy: "",
+    description: "",
+    img: "",
+    title: ""
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .book {
   align-items: flex-start;
   display: flex;
@@ -82,14 +86,20 @@ export default {
       max-width: rem(640);
       width: 100%;
     }
-    > * + * { margin-top: rem(24); }
+    > * + * {
+      margin-top: rem(24);
+    }
   }
-  .title:before { margin-left: rem(-12); }
+  .title:before {
+    margin-left: rem(-12);
+  }
   .author {
     font-size: rem(24);
     line-height: rem(32);
     margin-top: rem(8);
   }
-  .button .icon { margin-left: rem(8); }
+  .button .icon {
+    margin-left: rem(8);
+  }
 }
 </style>

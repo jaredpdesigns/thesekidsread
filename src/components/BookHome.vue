@@ -15,45 +15,53 @@
   </section>
 </template>
 <script>
-import Icon from '@/components/Icon.vue'
+import Icon from "@/components/Icon.vue";
 export default {
-  name: 'BookHome',
+  name: "BookHome",
   components: { Icon },
-  data() { return {
-    loaded: false
-  }},
+  data() {
+    return {
+      loaded: false
+    };
+  },
   methods: {
-    onLoaded() { this.loaded = true },
+    onLoaded() {
+      this.loaded = true;
+    },
     scale(thing) {
-      if(thing.includes('SL480')){
-        return thing.replace('SL480','SL360')
-      }
-      else if(thing.includes('w=480')){
-        return thing.replace('w=480','w=360')
+      if (thing.includes("SL480")) {
+        return thing.replace("SL480", "SL360");
+      } else if (thing.includes("w=480")) {
+        return thing.replace("w=480", "w=360");
       }
     }
   },
   props: {
-    authors: '',
-    img: '',
-    slug: '',
-    title: ''
+    authors: "",
+    img: "",
+    slug: "",
+    title: ""
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .book a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  &:focus, &:hover {
-    figure { transform: translateY(rem(-8)); }
+  &:focus,
+  &:hover {
+    figure {
+      transform: translateY(rem(-8));
+    }
   }
   figure {
     @include smooth;
     color: var(--base-light);
-    img { max-height: rem(240); }
+    img {
+      max-height: rem(240);
+    }
   }
   figcaption {
     padding: rem(16);

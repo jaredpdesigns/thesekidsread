@@ -15,45 +15,51 @@
   </li>
 </template>
 <script>
-import Icon from '@/components/Icon.vue'
+import Icon from "@/components/Icon.vue";
 export default {
-  name: 'BookSearch',
+  name: "BookSearch",
   components: { Icon },
-  data() { return {
-    loaded: false
-  }},
+  data() {
+    return {
+      loaded: false
+    };
+  },
   methods: {
-    onLoaded() { this.loaded = true },
+    onLoaded() {
+      this.loaded = true;
+    },
     scale(thing) {
-      if(thing.includes('SL480')){
-        return thing.replace('SL480','SL96')
-      }
-      else if(thing.includes('w=480')){
-        return thing.replace('w=480','w=96')
+      if (thing.includes("SL480")) {
+        return thing.replace("SL480", "SL96");
+      } else if (thing.includes("w=480")) {
+        return thing.replace("w=480", "w=96");
       }
     }
   },
   props: {
-    authors: '',
-    img: '',
-    slug: '',
-    title: ''
+    authors: "",
+    img: "",
+    slug: "",
+    title: ""
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 .book {
   border-bottom: rem(1) solid var(--base-light);
   list-style: none;
-  &:last-child { border-bottom: none; }
+  &:last-child {
+    border-bottom: none;
+  }
   a {
     @include smooth;
     align-items: center;
     display: flex;
     height: rem(64);
     width: 100%;
-    &:focus, &:hover {
+    &:focus,
+    &:hover {
       background-color: var(--highlight-light);
     }
   }
@@ -76,7 +82,9 @@ export default {
   .title {
     font-size: rem(16);
     line-height: rem(16);
-    &:before { margin-left: rem(-6); }
+    &:before {
+      margin-left: rem(-6);
+    }
   }
   .author {
     font-size: rem(14);

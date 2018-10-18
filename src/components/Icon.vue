@@ -7,21 +7,23 @@
 </template>
 <script>
 export default {
-  name: 'Icon',
+  name: "Icon",
   computed: {
-    icons() { return this.$store.state.icons },
+    icons() {
+      return this.$store.state.icons;
+    },
     filtered() {
-      let name = this.name
+      let name = this.name;
       return this.icons.filter(function(icon) {
-        return icon.name === name
-      })
+        return icon.name === name;
+      });
     }
   },
   props: {
     name: { default: null },
     size: { default: 24, type: Number }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .icon {

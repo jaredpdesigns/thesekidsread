@@ -4,8 +4,8 @@
       title="These Kids Read"
       description="We read great books together"
       keywords="these kids read, jared pendergraft, kids books, great book for kids"
-      image="http://thesekidsread.com/img/social.jpg"
-      url="thesekidsread.com"
+      image="https://thesekidsread.com/img/social.jpg"
+      url="https://thesekidsread.com"
     />
     <article v-for="book in books" :key="book.title">
       <Book :authors="book.author" :img="book.img" :slug="book.slug" :title="book.title" />
@@ -13,17 +13,19 @@
   </main>
 </template>
 <script>
-import Book from '@/components/BookHome.vue'
+import Book from "@/components/BookHome.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: { Book },
   computed: {
-    books() { return this.$store.state.books }
+    books() {
+      return this.$store.state.books;
+    }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 main {
   align-items: flex-start;
   display: flex;

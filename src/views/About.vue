@@ -4,8 +4,8 @@
       title="About Us | These Kids Read"
       description="Learn more about the family behind the site"
       keywords="these kids read, jared pendergraft, kids books, great book for kids"
-      image="http://thesekidsread.com/img/social.jpg"
-      url="thesekidsread.com/about"
+      image="https://thesekidsread.com/img/social.jpg"
+      url="https://thesekidsread.com/about"
     />
     <article>
       <header>
@@ -29,17 +29,17 @@
   </main>
 </template>
 <script>
-import AuthorLink from '@/components/AuthorLink.vue'
+import AuthorLink from "@/components/AuthorLink.vue";
 export default {
-  name: 'About',
-  components: {AuthorLink}
-}
+  name: "About",
+  components: { AuthorLink }
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 article header {
   align-items: center;
-  background-image: url('../assets/img/about.jpg');
+  background-image: url("../assets/img/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--contrast);
@@ -49,14 +49,20 @@ article header {
   min-height: calc(100vh - 9.5em);
   padding: rem(32);
   position: relative;
-  text-shadow: 0 0.0625rem 0.125rem rgba(black,0.5);
-  @include breakpoint(xs-only) { background-position: 40% center; }
-  @include breakpoint(xsl) { min-height: calc(100vh - 7em); }
-  @include breakpoint(m) { min-height: calc(100vh - 4.5em); }
+  text-shadow: 0 0.0625rem 0.125rem rgba(black, 0.5);
+  @include breakpoint(xs-only) {
+    background-position: 40% center;
+  }
+  @include breakpoint(xsl) {
+    min-height: calc(100vh - 7em);
+  }
+  @include breakpoint(m) {
+    min-height: calc(100vh - 4.5em);
+  }
   &:before {
     background-color: var(--highlight);
     bottom: 0;
-    content: '';
+    content: "";
     left: 0;
     opacity: 0.625;
     position: absolute;
@@ -68,8 +74,12 @@ article header {
     margin-left: auto;
     margin-right: auto;
     max-width: rem(960);
-    h1 { text-align: center; }
-    > * + * { margin-top: rem(32); }
+    h1 {
+      text-align: center;
+    }
+    > * + * {
+      margin-top: rem(32);
+    }
   }
 }
 
@@ -79,8 +89,12 @@ article section {
     margin-left: auto;
     margin-right: auto;
     max-width: rem(960);
-    + * { margin-top: rem(16); }
-    + h3 { margin-top: rem(32); }
+    + * {
+      margin-top: rem(16);
+    }
+    + h3 {
+      margin-top: rem(32);
+    }
   }
 }
 h3 {
@@ -89,6 +103,9 @@ h3 {
 p a {
   border-bottom: rem(1) solid;
   color: var(--highlight);
-  &:focus, &:hover { color: var(--base-mid) }
+  &:focus,
+  &:hover {
+    color: var(--base-mid);
+  }
 }
 </style>

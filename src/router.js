@@ -1,43 +1,43 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-const About = () => import('@/views/About')
-const Author = () => import('@/views/Author')
-const Book = () => import('@/views/Book')
-const Error = () => import('@/views/Error')
-const Home = () => import('@/views/Home')
+import Vue from "vue";
+import Router from "vue-router";
+const About = () => import("@/views/About");
+const Author = () => import("@/views/Author");
+const Book = () => import("@/views/Book");
+const Error = () => import("@/views/Error");
+const Home = () => import("@/views/Home");
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '*',
+      path: "*",
       component: Error
     },
     {
-      path: '/',
-      name: 'home',
+      path: "/",
+      name: "home",
       component: Home
     },
     {
-      path: '/books/:slug',
-      name: 'book',
+      path: "/books/:slug",
+      name: "book",
       component: Book
     },
     {
-      path: '/about',
-      name: 'about',
+      path: "/about",
+      name: "about",
       component: About
     },
     {
-      path: '/author/:authorSlug',
-      name: 'author',
+      path: "/author/:authorSlug",
+      name: "author",
       component: Author,
       props: true
-    },
+    }
   ],
-  scrollBehavior (to, from, savedPosition) {
-    return { x: 0, y: 0 }
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
   }
-})
+});

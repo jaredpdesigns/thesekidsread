@@ -24,30 +24,32 @@
   </div>
 </template>
 <script>
-import Icon from '@/components/Icon.vue'
-import Search from '@/components/Search.vue'
+import Icon from "@/components/Icon.vue";
+import Search from "@/components/Search.vue";
 export default {
   components: { Icon, Search }
-}
+};
 </script>
 <style lang="scss">
 @import url("https://use.typekit.net/fbk7qer.css");
-@import 'assets/css/variables';
+@import "assets/css/variables";
 
 :root {
   --hue: 175;
-  --base: hsl(var(--hue),4%,12%);
-  --base-mid: hsl(var(--hue),4%,50%);
-  --base-upper: hsl(var(--hue),4%,75%);
-  --base-light: hsl(var(--hue),4%,88%);
-  --bg: hsl(var(--hue),4%,98%);
+  --base: hsl(var(--hue), 4%, 12%);
+  --base-mid: hsl(var(--hue), 4%, 50%);
+  --base-upper: hsl(var(--hue), 4%, 75%);
+  --base-light: hsl(var(--hue), 4%, 88%);
+  --bg: hsl(var(--hue), 4%, 98%);
   --contrast: white;
-  --highlight: hsl(var(--hue),100%,38%);
-  --highlight-mid: hsl(var(--hue),50%,64%);
-  --highlight-light: hsl(var(--hue),50%,96%);
+  --highlight: hsl(var(--hue), 100%, 38%);
+  --highlight-mid: hsl(var(--hue), 50%, 64%);
+  --highlight-light: hsl(var(--hue), 50%, 96%);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -74,13 +76,18 @@ figure {
   display: inline-flex;
   justify-content: center;
   img {
-    height: auto; 
+    height: auto;
     max-height: 100%;
     max-width: 100%;
   }
 }
 
-h1, h2, h3, h4 { font-family: "proxima-soft", sans-serif; }
+h1,
+h2,
+h3,
+h4 {
+  font-family: "proxima-soft", sans-serif;
+}
 
 h1 {
   font-size: rem(30);
@@ -97,18 +104,25 @@ h3 {
   line-height: rem(24);
 }
 
-h4, p {
+h4,
+p {
   font-size: rem(18);
   line-height: rem(32);
 }
-nav a, input, button {
+nav a,
+input,
+button {
   font-size: rem(16);
   line-height: rem(24);
 }
 input {
   appearance: none;
-  &::placeholder { color: var(--base-upper); }
-  &:focus::placeholder { color: var(--base-mid); }
+  &::placeholder {
+    color: var(--base-upper);
+  }
+  &:focus::placeholder {
+    color: var(--base-mid);
+  }
 }
 button {
   appearance: none;
@@ -119,13 +133,23 @@ a {
   @include smooth;
   color: inherit;
   text-decoration: none;
-  &:focus, &:hover { color: var(--highlight); }
+  &:focus,
+  &:hover {
+    color: var(--highlight);
+  }
 }
 .title {
   color: var(--highlight);
-  &:after, &:before { opacity: 0.375; }
-  &:after { content: "”" }
-  &:before { content: "“" }
+  &:after,
+  &:before {
+    opacity: 0.375;
+  }
+  &:after {
+    content: "”";
+  }
+  &:before {
+    content: "“";
+  }
 }
 .author {
   color: var(--base-mid);
@@ -135,7 +159,7 @@ a {
     font-weight: 600;
   }
   &__name + *:before {
-    content: ' & ';
+    content: " & ";
     font-weight: normal;
   }
 }
@@ -150,8 +174,12 @@ nav a {
 }
 main {
   margin-top: rem(154);
-  @include breakpoint(xsl) { margin-top: rem(112); }
-  @include breakpoint(m) { margin-top: rem(72); }
+  @include breakpoint(xsl) {
+    margin-top: rem(112);
+  }
+  @include breakpoint(m) {
+    margin-top: rem(72);
+  }
 }
 .button {
   @include smooth;
@@ -161,22 +189,25 @@ main {
   color: var(--contrast);
   display: inline-flex;
   padding: rem(8) rem(16);
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     background-color: var(--highlight-mid);
     color: var(--contrast);
   }
 }
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease-in, transform 0.375s ease-in;
 }
 
-.fade-enter, .fade-leave-to  {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
   transform: translateY(rem(-4));
 }
 </style>
 <style lang="scss" scoped>
-@import 'assets/css/variables';
+@import "assets/css/variables";
 header[role="main"] {
   align-items: center;
   background-color: var(--contrast);
@@ -196,7 +227,9 @@ header[role="main"] {
     display: inline-flex;
     justify-content: center;
     width: 100%;
-    @include breakpoint(xsl) { width: auto; }
+    @include breakpoint(xsl) {
+      width: auto;
+    }
     &:focus {
       transform: scale(1.03125);
     }
@@ -204,7 +237,9 @@ header[role="main"] {
   nav {
     align-items: center;
     display: inline-flex;
-    @include breakpoint(xs-only) { margin-top: rem(16); }
+    @include breakpoint(xs-only) {
+      margin-top: rem(16);
+    }
   }
   nav a {
     align-items: center;
@@ -215,7 +250,9 @@ header[role="main"] {
       opacity: 0.75;
     }
     &:focus &:hover {
-      .icon { opacity: 1; }
+      .icon {
+        opacity: 1;
+      }
     }
   }
 }

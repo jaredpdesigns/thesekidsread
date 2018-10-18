@@ -5,7 +5,7 @@
       :description="'“' + book.title + '” is a great book by ' + authorsJoined"
       :keywords="book.title + ',' + book.author"
       :image="book.img"
-      :url="'thesekidsread.com/books/' + book.slug"
+      :url="'https://thesekidsread.com/books/' + book.slug"
     />
     <Book v-for="book in filtered" :key="book.title" :authors="book.author" :buy="book.buy" :description="book.description" :img="book.img" :title="book.title"/>
     <aside v-if="related.length > 0">
@@ -21,50 +21,64 @@
   </main>
 </template>
 <script>
-import {_} from 'vue-underscore'
-import Book from '@/components/BookDetail.vue'
-import Icon from '@/components/Icon.vue'
-import Related from '@/components/BookRelated.vue'
+import { _ } from "vue-underscore";
+import Book from "@/components/BookDetail.vue";
+import Icon from "@/components/Icon.vue";
+import Related from "@/components/BookRelated.vue";
 export default {
-  name: 'Detail',
+  name: "Detail",
   components: { Book, Icon, Related },
   computed: {
-    authors() { return _.flatten(_.pluck(this.filtered,'author')) },
-    authorsJoined() { return this.authors.join(' & ') },
-    books() { return this.$store.state.books },
+    authors() {
+      return _.flatten(_.pluck(this.filtered, "author"));
+    },
+    authorsJoined() {
+      return this.authors.join(" & ");
+    },
+    books() {
+      return this.$store.state.books;
+    },
     filtered() {
-      let array = this.books
-      let slug = this.$route.params.slug
-      return _.filter(array, { slug: slug })
+      let array = this.books;
+      let slug = this.$route.params.slug;
+      return _.filter(array, { slug: slug });
     },
     related() {
-      let array = this.books
-      let search = this.authors
-      let reduced = _.filter(array, book => { return _.contains(search,book.author[0]) })
-      return _.difference(reduced, this.filtered)
+      let array = this.books;
+      let search = this.authors;
+      let reduced = _.filter(array, book => {
+        return _.contains(search, book.author[0]);
+      });
+      return _.difference(reduced, this.filtered);
     },
     bookIndex() {
-      let array = this.books
-      let slug = this.$route.params.slug
-      return _.findIndex(array,{slug: slug})
+      let array = this.books;
+      let slug = this.$route.params.slug;
+      return _.findIndex(array, { slug: slug });
     },
     bookNext() {
-      let array = this.books
-      let current = (this.bookIndex) + 1
-      if(current < array.length ) { return array[current].slug }
-      else { return '' }
+      let array = this.books;
+      let current = this.bookIndex + 1;
+      if (current < array.length) {
+        return array[current].slug;
+      } else {
+        return "";
+      }
     },
     bookPrev() {
-      let array = this.books
-      let current = (this.bookIndex) - 1
-      if(current > -1 ) { return array[current].slug }
-      else { return '' }
+      let array = this.books;
+      let current = this.bookIndex - 1;
+      if (current > -1) {
+        return array[current].slug;
+      } else {
+        return "";
+      }
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
-@import '../assets/css/variables';
+@import "../assets/css/variables";
 aside {
   background-color: var(--contrast);
   padding: rem(16);
@@ -85,7 +99,9 @@ aside {
     flex-shrink: 0;
     flex-basis: 100%;
     @include breakpoint(xs) {
-      + * { margin-top: rem(32); }
+      + * {
+        margin-top: rem(32);
+      }
     }
     @include breakpoint(s) {
       flex-basis: 50%;
@@ -112,7 +128,7 @@ nav[role="pagination"] {
     background-color: var(--contrast);
     border: rem(1) solid var(--base-light);
     border-radius: 50%;
-    box-shadow: 0 rem(8) rem(16) rem(-8) rgba(black,0.25);
+    box-shadow: 0 rem(8) rem(16) rem(-8) rgba(black, 0.25);
     color: var(--base-upper);
     display: inline-flex;
     height: rem(48);
@@ -123,7 +139,8 @@ nav[role="pagination"] {
       opacity: 0;
       visiblity: none;
     }
-    &:not(.empty):focus, &:not(.empty):hover {
+    &:not(.empty):focus,
+    &:not(.empty):hover {
       color: var(--highlight);
       transform: scale(1.03125);
     }
