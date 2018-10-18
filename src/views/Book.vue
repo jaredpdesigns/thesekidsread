@@ -137,7 +137,7 @@ nav[role="pagination"] {
     &.empty {
       cursor: none;
       opacity: 0;
-      visiblity: none;
+      visibility: hidden;
     }
     &:not(.empty):focus,
     &:not(.empty):hover {

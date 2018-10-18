@@ -9,7 +9,7 @@
       </figure>
       <figcaption>
         <h3 class="title">{{ title }}</h3>
-        <p class="author">By <span class="author__name" v-for="author in authors">{{ author }}</span></p>
+        <p class="author">By <span class="author__name" v-for="author in authors" v-bind:key="author">{{ author }}</span></p>
       </figcaption>
     </router-link>
   </li>
