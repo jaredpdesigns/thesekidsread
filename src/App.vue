@@ -207,7 +207,6 @@ main {
 }
 </style>
 <style lang="scss" scoped>
-@import "assets/css/variables";
 header[role="main"] {
   align-items: center;
   background-color: var(--contrast);

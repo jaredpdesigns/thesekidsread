@@ -25,7 +25,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 article {
   align-items: center;
   display: flex;

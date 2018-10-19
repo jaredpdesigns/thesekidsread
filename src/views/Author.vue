@@ -44,7 +44,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 header {
   padding: rem(32);
   text-align: center;

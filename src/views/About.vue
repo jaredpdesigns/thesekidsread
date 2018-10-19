@@ -36,7 +36,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 article header {
   align-items: center;
   background-image: url("../assets/img/about.jpg");

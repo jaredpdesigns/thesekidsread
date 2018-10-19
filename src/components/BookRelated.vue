@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 .book {
   list-style: none;
   padding: rem(8);

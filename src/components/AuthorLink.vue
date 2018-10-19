@@ -26,7 +26,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 .book {
   align-items: flex-start;
   display: flex;

@@ -53,7 +53,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 .search {
   margin-top: rem(16);
   width: 100%;

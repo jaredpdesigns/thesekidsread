@@ -78,7 +78,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 aside {
   background-color: var(--contrast);
   padding: rem(16);

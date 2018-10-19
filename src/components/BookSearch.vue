@@ -45,7 +45,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../assets/css/variables";
+
 .book {
   border-bottom: rem(1) solid var(--base-light);
   list-style: none;
