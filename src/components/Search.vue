@@ -55,10 +55,8 @@ export default {
 <style lang="scss" scoped>
 
 .search {
-  margin-top: rem(16);
-  width: 100%;
+  flex-grow: 1;
   @include breakpoint(m) {
-    margin-top: 0;
     max-width: rem(240);
   }
   button {
@@ -87,6 +85,7 @@ export default {
     color: var(--base-upper);
   }
   input {
+    background: none;
     font-family: inherit;
     height: rem(32);
     margin-left: rem(8);

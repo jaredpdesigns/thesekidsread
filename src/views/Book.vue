@@ -15,8 +15,8 @@
       </ul>
     </aside>
     <nav role="pagination">
-      <router-link :to="bookPrev" :class="{'empty':!bookPrev}"><Icon name="arrow-left" :size="24"/></router-link>
-      <router-link :to="bookNext" :class="{'empty':!bookNext}"><Icon name="arrow-right" :size="24"/></router-link>
+      <router-link :to="bookPrev" class="prev" :class="{'empty':!bookPrev}"><Icon name="arrow-left" :size="24"/></router-link>
+      <router-link :to="bookNext" class="next" :class="{'empty':!bookNext}"><Icon name="arrow-right" :size="24"/></router-link>
     </nav>
   </main>
 </template>
@@ -114,14 +114,6 @@ aside {
   }
 }
 nav[role="pagination"] {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  left: rem(16);
-  position: fixed;
-  right: rem(16);
-  top: 50%;
-  transform: translateY(-50%);
   a {
     @include smooth;
     align-items: center;
@@ -133,7 +125,17 @@ nav[role="pagination"] {
     display: inline-flex;
     height: rem(48);
     justify-content: center;
+    position: fixed;
     width: rem(48);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    &.prev {
+      left: rem(16);
+    }
+    &.next {
+      right: rem(16);
+    }
     &.empty {
       cursor: none;
       opacity: 0;
@@ -142,7 +144,7 @@ nav[role="pagination"] {
     &:not(.empty):focus,
     &:not(.empty):hover {
       color: var(--highlight);
-      transform: scale(1.03125);
+      transform: scale(1.03125) translateY(-50%);
     }
   }
 }

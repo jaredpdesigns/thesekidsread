@@ -42,7 +42,7 @@ article header {
   background-image: url("../assets/img/about.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--contrast);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;

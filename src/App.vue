@@ -18,7 +18,12 @@
           <Icon name="facebook" :size="20"/>
         </a>
       </nav>
-      <Search/>
+      <span>
+        <button class="themeSwitch" @click="updateTheme">
+          <Icon name="theme" :size="16"/>
+        </button>
+        <Search/>
+      </span>      
     </header>
     <router-view/>
   </div>
@@ -27,7 +32,37 @@
 import Icon from "@/components/Icon.vue";
 import Search from "@/components/Search.vue";
 export default {
-  components: { Icon, Search }
+  components: { Icon, Search },
+  computed: {
+    dark() {
+      return this.$store.state.dark;
+    }
+  },
+  methods: {
+    switchDark() {
+      let root = document.getElementsByTagName("html")[0];
+      root.classList.add("themeDark");
+      this.$store.dispatch("updateTheme", true);
+    },
+    updateTheme() {
+      let root = document.getElementsByTagName("html")[0];
+      if (this.dark) {
+        root.classList.remove("themeDark");
+        this.$store.dispatch("updateTheme", false);
+      } else {
+        root.classList.add("themeDark");
+        this.$store.dispatch("updateTheme", true);
+      }
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      let today = new Date();
+      if (today.getHours() >= 18 || today.getHours() <= 6) {
+        this.switchDark();
+      }
+    });
+  }
 };
 </script>
 <style lang="scss">
@@ -35,16 +70,25 @@ export default {
 @import "assets/css/variables";
 
 :root {
-  --hue: 175;
-  --base: hsl(var(--hue), 4%, 12%);
-  --base-mid: hsl(var(--hue), 4%, 50%);
-  --base-upper: hsl(var(--hue), 4%, 75%);
-  --base-light: hsl(var(--hue), 4%, 88%);
-  --bg: hsl(var(--hue), 4%, 98%);
+  --hue-base: 220;
+  --hue-highlight: 175;
+  --base: hsl(var(--hue-base), 12%, 12%);
+  --base-mid: hsl(var(--hue-base), 12%, 50%);
+  --base-upper: hsl(var(--hue-base), 12%, 75%);
+  --base-light: hsl(var(--hue-base), 12%, 88%);
+  --bg: hsl(var(--hue-base), 12%, 98%);
   --contrast: white;
-  --highlight: hsl(var(--hue), 100%, 38%);
-  --highlight-mid: hsl(var(--hue), 50%, 64%);
-  --highlight-light: hsl(var(--hue), 50%, 96%);
+  --highlight: hsl(var(--hue-highlight), 100%, 38%);
+  --highlight-mid: hsl(var(--hue-highlight), 50%, 64%);
+  --highlight-light: hsl(var(--hue-highlight), 50%, 96%);
+}
+
+:root.themeDark {
+  --base-mid: hsl(var(--hue-base), 12%, 62%);
+  --base-light: hsl(var(--hue-base), 12%, 25%);
+  --base: white;
+  --bg: hsl(var(--hue-base), 12%, 16%);
+  --contrast: hsl(var(--hue-base), 12%, 8%);
 }
 
 *,
@@ -186,13 +230,13 @@ main {
   align-items: center;
   background-color: var(--highlight);
   border-radius: rem(8);
-  color: var(--contrast);
+  color: white;
   display: inline-flex;
   padding: rem(8) rem(16);
   &:focus,
   &:hover {
     background-color: var(--highlight-mid);
-    color: var(--contrast);
+    color: white;
   }
 }
 .fade-enter-active,
@@ -236,8 +280,9 @@ header[role="main"] {
   nav {
     align-items: center;
     display: inline-flex;
-    @include breakpoint(xs-only) {
-      margin-top: rem(16);
+    margin-top: rem(16);
+    @include breakpoint(xsl) {
+      margin-top: 0;
     }
   }
   nav a {
@@ -252,6 +297,34 @@ header[role="main"] {
       .icon {
         opacity: 1;
       }
+    }
+  }
+  > span {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: rem(16);
+    width: 100%;
+    @include breakpoint(m) {
+      margin-top: 0;
+      width: auto;
+    }
+  }
+  .themeSwitch {
+    @include smooth;
+    align-items: center;
+    color: var(--base-mid);
+    display: inline-flex;
+    flex-shrink: 0;
+    height: rem(40);
+    justify-content: center;
+    margin-right: rem(8);
+    opacity: 0.75;
+    width: rem(40);
+    &:focus,
+    &:hover {
+      color: var(--highlight);
+      opacity: 1;
     }
   }
 }

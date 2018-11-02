@@ -38,12 +38,20 @@ article {
   flex-basis: 100%;
   padding: rem(16);
   @include breakpoint(s) {
-    flex-basis: 50%;
-    max-width: 50%;
+    flex-basis: calc(100%/2);
+    max-width: calc(100%/2);
+  }
+  @include breakpoint(m) {
+    flex-basis: calc(100%/3);
+    max-width: calc(100%/3);
   }
   @include breakpoint(l) {
-    flex-basis: 25%;
-    max-width: 25%;
+    flex-basis: calc(100%/4);
+    max-width: calc(100%/4);
+  }
+  @include breakpoint(xxl) {
+    flex-basis: calc(100%/6);
+    max-width: calc(100%/6);
   }
 }
 </style>
