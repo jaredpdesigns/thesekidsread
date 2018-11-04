@@ -11,19 +11,17 @@
           Suggest
           <Icon name="suggest" :size="14"/>
         </a>
-        <a href="https://twitter.com/thesekidsread" target="_blank" rel="noopener" title="Follow us on Twitter">
+        <a class="social" href="https://twitter.com/thesekidsread" target="_blank" rel="noopener" title="Follow us on Twitter">
           <Icon name="twitter" :size="20"/>
         </a>
-        <a href="https://www.facebook.com/thesekidsread/" target="_blank" rel="noopener" title="Follow us on Facebook">
+        <a class="social" href="https://www.facebook.com/thesekidsread/" target="_blank" rel="noopener" title="Follow us on Facebook">
           <Icon name="facebook" :size="20"/>
         </a>
-      </nav>
-      <span>
         <button class="themeSwitch" @click="updateTheme">
           <Icon name="theme" :size="16"/>
         </button>
-        <Search/>
-      </span>      
+      </nav>
+      <Search/>     
     </header>
     <router-view/>
   </div>
@@ -78,6 +76,7 @@ export default {
   --base-light: hsl(var(--hue-base), 12%, 88%);
   --bg: hsl(var(--hue-base), 12%, 98%);
   --contrast: white;
+  --highlight-dark: hsl(var(--hue-highlight), 100%, 32%);
   --highlight: hsl(var(--hue-highlight), 100%, 38%);
   --highlight-mid: hsl(var(--hue-highlight), 50%, 64%);
   --highlight-light: hsl(var(--hue-highlight), 50%, 96%);
@@ -210,7 +209,7 @@ a {
 .book > a {
   text-decoration: none;
 }
-nav a {
+nav > * {
   color: var(--base-mid);
   font-family: "proxima-soft", sans-serif;
   font-weight: 600;
@@ -235,7 +234,7 @@ main {
   padding: rem(8) rem(16);
   &:focus,
   &:hover {
-    background-color: var(--highlight-mid);
+    background-color: var(--highlight-dark);
     color: white;
   }
 }
@@ -280,51 +279,44 @@ header[role="main"] {
   nav {
     align-items: center;
     display: inline-flex;
-    margin-top: rem(16);
-    @include breakpoint(xsl) {
-      margin-top: 0;
-    }
-  }
-  nav a {
-    align-items: center;
-    display: inline-flex;
-    margin: 0 rem(16);
-    .icon {
-      margin-left: rem(8);
-      opacity: 0.75;
-    }
-    &:focus &:hover {
-      .icon {
-        opacity: 1;
-      }
-    }
-  }
-  > span {
-    align-items: center;
-    display: inline-flex;
     justify-content: center;
     margin-top: rem(16);
     width: 100%;
-    @include breakpoint(m) {
+    @include breakpoint(xsl) {
       margin-top: 0;
       width: auto;
     }
   }
-  .themeSwitch {
+  nav > * {
     @include smooth;
     align-items: center;
-    color: var(--base-mid);
     display: inline-flex;
     flex-shrink: 0;
-    height: rem(40);
     justify-content: center;
-    margin-right: rem(8);
-    opacity: 0.75;
-    width: rem(40);
+    margin-right: rem(16);
+    @include breakpoint(m) {
+      margin-right: rem(32);
+    }
     &:focus,
     &:hover {
       color: var(--highlight);
-      opacity: 1;
+    }
+    .icon {
+      margin-left: rem(8);
+      opacity: 0.75;
+      &:focus,
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &.social,
+    &.themeSwitch {
+      height: rem(48);
+      margin-right: 0;
+      width: rem(48);
+      .icon {
+        margin-left: 0;
+      }
     }
   }
 }

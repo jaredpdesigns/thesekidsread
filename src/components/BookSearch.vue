@@ -61,6 +61,7 @@ export default {
     &:focus,
     &:hover {
       background-color: var(--highlight-light);
+      .themeDark & { background-color: var(--bg); }
     }
   }
   figure {

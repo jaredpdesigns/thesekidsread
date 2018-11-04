@@ -56,7 +56,9 @@ export default {
 
 .search {
   flex-grow: 1;
+  margin-top: rem(8);
   @include breakpoint(m) {
+    margin-top: 0;
     max-width: rem(240);
   }
   button {
@@ -86,6 +88,7 @@ export default {
   }
   input {
     background: none;
+    color: inherit;
     font-family: inherit;
     height: rem(32);
     margin-left: rem(8);
