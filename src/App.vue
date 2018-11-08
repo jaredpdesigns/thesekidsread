@@ -280,10 +280,9 @@ header[role="main"] {
     align-items: center;
     display: inline-flex;
     justify-content: center;
-    margin-top: rem(16);
+    padding: 0 rem(16);
     width: 100%;
     @include breakpoint(xsl) {
-      margin-top: 0;
       width: auto;
     }
   }

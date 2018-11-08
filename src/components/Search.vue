@@ -53,12 +53,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
 .search {
   flex-grow: 1;
-  margin-top: rem(8);
   @include breakpoint(m) {
-    margin-top: 0;
     max-width: rem(240);
   }
   button {
