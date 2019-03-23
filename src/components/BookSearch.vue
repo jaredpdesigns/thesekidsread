@@ -90,7 +90,6 @@ export default {
   .author {
     font-size: rem(14);
     line-height: rem(16);
-    margin-top: 0;
   }
 }
 </style>

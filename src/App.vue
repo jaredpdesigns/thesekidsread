@@ -11,13 +11,8 @@
           Suggest
           <Icon name="suggest" :size="14"/>
         </a>
-        <a class="social" href="https://twitter.com/thesekidsread" target="_blank" rel="noopener" title="Follow us on Twitter">
-          <Icon name="twitter" :size="20"/>
-        </a>
-        <a class="social" href="https://www.facebook.com/thesekidsread/" target="_blank" rel="noopener" title="Follow us on Facebook">
-          <Icon name="facebook" :size="20"/>
-        </a>
         <button class="themeSwitch" @click="updateTheme">
+          Theme
           <Icon name="theme" :size="16"/>
         </button>
       </nav>
@@ -216,7 +211,7 @@ nav > * {
   text-transform: uppercase;
 }
 main {
-  margin-top: rem(154);
+  margin-top: rem(136);
   @include breakpoint(xsl) {
     margin-top: rem(112);
   }
@@ -249,7 +244,7 @@ main {
   transform: translateY(rem(-4));
 }
 </style>
-<style lang="scss" scoped>
+<style lang="scss">
 header[role="main"] {
   align-items: center;
   background-color: var(--contrast);
@@ -257,7 +252,7 @@ header[role="main"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: rem(16);
+  padding: rem(8) rem(16);
   position: fixed;
   top: 0;
   width: 100%;
@@ -268,6 +263,7 @@ header[role="main"] {
     color: var(--highlight);
     display: inline-flex;
     justify-content: center;
+    padding: rem(8) 0;
     width: 100%;
     @include breakpoint(xsl) {
       width: auto;
@@ -292,10 +288,7 @@ header[role="main"] {
     display: inline-flex;
     flex-shrink: 0;
     justify-content: center;
-    margin-right: rem(16);
-    @include breakpoint(m) {
-      margin-right: rem(32);
-    }
+    margin: 0 rem(16);
     &:focus,
     &:hover {
       color: var(--highlight);
@@ -308,15 +301,9 @@ header[role="main"] {
         opacity: 1;
       }
     }
-    &.social,
-    &.themeSwitch {
-      height: rem(48);
-      margin-right: 0;
-      width: rem(48);
-      .icon {
-        margin-left: 0;
-      }
-    }
+  }
+  .search {
+    margin: rem(8) 0;
   }
 }
 </style>
