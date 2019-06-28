@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <header role="main">
-      <router-link to="/" class="logo" replace><Icon name="logo"/></router-link>
+      <router-link to="/" class="logo" replace>
+        <Icon name="logo"/>
+      </router-link>
       <nav>
         <router-link to="/about">
           About
@@ -16,7 +18,7 @@
           <Icon name="theme" :size="16"/>
         </button>
       </nav>
-      <Search/>     
+      <Search/>
     </header>
     <router-view/>
   </div>
@@ -32,11 +34,6 @@ export default {
     }
   },
   methods: {
-    switchDark() {
-      let root = document.getElementsByTagName("html")[0];
-      root.classList.add("themeDark");
-      this.$store.dispatch("updateTheme", true);
-    },
     updateTheme() {
       let root = document.getElementsByTagName("html")[0];
       if (this.dark) {
@@ -49,12 +46,11 @@ export default {
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      let today = new Date();
-      if (today.getHours() >= 18 || today.getHours() <= 6) {
-        this.switchDark();
-      }
-    });
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      let root = document.getElementsByTagName("html")[0];
+      root.classList.add("themeDark");
+      this.$store.dispatch("updateTheme", true);
+    }
   }
 };
 </script>
