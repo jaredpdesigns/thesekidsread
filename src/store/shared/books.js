@@ -12,7 +12,7 @@ export const books = [
   //   description: "#",
   //   author: ["Lonely Planet"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/71FxCwDLzfL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/71FxCwDLzfL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "how-to-be-a-dinosaur-hunter"
   // },
@@ -21,7 +21,7 @@ export const books = [
   //   description: "#",
   //   author: ["Duncan Beedie"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/A1iS385+NEL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/A1iS385+NEL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "the-lumberjacks-beard"
   // },
@@ -30,7 +30,7 @@ export const books = [
   //   description: "#",
   //   author: ["Glenn Ringtved", "Charlotte Pardi"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/81OwCVM+dKL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/81OwCVM+dKL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "cry-heart-but-never-break"
   // },
@@ -39,7 +39,7 @@ export const books = [
   //   description: "#",
   //   author: ["Lucas Zanotto"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/61sSQp5BZKL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/61sSQp5BZKL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "miximal"
   // },
@@ -48,7 +48,7 @@ export const books = [
   //   description: "#",
   //   author: ["Laurie Wallmark", "Katy Wu"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/71ejVTefWRL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/71ejVTefWRL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "grace-hopper-queen-of-computer-code"
   // },
@@ -57,7 +57,7 @@ export const books = [
   //   description: "#",
   //   author: ["Matt de la Peña", "Ana Ramírez"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/61FIEVCwfVL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/61FIEVCwfVL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "coco-miguel-and-the-grand-harmony"
   // },
@@ -66,7 +66,7 @@ export const books = [
   //   description: "#",
   //   author: ["Natalia O’Hara", "Lauren O’Hara"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51l0WA9aEIL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51l0WA9aEIL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "hortense-and-the-shadow"
   // },
@@ -75,7 +75,7 @@ export const books = [
   //   description: "#",
   //   author: ["Heather Swain", "Steven Henry"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/91u98488X-L._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/91u98488X-L._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "how-many-hugs"
   // },
@@ -84,7 +84,7 @@ export const books = [
   //   description: "#",
   //   author: ["Jeffrey Brown"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/8170dwDQxCL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/8170dwDQxCL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "darth-vaders-son"
   // },
@@ -93,7 +93,7 @@ export const books = [
   //   description: "#",
   //   author: ["Jeffrey Brown"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/71jkG4cPRsL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/71jkG4cPRsL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "goodnight-darth-vader"
   // },
@@ -102,7 +102,7 @@ export const books = [
   //   description: "#",
   //   author: ["Jeffrey Brown"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/91s7zBGUtJL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/91s7zBGUtJL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "vaders-little-princess"
   // },
@@ -111,7 +111,7 @@ export const books = [
   //   description: "#",
   //   author: ["Carl Hiaasen"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/71qrLeMElCL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/71qrLeMElCL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "Chomp"
   // },
@@ -120,7 +120,7 @@ export const books = [
   //   description: "#",
   //   author: ["Carl Hiaasen"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/71wXvpxBj7L._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/71wXvpxBj7L._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "flush"
   // },
@@ -129,7 +129,7 @@ export const books = [
   //   description: "#",
   //   author: ["Emily Winfield Martin"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/91MWQJp4CvL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/91MWQJp4CvL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "snow-and-rose"
   // },
@@ -138,7 +138,7 @@ export const books = [
   //   description: "#",
   //   author: ["Roda Ahmed", "Stasia Burrington"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51SDgFkuEaL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51SDgFkuEaL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "mae-among-the-stars"
   // },
@@ -147,7 +147,7 @@ export const books = [
   //   description: "#",
   //   author: ["Matthew Olshan", "Sophie Blackall"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/81de7xKfaFL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/81de7xKfaFL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "a-voyage-in-the-clouds"
   // },
@@ -156,7 +156,7 @@ export const books = [
   //   description: "#",
   //   author: ["Robert Kondo", "Dice Tsutsumi"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51S6kyLD7zL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51S6kyLD7zL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "the-dam-keeper"
   // },
@@ -165,7 +165,7 @@ export const books = [
   //   description: "#",
   //   author: ["Peter Brown"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51c+sjN-MTL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51c+sjN-MTL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "the-wild-robot-escapes"
   // },
@@ -174,7 +174,7 @@ export const books = [
   //   description: "#",
   //   author: ["Samantha Berger", "Tad Carpenter"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/71wA+cR1lvL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/71wA+cR1lvL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "monsters-new-undies"
   // },
@@ -183,7 +183,7 @@ export const books = [
   //   description: "#",
   //   author: ["Judy Sierra", "Eric Comstock"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51LSuIFXzdL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51LSuIFXzdL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "the-great-dictionary-caper"
   // },
@@ -192,7 +192,7 @@ export const books = [
   //   description: "#",
   //   author: ["Beth Ferry", "Ben Mantle"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/81yBSVOoC+L._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/81yBSVOoC+L._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "land-shark"
   // },
@@ -201,7 +201,7 @@ export const books = [
   //   description: "#",
   //   author: ["Zainab Khan"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/91U2joeXY+L._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/91U2joeXY+L._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "kawaii-doodle-class"
   // },
@@ -210,7 +210,7 @@ export const books = [
   //   description: "#",
   //   author: ["Bethan Woollvin"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51ars1kS7nL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51ars1kS7nL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "rapunzel"
   // },
@@ -219,7 +219,7 @@ export const books = [
   //   description: "#",
   //   author: ["Stacy McAnulty", "David Litchfield"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/81MiKPYyZNL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/81MiKPYyZNL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "earth-my-first-454-billion-years"
   // },
@@ -228,7 +228,7 @@ export const books = [
   //   description: "#",
   //   author: ["Steve Antony"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/81YUbKpo+nL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/81YUbKpo+nL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "ill-wait-mr-panda"
   // },
@@ -237,7 +237,7 @@ export const books = [
   //   description: "#",
   //   author: ["Cece Meng", "Ellen Shi"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/713r3rJRIvL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/713r3rJRIvL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "world-pizza"
   // },
@@ -246,7 +246,7 @@ export const books = [
   //   description: "#",
   //   author: ["Madeleine L’Engle", "Hope Larson"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/513pp8O3c2L._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/513pp8O3c2L._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "a-wrinkle-in-time-the-graphic-novel"
   // },
@@ -255,7 +255,7 @@ export const books = [
   //   description: "#",
   //   author: ["Tom Chapin"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/51kQbcxzYFL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/51kQbcxzYFL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "the-library-book"
   // },
@@ -264,7 +264,7 @@ export const books = [
   //   description: "#",
   //   author: ["#"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/61WmVto-+KL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/61WmVto-+KL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "her-right-foot"
   // },
@@ -273,7 +273,7 @@ export const books = [
   //   description: "#",
   //   author: ["Ame Dyckman", "Zachariah OHora"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/614p55BtAXL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/614p55BtAXL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "read-the-book-lemmings"
   // },
@@ -282,7 +282,7 @@ export const books = [
   //   description: "#",
   //   author: ["Oliver Jeffer", "Sam Winston"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/A1X6L4b4tcL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/A1X6L4b4tcL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "a-child-of-books"
   // },
@@ -291,7 +291,7 @@ export const books = [
   //   description: "#",
   //   author: ["Hyewon Yum"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/515qxaZ5m9L._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/515qxaZ5m9L._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "puddle"
   // },
@@ -300,7 +300,7 @@ export const books = [
   //   description: "#",
   //   author: ["Yuval Zommer"],
   //   img:
-  //     "https:images-na.ssl-images-amazon.com/images/I/A1k5wr3h3XL._SL480_.jpg",
+  //     "https://images-na.ssl-images-amazon.com/images/I/A1k5wr3h3XL._SL480_.jpg",
   //   buy: "http:a.co/#",
   //   slug: "one-hundred-sausages"
   // },
@@ -309,7 +309,7 @@ export const books = [
     description: "Two hundred years ago, a daughter was born to the famous poet, Lord Byron, and his mathematical wife, Annabella. Like her father, Ada had a vivid imagination and a creative gift for connecting ideas in original ways. Like her mother, she had a passion for science, math, and machines. It was a very good combination. Ada hoped that one day she could do something important with her creative and nimble mind. A hundred years before the dawn of the digital age, Ada Lovelace envisioned the computer-driven world we know today. And in demonstrating how the machine would be coded, she wrote the first computer program. She would go down in history as Ada Lovelace, the first computer programmer.",
     author: ["Diane Stanley", "Jessie Hartland"],
     img:
-      "https:images-na.ssl-images-amazon.com/images/I/51SvmSRaJYL._SL480_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/51SvmSRaJYL._SL480_.jpg",
     buy: "https://www.amazon.com/dp/1481452495",
     slug: "ada-lovelace-poet-of-science"
   },
@@ -318,7 +318,7 @@ export const books = [
     description: "A boy who loves adventure. A mysterious ocean journey. A remote island wilderness. Discover what surprises await in this beautiful dreamlike exploration of courage and loneliness, independence and friendship.",
     author: ["Peter Sís"],
     img:
-      "https:images-na.ssl-images-amazon.com/images/I/51ZyJWuGlzL._SL480_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/51ZyJWuGlzL._SL480_.jpg",
     buy: "https://www.amazon.com/dp/0545731666",
     slug: "robinson"
   },
@@ -327,7 +327,7 @@ export const books = [
     description: "A jaunty adaptation of the cumulative folk song about soldiers who build a magnificent cannon and Drummer Hoff, who fires it off.",
     author: ["Barbara Emberley", "Ed Emberley"],
     img:
-      "https:images-na.ssl-images-amazon.com/images/I/616ZR4bhdfL._SL480_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/616ZR4bhdfL._SL480_.jpg",
     buy: "https://www.amazon.com/dp/0671662481",
     slug: "drummer-hoff"
   },
@@ -337,7 +337,7 @@ export const books = [
       "A young boy named Max who, after dressing in his wolf costume, wreaks such havoc through his household that he is sent to bed without his supper. Max’s bedroom undergoes a mysterious transformation into a jungle environment, and he winds up sailing to an island inhabited by malicious beasts known as the “Wild Things.” After successfully intimidating the creatures, Max is hailed as the king of the Wild Things and enjoys a playful romp with his subjects. However, he starts to feel lonely and decides to return home, to the Wild Things’ dismay. Upon returning to his bedroom, Max discovers a hot supper waiting for him",
     author: ["Maurice Sendak"],
     img:
-      "https:images-na.ssl-images-amazon.com/images/I/61lRoIlve8L._SL480_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/61lRoIlve8L._SL480_.jpg",
     buy: "https://www.amazon.com/dp/0060254920",
     slug: "where-the-wild-things-are"
   },
