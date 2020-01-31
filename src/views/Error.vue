@@ -4,8 +4,8 @@
       title="Oops! | These Kids Read"
       description="The book you’re looking for can’t be found."
       keywords="these kids read, jared pendergraft, kids books, great book for kids"
-      image="https://thesekidsread.com/img/social.jpg"
-      url="https://thesekidsread.com"
+      image="https://thesekidsread.jaredpendergraft.com/img/social.jpg"
+      url="https://thesekidsread.jaredpendergraft.com"
     />
     <article>
       <h1>Oops! Something went wrong.</h1>

@@ -4,8 +4,8 @@
       title="About Us | These Kids Read"
       description="Learn more about the family behind the site"
       keywords="these kids read, jared pendergraft, kids books, great book for kids"
-      image="https://thesekidsread.com/img/social.jpg"
-      url="https://thesekidsread.com/about"
+      image="https://thesekidsread.jaredpendergraft.com/img/social.jpg"
+      url="https://thesekidsread.jaredpendergraft.com/about"
     />
     <article>
       <header>

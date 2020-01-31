@@ -4,8 +4,8 @@
       title="These Kids Read"
       description="We read great books together"
       keywords="these kids read, jared pendergraft, kids books, great book for kids"
-      image="https://thesekidsread.com/img/social.jpg"
-      url="https://thesekidsread.com"
+      image="https://thesekidsread.jaredpendergraft.com/img/social.jpg"
+      url="https://thesekidsread.jaredpendergraft.com"
     />
     <article v-for="book in books" :key="book.title">
       <Book :authors="book.author" :img="book.img" :slug="book.slug" :title="book.title" />
