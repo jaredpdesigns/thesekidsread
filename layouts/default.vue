@@ -1,11 +1,23 @@
 <template>
-  <div>
+  <Icon
+    class="Loader color__type--brand"
+    v-if="loading"
+    name="book"
+    :size="28"
+  />
+  <div v-else>
     <LazyHeader />
     <Nuxt />
+    <LazyFooter />
   </div>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      loading: true,
+    };
+  },
   head() {
     return {
       meta: [
@@ -49,7 +61,16 @@ export default {
         .addEventListener("change", (event) => {
           this.setInitialTheme();
         });
+      this.loading = false;
     });
   },
 };
 </script>
+<style lang="scss">
+.Loader {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>

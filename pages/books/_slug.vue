@@ -36,7 +36,7 @@
         <span :class="$options.name + '__img'">
           <picture>
             <source
-              sizes="(min-width: 63rem) 640px, (min-width: 47rem) 480px, (min-width: 29rem) 320px, 240px"
+              sizes="(min-width: 79rem) 640px, (min-width: 47rem) 480px, (min-width: 29rem) 320px, 240px"
               :srcset="
                 (book.img + '._SL320_.jpg 320w',
                 book.img + '._SL480_.jpg 480w',
@@ -65,8 +65,8 @@
             :href="book.buy"
             rel="noopener"
             target="_blank"
-            >Buy Now<Icon class="margin__left--s" name="buy"
-          /></a>
+            ><Icon class="margin__right--s" name="buy" />Buy Now</a
+          >
         </section>
       </section>
     </article>
@@ -145,7 +145,7 @@ export default {
   },
   head() {
     return {
-      title: this.book.title + "| TheseKidsRead",
+      title: this.book.title + " | These Kids Read",
       meta: [
         {
           hid: "description",
@@ -171,12 +171,19 @@ export default {
 .Detail {
   --size: var(--width__xs);
   @include breakpoint(m) {
+    --size: var(--width__s);
+  }
+  @include breakpoint(l) {
     --size: var(--width__m);
   }
   &__wrap {
     @media (orientation: landscape) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint(xl) {
+      padding-bottom: var(--size__xxxl);
+      padding-top: var(--size__xxxl);
     }
   }
   figure {
@@ -203,7 +210,12 @@ export default {
     img {
       @include smooth;
       max-height: var(--size);
-      width: 100%;
+      @media (hover: hover) {
+        &:hover {
+          transform: perspective(var(--size)) rotateY(-7.5deg)
+            translateY(calc(var(--size__s) * -1)) rotateX(3.75deg);
+        }
+      }
     }
   }
   &__description {
@@ -233,6 +245,10 @@ export default {
       font-weight: normal;
     }
     p {
+      @media (orientation: portrait) {
+        margin-left: auto;
+        margin-right: auto;
+      }
       max-width: 56ch;
     }
   }

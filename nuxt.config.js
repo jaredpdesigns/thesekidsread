@@ -11,7 +11,7 @@ export default {
     htmlAttrs: {
       lang: "en",
     },
-    title: "TheseKidsRead",
+    title: "These Kids Read",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -29,7 +29,7 @@ export default {
       {
         hid: "og:site_name",
         property: "og:site_name",
-        content: "TheseKidsRead",
+        content: "These Kids Read",
       },
       {
         hid: "og:description",
@@ -59,7 +59,7 @@ export default {
       {
         hid: "twitter:title",
         name: "twitter:title",
-        content: "TheseKidsRead",
+        content: "These Kids Read",
       },
       {
         hid: "twitter:description",
@@ -90,7 +90,7 @@ export default {
       },
       {
         name: "apple-mobile-web-app-title",
-        content: "TheseKidsRead",
+        content: "These Kids Read",
       },
       {
         name: "msapplication-TileImage",

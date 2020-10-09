@@ -19,7 +19,7 @@ export default {
   name: "Home",
   head() {
     return {
-      title: "TheseKidsRead",
+      title: "These Kids Read",
       meta: [
         {
           hid: "description",

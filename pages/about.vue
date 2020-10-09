@@ -43,8 +43,8 @@
           <a
             class="button"
             href="mailto:thesekidsread@gmail.com?subject=You should read this book next…"
-            >Suggest a Book<Icon class="margin__left--s" name="suggest"
-          /></a>
+            ><Icon class="margin__right--s" name="suggest" />Suggest a Book</a
+          >
         </section>
       </header>
       <section
@@ -56,7 +56,10 @@
           <h2 class="color__type--base--mid">Jared (Dad)</h2>
           <p class="margin__top--m">
             Builds
-            <a href="http://jaredpendergraft.com" rel="noopener" target="_blank"
+            <a
+              href="https://jaredpendergraft.com"
+              rel="noopener"
+              target="_blank"
               >web-things</a
             >
             and loves books with silly stories and great illustrations. His
@@ -78,7 +81,7 @@
           <h2 class="color__type--base--mid">Avery</h2>
           <p class="margin__top--m">
             Is
-            <a href="http://averymirabelle.com" rel="noopener" target="_blank"
+            <a href="https://averymirabelle.com" rel="noopener" target="_blank"
               >already an artist</a
             >
             and loves comics—like
@@ -89,7 +92,7 @@
           <h2 class="color__type--base--mid">Ezra</h2>
           <p class="margin__top--m">
             Is the
-            <a href="http://ezrapendergraft.com" rel="noopener" target="_blank"
+            <a href="https://ezrapendergraft.com" rel="noopener" target="_blank"
               >oldest</a
             >
             five-year-old I know and marvels at any book with a dinosaur or
@@ -115,7 +118,7 @@ export default {
   },
   head() {
     return {
-      title: "About Us | TheseKidsRead",
+      title: "About Us | These Kids Read",
       meta: [
         {
           hid: "description",

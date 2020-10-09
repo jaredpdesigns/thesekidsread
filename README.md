@@ -1,4 +1,4 @@
-# TheseKidsRead
+# These Kids Read
 
 ![Jared, Ezra, Avery and Allison](https://images.ctfassets.net/cuehicrlqnvu/1z7fgfLDKO0IvaINQmcfmW/6e435f7f726b47b5ce1232fcd066f087/tkr-about.jpg?w=960)
 

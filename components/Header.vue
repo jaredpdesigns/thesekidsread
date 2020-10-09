@@ -10,7 +10,7 @@
       active-class
       exact-active-class
       class="color__type--brand"
-      aria-label="Return to TheseKidsRead homepage"
+      aria-label="Return to These Kids Read homepage"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -27,42 +27,71 @@
     <nav class="padding__bottom--s padding__top--s">
       <nuxt-link
         to="/about"
-        class="color__type--base--mid type__family--display type__size--m-l"
+        class="color__type--base--mid type__family--display type__size--m-m"
+        active-class
+        exact-active-class
       >
+        <Icon class="margin__right--s" name="book" />
         About
-        <Icon class="margin__left--s" name="book" />
+      </nuxt-link>
+      <nuxt-link
+        :to="'/books/' + randomBook"
+        class="color__type--base--mid type__family--display type__size--m-m"
+        active-class
+        exact-active-class
+        @click.native="surprise"
+        ><Icon class="margin__right--s" name="surprise" />Surprise Me
       </nuxt-link>
       <a
-        class="color__type--base--mid type__family--display type__size--m-l"
+        class="color__type--base--mid type__family--display type__size--m-m"
         href="mailto:thesekidsread@gmail.com?subject=You should read this book next…"
       >
+        <Icon class="margin__right--s" name="suggest" />
         Suggest
-        <Icon class="margin__left--s" name="suggest" />
       </a>
-      <button
-        class="color__type--base--mid type__family--display type__size--m-l"
-        @click="setTheme"
-      >
-        Theme
-        <Icon class="margin__left--s" name="theme" />
-      </button>
     </nav>
     <Search />
+    <canvas id="surprise"></canvas>
   </header>
 </template>
 <script>
+import ConfettiGenerator from "confetti-js";
 export default {
   name: "Header",
+  data() {
+    return {
+      randomBook: [],
+    };
+  },
   methods: {
-    setTheme() {
-      let root = document.getElementsByTagName("html")[0];
-      if (root.getAttribute("data-theme") === "dark") {
-        root.setAttribute("data-theme", "light");
-        this.$store.dispatch("setTheme", "light");
-      } else {
-        root.setAttribute("data-theme", "dark");
-        this.$store.dispatch("setTheme", "dark");
-      }
+    getRandomBook() {
+      this.randomBook = this.$store.state.books[
+        Math.floor(Math.random() * this.$store.state.books.length)
+      ].slug;
+    },
+    surprise() {
+      let confetti = new ConfettiGenerator({
+        target: "surprise",
+        props: ["circle", "square", "triangle"],
+        colors: [
+          [0, 194, 178],
+          [254, 149, 172],
+          [0, 139, 214],
+        ],
+        clock: 32,
+      });
+      confetti.render();
+      setTimeout(() => {
+        confetti.clear();
+      }, 2000);
+    },
+  },
+  mounted() {
+    this.getRandomBook();
+  },
+  watch: {
+    $route(to, from) {
+      this.getRandomBook();
     },
   },
 };
@@ -108,7 +137,11 @@ export default {
     }
   }
   nav {
+    align-items: center;
+    display: flex;
     flex-shrink: 0;
+    flex-wrap: wrap;
+    justify-content: center;
     @include breakpoint(m) {
       max-width: var(--width__s);
       order: -1;
@@ -130,6 +163,10 @@ export default {
         }
       }
     }
+  }
+  #surprise {
+    position: fixed;
+    z-index: -1;
   }
 }
 </style>
