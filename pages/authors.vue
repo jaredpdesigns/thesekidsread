@@ -12,7 +12,7 @@
         'padding__bottom--l padding__left--m padding__right--m padding__top--l',
       ]"
     >
-      <BookTile v-for="(book, index) in books" :key="index" :book="book" />
+      <LazyBookTile v-for="(book, index) in books" :key="index" :book="book" />
     </section>
   </main>
   <main v-else :class="$options.name">

@@ -83,7 +83,7 @@
         </h3>
       </header>
       <section :class="[$options.name + '__related--wrap', 'padding__all--m']">
-        <BookTile
+        <LazyBookTile
           v-for="(book, index) in booksRelated"
           :key="index"
           :book="book"

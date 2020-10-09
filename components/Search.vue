@@ -29,7 +29,7 @@
         'border__bottom border__left border__right color__bg--contrast color__border--base--light shadow radius__bl--m radius__br--m type__align--center',
       ]"
     >
-      <BookTile
+      <LazyBookTile
         v-for="(book, index) in booksSearched"
         :key="index"
         :book="book"

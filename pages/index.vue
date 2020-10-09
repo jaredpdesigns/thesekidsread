@@ -6,7 +6,7 @@
         'padding__bottom--l padding__left--m padding__right--m padding__top--l',
       ]"
     >
-      <BookTile
+      <LazyBookTile
         v-for="(book, index) in $store.state.books"
         :key="index"
         :book="book"
