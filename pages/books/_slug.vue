@@ -34,6 +34,7 @@
           /></nuxt-link>
         </nav>
         <span :class="$options.name + '__img'">
+          <Icon class="color__type--base--light" name="book" :size="28" />
           <picture>
             <source
               sizes="(min-width: 79rem) 640px, (min-width: 47rem) 480px, (min-width: 29rem) 320px, 240px"
@@ -60,7 +61,7 @@
           </h2>
           <p class="type__align--left">{{ book.description }}</p>
           <a
-            :aria-label="'Buy a copy of ' + book.title + ' from Amazon'"
+            :aria-label="'Buy a copy of ' + book.title"
             class="button"
             :href="book.buy"
             rel="noopener"
@@ -107,7 +108,7 @@ export default {
           )
         );
       });
-      return results.flat();
+      return [...new Set(results.flat())];
     },
     bookNext() {
       let index = this.$store.state.books.findIndex((element, index) => {
@@ -206,16 +207,24 @@ export default {
     display: inline-flex;
     height: var(--size);
     justify-content: center;
+    position: relative;
     width: var(--size);
     img {
       @include smooth;
       max-height: var(--size);
+      position: relative;
       @media (hover: hover) {
         &:hover {
           transform: perspective(var(--size)) rotateY(-7.5deg)
             translateY(calc(var(--size__s) * -1)) rotateX(3.75deg);
         }
       }
+    }
+    svg {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
   &__description {

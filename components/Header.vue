@@ -35,6 +35,7 @@
         About
       </nuxt-link>
       <nuxt-link
+        id="surprise-btn"
         :to="'/books/' + randomBook"
         class="color__type--base--mid type__family--display type__size--m-m"
         active-class
@@ -81,6 +82,7 @@ export default {
         ],
         clock: 32,
       });
+      document.getElementById("surprise-btn").blur();
       confetti.render();
       setTimeout(() => {
         confetti.clear();
@@ -146,9 +148,7 @@ export default {
     flex-wrap: wrap;
     justify-content: center;
     @include breakpoint(m) {
-      max-width: var(--width__s);
       order: -1;
-      width: 100%;
     }
     > * {
       @include smooth;

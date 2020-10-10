@@ -87,20 +87,22 @@
             and loves comics—like
             <nuxt-link to="/books/smile">Smile</nuxt-link> and
             <nuxt-link to="/books/sisters">Sisters</nuxt-link>—and stories of
-            adventure including <em>Hilda</em> and <em>Harry Potter</em>.
+            adventure including <em>Hilda</em> and <em>Harry Potter</em>. She’s
+            moved on to lengthy chapter books and can regularly be found curled
+            up on the couch, deep in a story.
           </p>
           <h2 class="color__type--base--mid">Ezra</h2>
           <p class="margin__top--m">
-            Is the
+            Loves
             <a href="https://ezrapendergraft.com" rel="noopener" target="_blank"
-              >oldest</a
+              >cool facts</a
             >
-            five-year-old I know and marvels at any book with a dinosaur or
-            backhoe in it. He especially loves
-            <nuxt-link
-              to="/books/richard-scarry-s-cars-and-trucks-and-things-that-go"
-              >Richard Scarry’s Cars and Trucks and Things That Go</nuxt-link
-            >.
+            and marvels at any book with a dinosaur, robot or monster in it. He
+            really enjoys the illustrations in
+            <nuxt-link to="/books/the-halloween-kid"
+              >The Halloween Kid</nuxt-link
+            >
+            and is already planning out next year’s costume.
           </p>
         </section>
       </section>

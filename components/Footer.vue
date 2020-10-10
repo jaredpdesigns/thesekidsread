@@ -5,18 +5,18 @@
       'border__top color__bg--contrast color__border--base--ghost padding__all--m type__align--center',
     ]"
   >
-    <p class="color__type--base--mid type__size--m-l">
+    <span class="color__type--base--mid type__family--display type__size--m-l">
       Made with <Icon name="heart" /> by
       <a href="https://jaredpendergraft.com" rel="noopener" target="_blank"
         >Jared Pendergraft</a
       >
-    </p>
+    </span>
     <button
       class="color__type--base--mid margin__left--m margin__right--m type__family--display type__size--m-l"
       @click="setTheme"
     >
       <Icon class="margin__right--s" name="theme" />
-      Change Theme      
+      Change Theme
     </button>
   </footer>
 </template>
@@ -43,9 +43,19 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  p svg {
-    position: relative;
-    top: var(--size__xxs);
+  > span {
+    a {
+      @include smooth;
+      font-weight: 600;
+      &:focus,
+      &:hover {
+        color: var(--color__brand);
+      }
+    }
+    svg {
+      position: relative;
+      top: var(--size__xxs);
+    }
   }
   button {
     @include smooth;
