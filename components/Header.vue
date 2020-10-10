@@ -51,7 +51,7 @@
       </a>
     </nav>
     <Search />
-    <canvas id="surprise"></canvas>
+    <canvas id="surprise" height="0" width="0"></canvas>
   </header>
 </template>
 <script>
@@ -70,6 +70,7 @@ export default {
       ].slug;
     },
     surprise() {
+      let el = document.getElementById("surprise");
       let confetti = new ConfettiGenerator({
         target: "surprise",
         props: ["circle", "square", "triangle"],
@@ -83,6 +84,8 @@ export default {
       confetti.render();
       setTimeout(() => {
         confetti.clear();
+        el.setAttribute("height", "0");
+        el.setAttribute("width", "0");
       }, 2000);
     },
   },
