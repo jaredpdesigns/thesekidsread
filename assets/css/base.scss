@@ -95,12 +95,15 @@ a {
   li & {
     @include smooth;
     border-bottom: rem(1) solid var(--color__brand);
+    border-radius: var(--size__xs);
     &:focus,
     &:hover {
       color: var(--color__brand);
     }
-    &:focus {
-      background-color: var(--color__contrast);
+    &:focus-visible {
+      background-color: var(--color__brand--light);
+      box-shadow: 0 0 0 var(--size__xs) var(--color__brand--light);
+      color: var(--color__base);
     }
   }
 }
@@ -157,5 +160,8 @@ main {
   &:focus,
   &:hover {
     transform: scale(1.0125);
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 var(--size__xs) var(--color__brand--light);
   }
 }

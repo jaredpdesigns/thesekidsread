@@ -3,7 +3,7 @@
     <section
       :class="[
         $options.name + '__input',
-        'border__all color__border--base--light oomph__h--s padding__left--m padding__right--m',
+        'border__all color__border--base--light oomph__h--s padding__left--m padding__right--s',
       ]"
     >
       <Icon class="color__type--base--mid" name="search" />
@@ -111,7 +111,18 @@ export default {
     }
     button {
       align-items: center;
+      border-radius: var(--size__m);
       display: inline-flex;
+      height: var(--size__l);
+      justify-content: center;
+      width: var(--size__l);
+      &:focus,
+      &:hover {
+        color: var(--color__base);
+      }
+      &:focus-visible {
+        background-color: var(--color__brand--light);
+      }
     }
   }
   &__results {

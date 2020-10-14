@@ -3,7 +3,7 @@
     <section
       :class="[
         $options.name + '__wrap',
-        'padding__bottom--l padding__left--m padding__right--m padding__top--l',
+        'padding__all--m',
       ]"
     >
       <LazyBookTile
@@ -46,7 +46,6 @@ export default {
   &__wrap {
     align-items: start;
     display: grid;
-    grid-gap: var(--size__m);
     @media (max-width: 28rem) {
       .BookTile__img {
         height: auto;

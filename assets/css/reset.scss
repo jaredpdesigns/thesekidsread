@@ -64,9 +64,6 @@ a {
   &:focus {
     outline: none;
   }
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xxs) var(--color__brand);
-  }
 }
 
 input[type="email"],
@@ -94,9 +91,6 @@ textarea {
   font-family: inherit;
   &:focus {
     outline: 0;
-  }
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xxs) var(--color__brand);
   }
 }
 
@@ -137,9 +131,6 @@ textarea {
   max-width: 100%;
   outline: none;
   width: 100%;
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xxs) var(--color__brand);
-  }
 }
 
 label {
@@ -151,9 +142,6 @@ select {
   background: transparent;
   outline: 0;
   width: 100%;
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xxs) var(--color__brand);
-  }
 }
 
 input[type="file"],

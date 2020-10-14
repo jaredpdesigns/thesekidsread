@@ -265,6 +265,7 @@ export default {
     &--wrap {
       display: grid;
       grid-gap: var(--size__m);
+      place-items: center;
       @include breakpoint(xsl) {
         grid-template-columns: repeat(auto-fit, minmax(var(--width__xs), 1fr));
       }

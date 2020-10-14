@@ -46,10 +46,16 @@ export default {
   > span {
     a {
       @include smooth;
+      border-radius: var(--size__xs);
       font-weight: 600;
       &:focus,
       &:hover {
         color: var(--color__brand);
+      }
+      &:focus-visible {
+        background-color: var(--color__brand--light);
+        box-shadow: 0 0 0 var(--size__xs) var(--color__brand--light);
+        color: var(--color__base);
       }
     }
     svg {
@@ -60,11 +66,17 @@ export default {
   button {
     @include smooth;
     align-items: center;
+    border-radius: var(--size__xs);
     display: inline-flex;
     font-weight: 600;
     &:focus,
     &:hover {
       color: var(--color__brand);
+    }
+    &:focus-visible {
+      background-color: var(--color__brand--light);
+      box-shadow: 0 0 0 var(--size__xs) var(--color__brand--light);
+      color: var(--color__base);
     }
   }
 }

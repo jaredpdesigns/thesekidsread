@@ -3,12 +3,11 @@
     :class="[
       $options.name,
       row
-        ? $options.name +
-          '--row border__bottom color__border--base--light padding__all--s'
+        ? $options.name + '--row border__bottom color__border--base--light'
         : 'type__align--center',
     ]"
   >
-    <nuxt-link :to="'/books/' + book.slug">
+    <nuxt-link :to="'/books/' + book.slug" class="padding__all--m">
       <figure>
         <span :class="$options.name + '__img'">
           <picture>
@@ -26,7 +25,7 @@
             />
           </picture>
         </span>
-        <figcaption class="oomph__v--xs padding__all--m">
+        <figcaption class="oomph__v--xs padding__top--m">
           <h1 class="color__type--brand type__size--l-m">{{ book.title }}</h1>
           <h2 class="color__type--base--mid type__family--body type__size--m-m">
             {{ "by " + book.author.join(" & ") }}
@@ -52,11 +51,16 @@ export default {
     --size: var(--width__xs);
   }
   a {
+    border-radius: var(--size__s);
+    display: block;
     &:focus,
-    :hover {
+    &:hover {
       img {
         transform: scale(1.0125);
       }
+    }
+    &:focus-visible {
+      background-color: var(--color__brand--light);
     }
   }
   &__img {
@@ -88,12 +92,13 @@ export default {
   &--row {
     --size: 4rem;
     @include smooth;
-    &:focus-within,
-    &:hover {
-      background-color: var(--color__base--ghost);
-    }
     &:last-child {
       border-bottom: none;
+    }
+    a {
+      &:hover {
+        background-color: var(--color__brand--light);
+      }
     }
     figure {
       align-items: center;
