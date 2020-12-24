@@ -131,7 +131,6 @@ export default {
         rel: "preload",
         href: "https://use.typekit.net/fbk7qer.css",
         as: "style",
-        crossorigin: "anonymous",
       },
       {
         rel: "stylesheet",
@@ -145,7 +144,6 @@ export default {
         rel: "preload",
         href: "https://www.googletagmanager.com/gtag/js?id=UA-58477499-1",
         as: "script",
-        crossorigin: "anonymous",
       },
       {
         rel: "preconnect",
@@ -155,7 +153,6 @@ export default {
         rel: "preload",
         href: "/js/google-analytics.js",
         as: "script",
-        crossorigin: "anonymous",
       },
     ],
     script: [
