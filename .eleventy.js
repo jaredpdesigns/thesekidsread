@@ -16,7 +16,7 @@ module.exports = (eleventyConfig) => {
   // Serverless functions
   eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
     name: "search",
-    functionsDir: "./functions/",
+    copy: ['src/scss/']
   });
 
   // Filters
