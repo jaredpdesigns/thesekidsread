@@ -96,7 +96,7 @@ footer button {
 header {
   @media (min-width: 63rem) {
     grid-gap: 0 !important;
-    grid-template-columns: 1fr var(--width__s);
+    // grid-template-columns: 1fr var(--width__s);
   }
   nav {
     @media (min-width: 29rem) {
@@ -108,9 +108,9 @@ header {
     }
     > a:first-child {
       justify-self: center;
-      @media (min-width: 63rem) {
-        order: 2;
-      }
+      // @media (min-width: 63rem) {
+      //   order: 2;
+      // }
       &:focus,
       &:focus-visible,
       &:hover {

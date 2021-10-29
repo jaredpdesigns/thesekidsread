@@ -30,7 +30,8 @@ eleventyComputed:
   </figure>
   <h1 class="margin__top--l">{{ book.title }}</h1>
   <p class="color__type--base--ish type__size--l-l type__weight--semibold">By {% for author in book.author %}
-      <a href="/search/?query={{ author | lower }}">{{ author }}</a>
+      {# <a href="/search/?query={{ author | lower }}">{{ author }}</a> #}
+      {{ author }}
       {{ ' & ' if not loop.last }}
     {% endfor %}
   </p>
