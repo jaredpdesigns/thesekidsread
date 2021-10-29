@@ -8,7 +8,7 @@ async function handler(event) {
   let elev = new EleventyServerless("search", {
     path: event.path,
     query: event.queryStringParameters,
-    functionsDir: "./netlify/functions/",
+    functionsDir: "./functions/",
   });
 
   try {

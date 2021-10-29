@@ -15,8 +15,7 @@ module.exports = (eleventyConfig) => {
 
   // Serverless functions
   eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
-    name: "search", // The serverless function name for the permalink object
-    functionsDir: "./functions/",
+    name: "search"
   });
 
   // Filters

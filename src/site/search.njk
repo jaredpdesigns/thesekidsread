@@ -15,6 +15,9 @@ class: search flow__grid flow__align--h-start flow__align--v-start
   {% for item in results %}
     {% Book item %}
   {% else %}
-    <p>No results found</p>
+    <section class="oomph__v--m type__align--center">
+      <p>No books found…</p>
+      <a class="button__secondary flow__gap--s type__weight--semibold" href="/books/{{ books | random }}">{% Icon 'surprise' %}Surprise Me</a>
+    </section>
   {% endfor %}
 </section>
