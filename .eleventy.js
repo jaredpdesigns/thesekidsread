@@ -4,9 +4,9 @@ const sass = require("sass");
 const fs = require("fs-extra");
 
 // Components
-const componentsDir = "src/site/_includes/components";
-const Book = require(`./${componentsDir}/book.js`);
-const Icon = require(`./${componentsDir}/icon.js`);
+const componentsDir = "./src/site/_includes/components";
+const Book = require(`${componentsDir}/book.js`);
+const Icon = require(`${componentsDir}/icon.js`);
 
 module.exports = (eleventyConfig) => {
   // Components
@@ -15,7 +15,7 @@ module.exports = (eleventyConfig) => {
 
   // Serverless functions
   eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
-    name: "search"
+    name: "search",
   });
 
   // Filters
@@ -55,14 +55,14 @@ module.exports = (eleventyConfig) => {
 
   //Build Stuff
   eleventyConfig.addPassthroughCopy({
-    "src/static": "/",
+    "./src/static": "/",
   });
-  eleventyConfig.addWatchTarget("src/scss/");
+  eleventyConfig.addWatchTarget("./src/scss/");
 
   // Compile SCSS before a build
   eleventyConfig.on("beforeBuild", () => {
     let result = sass.renderSync({
-      file: "src/scss/style.scss",
+      file: "./src/scss/style.scss",
       sourceMap: false,
       outputStyle: "compressed",
     });
