@@ -28,7 +28,7 @@ eleventyComputed:
   srcset="{{book.img }}{% if 'https://images-na' in book.img %}._SL320_.jpg{% else %}.jpg?w=320{% endif %} 320w, {{ book.img }}{% if 'https://images-na' in book.img %}._SL480_.jpg{% else %}.jpg?w=480{% endif %}.jpg 480w"
 />
   </figure>
-  <h1 class="color__type--highlight margin__top--l">{{ book.title }}</h1>
+  <h1 class="margin__top--l">{{ book.title }}</h1>
   <p class="color__type--base--ish type__size--l-l type__weight--semibold">By {% for author in book.author %}
       <a href="/search?query={{ author | lower }}">{{ author }}</a>
       {{ ' & ' if not loop.last }}

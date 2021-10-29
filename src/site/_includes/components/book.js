@@ -14,7 +14,7 @@ module.exports = function (book) {
 />
 </span>
 <figcaption class="oomph__v--s padding__all--m">
-<h3 class="color__type--highlight type__size--l-l">${book.title}</h3>
+<h3 class="type__size--l-l">${book.title}</h3>
 <p class="color__type--base--ish type__size--m-m type__weight--semibold">By ${book.author.join(
     " & "
   )}</p>
