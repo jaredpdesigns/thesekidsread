@@ -1,0 +1,20 @@
+---
+title: Search
+description: Search results
+layout: layouts/base.njk
+permalink:
+  search: /search
+class: search flow__grid flow__align--h-start flow__align--v-start
+---
+
+{% set query = eleventy.serverless.query.query %}
+{% set results = query | search(books) %}
+
+<h1 class="color__type--base--ish padding__top--l type__align--center width__full">Results for “{{ query }}”</h1>
+<section class="flow__grid flow__align--v-start flow__gap--l flow__grid--columns-auto padding__all--l width__full">
+  {% for item in results %}
+    {% Book item %}
+  {% else %}
+    <p>No results found</p>
+  {% endfor %}
+</section>

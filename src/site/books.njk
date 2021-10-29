@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: books
+  size: 1
+  addAllPagesToCollections: true
+permalink: /books/{{ pagination.items[0].slug }}/
+class: detail
+eleventyComputed:
+  title: "“{{ pagination.items[0].title }}“"
+  description: "{{ pagination.items[0].description }}"
+---
+
+{% set book = pagination.items[0] %}
+
+<nav class="flow__flex flow__align--h-between flow__align--v-center padding__all--m position__relative">
+  <a class="button__secondary flow__size--h-xxl flow__size--w-xxl shadow" href="{% if pagination.href.previous %}{{ pagination.href.previous}}{% endif %}"title="Previous book">
+    {% Icon 'arrow-left' %}</a>
+  <a class="button__secondary flow__size--h-xxl flow__size--w-xxl shadow" href="{{ pagination.href.next }}" title="Next book">{% Icon 'arrow-right' %}</a>
+</nav>
+<section class="flow__grid flow__align--v-start oomph__v--m padding__bottom--xxxl width__full">
+  <figure class="type__align--center width__full">
+    <img
+  class="border__all color__border--base--light fancyHover margin__left--auto margin__right--auto shadow radius__s"
+  loading="lazy" alt="Cover for {{book.title}}"
+  src="{{ book.img }}{% if 'https://images-na' in book.img %}._SL240_.jpg{% else %}.jpg?w=240{% endif %}"
+  sizes="(min-width: 47rem) 480px, (min-width: 29rem) 320px, 240px"
+  srcset="{{book.img }}{% if 'https://images-na' in book.img %}._SL320_.jpg{% else %}.jpg?w=320{% endif %} 320w, {{ book.img }}{% if 'https://images-na' in book.img %}._SL480_.jpg{% else %}.jpg?w=480{% endif %}.jpg 480w"
+/>
+  </figure>
+  <h1 class="color__type--highlight margin__top--l">{{ book.title }}</h1>
+  <p class="color__type--base--ish type__size--l-l type__weight--semibold">By {% for author in book.author %}
+      <a href="/search?query={{ author | lower }}">{{ author }}</a>
+      {{ ' & ' if not loop.last }}
+    {% endfor %}
+  </p>
+  <p>{{ book.description }}</p>
+  <a class="button__secondary flow__gap--s margin__top--l type__weight--semibold" href="{{ book.buy }}" target="_blank" rel="noopener">Buy Book {% Icon "buy" %}</a>
+</section>
+
+{% set related = books | related(book.author, book.title) %}
+
+{% if related.length %}
+  <aside class="border__bottom border__top color__bg--contrast color__border--highlight--light padding__top--l width__full">
+    <h2 class="color__type--base--ish type__align--center width__full">Related Books</h2>
+    <section class="flow__grid flow__align--h-center flow__align--v-start flow__grid--columns-auto flow__gap--l padding__all--l width__full">
+      {% for item in related %}
+        {% Book item %}
+      {% endfor %}
+    </section>
+  </aside>
+{% endif %}

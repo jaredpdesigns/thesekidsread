@@ -1,21 +1,18 @@
 {
-  "name": "thesekidsread",
+  "name": "these-kids-read",
   "version": "2.0.0",
-  "private": true,
+  "description": "Our family reads great books together",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "build": "eleventy",
+    "dev": "eleventy --serve"
   },
+  "author": "Jared Pendergraft <jaredpdesigns@gmail.com>",
+  "license": "ISC",
   "dependencies": {
-    "@nuxtjs/sitemap": "^2.4.0",
-    "@nuxtjs/style-resources": "^1.0.0",
-    "confetti-js": "^0.0.18",
-    "fs": "^0.0.1-security",
-    "node-sass": "^4.14.1",
-    "nuxt": "^2.14.0",
-    "sass-loader": "^10.0.2"
-  },
-  "devDependencies": {}
+    "@11ty/eleventy": "^1.0.0-canary.44",
+    "@jaredpdesigns/pasta": "^1.1.0",
+    "@netlify/functions": "^0.8.0",
+    "html-minifier": "^4.0.0",
+    "sass": "^1.43.4"
+  }
 }

@@ -1,0 +1,2 @@
+Sitemap: https://thesekidsread.jaredpendergraft.com/sitemap.xml
+User-agent: *
