@@ -35,4 +35,7 @@ async function handler(event) {
   }
 }
 
-exports.handler = handler;
+// exports.handler = handler; Use this if you *aren't* using Netlify functions apparently
+
+const { builder } = require("@netlify/functions");
+exports.handler = builder(handler);

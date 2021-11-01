@@ -21,17 +21,18 @@ eleventyComputed:
 <section class="flow__grid flow__align--v-start oomph__v--m padding__bottom--xxxl width__full">
   <figure class="type__align--center width__full">
     <img
-  class="border__all color__border--base--light fancyHover margin__left--auto margin__right--auto shadow radius__s"
+  class="fancyHover margin__left--auto margin__right--auto"
   loading="lazy" alt="Cover for {{book.title}}"
   src="{{ book.img }}{% if 'https://images-na' in book.img %}._SL240_.jpg{% else %}.jpg?w=240{% endif %}"
   sizes="(min-width: 47rem) 480px, (min-width: 29rem) 320px, 240px"
   srcset="{{book.img }}{% if 'https://images-na' in book.img %}._SL320_.jpg{% else %}.jpg?w=320{% endif %} 320w, {{ book.img }}{% if 'https://images-na' in book.img %}._SL480_.jpg{% else %}.jpg?w=480{% endif %}.jpg 480w"
+  height="160"
+  width="160"
 />
   </figure>
   <h1 class="margin__top--l">{{ book.title }}</h1>
   <p class="color__type--base--ish type__size--l-l type__weight--semibold">By {% for author in book.author %}
-      {# <a href="/search/?query={{ author | lower }}">{{ author }}</a> #}
-      {{ author }}
+      <a href="/search/{{ author | slug }}/">{{ author }}</a>
       {{ ' & ' if not loop.last }}
     {% endfor %}
   </p>

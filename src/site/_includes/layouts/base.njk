@@ -28,7 +28,7 @@
     <script async defer src="{{ '/js/scripts.js' | url }}"></script>
   </head>
   <body class="flow__grid">
-    <header class="border__bottom color__bg--contrast color__border--base--light flow__grid flow__align--v-center flow__gap--m padding__all--m">
+    <header class="color__bg--blur flow__grid flow__align--v-center flow__gap--m padding__all--m">
       <nav class="flow__grid flow__align--h-center flow__align--v-center flow__gap--m type__align--center">
         <a class="color__type--highlight" href="/" title="Return to overview">{% include 'components/logo.svg' %}</a>
         <section class="flow__inline flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m">
@@ -37,19 +37,19 @@
           <a class="color__type--base--ish flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs type__family--secondary type__size--m-l type__weight--semibold" href="mailto:thesekidsread@gmail.com?subject=You should read this book next…" title="Suggest a book for us to read">{% Icon 'suggest' %}Suggest</a>
         </section>
       </nav>
-      {# <form action="/search/" class="flow__inline position__relative width__m">
+      <form action="/post/" class="flow__inline position__relative width__m">
         <fieldset class="control__input flow__flex--grow">
           <input aria-label="Input search query" name="query" type="text" placeholder="Search books…"/>
         </fieldset>
         <button aria-label="Submit search form" class="button__primary flow__flex--shrink-no position__absolute radius__bl--none radius__tl--none" type="submit">{% Icon 'search' %}</button>
-      </form> #}
+      </form>
     </header>
     <main>
       <article class="{{ class }}">
         {{ content | safe }}
       </article>
     </main>
-    <footer class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m padding__all--m">
+    <footer class="color__bg--blur flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m padding__all--m">
       <a class="color__type--base--ish flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs type__family--secondary type__size--m-l type__weight--semibold" href="https://jaredpendergraft.com" target="_blank" rel="nofollower">{% Icon 'heart' %}Made by My Dad</a>
       <button class="color__type--base--ish flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs type__family--secondary type__size--m-l type__weight--semibold" onclick="setTheme()">{% Icon 'theme' %}Toggle Theme</button>
     </footer>

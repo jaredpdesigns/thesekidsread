@@ -21,22 +21,6 @@ html {
   background-attachment: fixed;
 }
 
-.button__secondary {
-  --size: var(--size__m);
-  box-shadow: calc(var(--size) * -1) calc(var(--size) * -1)
-      calc(var(--size) * 2) calc(var(--size) * -1) hsla(260, 75%, 64%, 0.5),
-    var(--size) var(--size) calc(var(--size) * 2) calc(var(--size) * -1)
-      hsla(196, 75%, 64%, 0.5);
-  color: var(--color__base--ish);
-}
-
-.button__secondary,
-.control__input input {
-  [data-theme="dark"] & {
-    background-color: var(--color__contrast--extra);
-  }
-}
-
 body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
@@ -61,6 +45,38 @@ p a {
   font-weight: bold;
 }
 
+.button__secondary {
+  --size: var(--size__m);
+  box-shadow: calc(var(--size) * -1) calc(var(--size) * -1)
+      calc(var(--size) * 2) calc(var(--size) * -1) hsla(260, 75%, 64%, 0.5),
+    var(--size) var(--size) calc(var(--size) * 2) calc(var(--size) * -1)
+      hsla(196, 75%, 64%, 0.5);
+  color: var(--color__base--ish);
+}
+
+.button__secondary,
+.control__input input {
+  [data-theme="dark"] & {
+    background-color: var(--color__contrast--extra);
+  }
+}
+
+.color__bg--blur {
+  @supports (backdrop-filter: blur(32px)) {
+    background-color: hsla(196, 100%, 100%, 0.625);
+    backdrop-filter: blur(32px);
+    [data-theme="dark"] & {
+      background-color: hsla(196, 24%, 8%, 0.625);
+    }
+  }
+  @supports not (backdrop-filter: blur(32px)) {
+    background-color: hsla(196, 100%, 100%, 0.98);
+    [data-theme="dark"] & {
+      background-color: hsla(196, 24%, 8%, 0.98);
+    }
+  }
+}
+
 .fancyHover {
   --rotation: -3.5deg;
   --size: var(--width__xs);
@@ -71,18 +87,25 @@ p a {
     --size: var(--width__m);
   }
   height: 100%;
-  transition: transform 0.375s ease-in;
   width: auto;
+  .loaded & {
+    transition: transform 0.375s ease-in;
+  }
   &:hover {
     transform: perspective(var(--size)) rotateY(var(--rotation))
       rotateX(calc((var(--rotation) / 2) * -1));
   }
 }
 
+header,
+footer {
+  position: sticky;
+  z-index: 100;
+}
+
 header nav > section a,
 footer a,
 footer button {
-  transition: all 0.375s ease-in;
   &:focus,
   &:hover {
     color: var(--color__highlight);
@@ -91,26 +114,30 @@ footer button {
   &:focus-visible {
     box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
   }
+  .loaded & {
+    transition: all 0.375s ease-in;
+  }
 }
 
 header {
+  top: 0;
   @media (min-width: 63rem) {
     grid-gap: 0 !important;
-    // grid-template-columns: 1fr var(--width__s);
+    grid-template-columns: 1fr var(--width__s);
   }
   nav {
     @media (min-width: 29rem) {
       grid-gap: 0 !important;
       grid-template-columns: auto 1fr;
     }
-    a {
+    .loaded & a {
       transition: all 0.375s ease-in;
     }
     > a:first-child {
       justify-self: center;
-      // @media (min-width: 63rem) {
-      //   order: 2;
-      // }
+      @media (min-width: 63rem) {
+        order: 2;
+      }
       &:focus,
       &:focus-visible,
       &:hover {
@@ -133,6 +160,10 @@ header {
 header nav section,
 footer {
   grid-row-gap: 0 !important;
+}
+
+footer {
+  bottom: 0;
 }
 
 .detail > section,
@@ -173,7 +204,14 @@ footer {
       @media (min-width: 47rem) {
         --size: var(--width__s);
       }
-      height: var(--size);
+      img {
+        aspect-ratio: 1/1;
+        filter: drop-shadow(0 var(--size__s) var(--size__m) rgba(black, 0.25));
+        height: var(--size);
+        object-fit: contain;
+        object-position: center;
+        width: var(--size) l;
+      }
     }
   }
   aside {
@@ -212,13 +250,20 @@ footer {
 
 .book {
   min-width: var(--width__xs);
-  transition: all 0.375s ease-in;
   &:focus-visible {
     background-color: var(--color__highlight--ghost);
     box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
   }
-  span {
-    height: 10rem;
+  .loaded & {
+    transition: all 0.375s ease-in;
+  }
+  img {
+    aspect-ratio: 1/1;
+    filter: drop-shadow(0 var(--size__s) var(--size__m) rgba(black, 0.25));
+    object-fit: contain;
+    object-position: center;
+    height: var(--width__xxs);
+    width: var(--width__xxs);
   }
 }
 

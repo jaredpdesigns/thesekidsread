@@ -4,7 +4,7 @@ module.exports = function (book) {
 <figure class="type__align--center width__full">
 <span class="flow__flex flow__align--h-center flow__align--v-center">
 <img
-  class="border__all color__border--base--light fancyHover flow__flex--shrink margin__left--auto margin__right--auto shadow radius__s"
+  class="fancyHover flow__flex--shrink margin__left--auto margin__right--auto"
   loading="lazy" alt="Cover for ${book.title}"
   src="${book.img}${
     book.img.includes("https://images-na") ? "._SL240_.jpg" : ".jpg?w=240"
