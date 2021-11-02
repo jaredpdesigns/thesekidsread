@@ -1,13 +1,11 @@
 ---
 title: Search
 description: Search results
-layout: layouts/base.njk
+layout: base.njk
 permalink:
-  search: /search/
+  searchy: /search/
 class: search flow__grid flow__align--h-start flow__align--v-start
 ---
-
-<pre>{{ eleventy | dump }}</pre>
 
 {% set query = eleventy.serverless.query.query | replace('-',' ') %}
 {% set results = query | search(books) %}

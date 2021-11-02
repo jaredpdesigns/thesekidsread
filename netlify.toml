@@ -1,9 +1,9 @@
 [[redirects]]
 from = "/search/"
-to = "/.netlify/functions/search"
+to = "/.netlify/functions/searchy"
 status = 200
 force = true
-_generated_by_eleventy_serverless = "search"
+_generated_by_eleventy_serverless = "searchy"
 
 [build]
 functions = "functions"

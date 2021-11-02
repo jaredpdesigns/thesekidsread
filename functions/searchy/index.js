@@ -5,10 +5,9 @@ const { EleventyServerless } = require("@11ty/eleventy");
 require("./eleventy-bundler-modules.js");
 
 async function handler(event) {
-  let elev = new EleventyServerless("search", {
+  let elev = new EleventyServerless("searchy", {
     path: event.path,
     query: event.queryStringParameters,
-    inputDir: "src/site",
     functionsDir: "./functions/",
   });
 
@@ -47,5 +46,5 @@ async function handler(event) {
 
 exports.handler = handler;
 
-// const { builder } = require("@netlify/functions");
-// exports.handler = builder(handler);
+//const { builder } = require("@netlify/functions");
+//exports.handler = builder(handler);

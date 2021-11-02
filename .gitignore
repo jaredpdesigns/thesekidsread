@@ -1,7 +1,7 @@
 node_modules
 package-lock.json
-dist
 .DS_Store
 .cache
-functions/search/**
-!functions/search/index.js
+_site
+netlify/functions/searchy/**
+!netlify/functions/searchy/index.js
