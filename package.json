@@ -3,14 +3,14 @@
   "version": "2.0.0",
   "description": "Our family reads great books together",
   "scripts": {
-    "build": "eleventy",
-    "dev": "eleventy --serve"
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
   },
   "author": "Jared Pendergraft <jaredpdesigns@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0-canary.44",
-    "@netlify/functions": "^0.8.0",
+    "@11ty/eleventy": "1.0.0-canary.41",
+    "@netlify/functions": "^0.7.2",
     "html-minifier": "^4.0.0",
     "sass": "^1.43.4"
   }

@@ -1,16 +1,18 @@
 [[redirects]]
-_generated_by_eleventy_serverless = "searchy"
-force = true
-from = "/search/*"
+from = "/search/:slug/"
+to = "/.netlify/functions/serverless"
 status = 200
-to = "/.netlify/builders/searchy"
+force = true
+_generated_by_eleventy_serverless = "serverless"
 
 [[redirects]]
-force = true
-from = "/post/"
-query = {query = ":query"}
+force = false
+from = "/search"
 status = 301
-to = "/search/:query/"
+to = "/search/:slug/"
+
+  [redirects.query]
+  slug = ":slug"
 
 [build]
 functions = "functions"

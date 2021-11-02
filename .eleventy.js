@@ -14,11 +14,8 @@ module.exports = (eleventyConfig) => {
 
   // Serverless functions
   eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
-    name: "searchy",
-    inputDir: "./src",
+    name: "serverless",
     functionsDir: "./functions/",
-    redirects: "netlify-toml-builders",
-    copy: ["src/_style.scss"],
   });
 
   // Filters

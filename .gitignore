@@ -3,5 +3,5 @@ package-lock.json
 .DS_Store
 .cache
 _site
-functions/searchy/**
-!functions/searchy/index.js
+functions/serverless/**
+!functions/serverless/index.js
