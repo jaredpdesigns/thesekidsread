@@ -1,0 +1,15 @@
+[[redirects]]
+from = "/search"
+to = "/.netlify/functions/serverless"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "serverless"
+
+[build]
+publish = "_site/"
+
+  [build.environment]
+  NODE_VERSION = "v14.17.6"
+
+[functions]
+directory = "functions/"

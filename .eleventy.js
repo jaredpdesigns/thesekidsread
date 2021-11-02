@@ -43,9 +43,12 @@ module.exports = (eleventyConfig) => {
       const items = Object.values(arr).flat();
       return items.filter(
         (book) =>
-          book.author.some((item) =>
-            item.toLowerCase().includes(query.toLowerCase())
-          ) ||
+          book.author.some((item) => {
+            const cleaned = item
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "");
+            return cleaned.toLowerCase().includes(query.toLowerCase());
+          }) ||
           book.description.toLowerCase().includes(query.toLowerCase()) ||
           book.title.toLowerCase().includes(query.toLowerCase())
       );
@@ -56,8 +59,10 @@ module.exports = (eleventyConfig) => {
 
   //Build Stuff
   eleventyConfig.addPassthroughCopy({
-    "./static": "/",
+    static: "/",
   });
+
+  eleventyConfig.addWatchTarget("src/");
 
   // Compile SCSS before a build
   eleventyConfig.on("beforeBuild", () => {
