@@ -1,9 +1,9 @@
 [[redirects]]
-from = "/search/:slug/"
-to = "/.netlify/functions/serverless"
-status = 200
-force = true
 _generated_by_eleventy_serverless = "serverless"
+force = true
+from = "/search/:slug/"
+status = 200
+to = "/.netlify/functions/serverless"
 
 [[redirects]]
 force = false
@@ -11,8 +11,14 @@ from = "/search"
 status = 301
 to = "/search/:slug/"
 
-  [redirects.query]
-  slug = ":slug"
+[redirects.query]
+slug = ":slug"
 
 [build]
-functions = "functions"
+publish = "_site/"
+
+[build.environment]
+NODE_VERSION = "v14.17.6"
+
+[functions]
+directory = "functions/"
