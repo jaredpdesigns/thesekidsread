@@ -17,6 +17,7 @@ module.exports = (eleventyConfig) => {
     name: "searchy",
     inputDir: "./src",
     functionsDir: "./functions/",
+    redirects: "netlify-toml-builders",
     copy: ["src/_style.scss"],
   });
 

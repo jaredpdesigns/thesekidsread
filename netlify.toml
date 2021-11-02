@@ -1,9 +1,16 @@
 [[redirects]]
-from = "/search/"
-to = "/.netlify/functions/searchy"
-status = 200
-force = true
 _generated_by_eleventy_serverless = "searchy"
+force = true
+from = "/search/*"
+status = 200
+to = "/.netlify/builders/searchy"
+
+[[redirects]]
+force = true
+from = "/post/"
+query = {query = ":query"}
+status = 301
+to = "/search/:query/"
 
 [build]
 functions = "functions"

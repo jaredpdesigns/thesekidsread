@@ -3,5 +3,5 @@ package-lock.json
 .DS_Store
 .cache
 _site
-netlify/functions/searchy/**
-!netlify/functions/searchy/index.js
+functions/searchy/**
+!functions/searchy/index.js
