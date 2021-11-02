@@ -1,17 +1,9 @@
 [[redirects]]
-_generated_by_eleventy_serverless = "color"
-force = true
-from = "/search/:query/"
-status = 200
+from = "/search/"
 to = "/.netlify/functions/search"
-
-[[redirects]]
-from = "/post/"
-status = 301
-to = "/search/:query/"
-
-  [redirects.query]
-  query = ":query"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "search"
 
 [build]
 functions = "functions"
