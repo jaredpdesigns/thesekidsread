@@ -7,7 +7,8 @@ async function handler(event) {
     path: event.path,
     query: event.queryStringParameters,
     inputDir: "./src/site/",
-    functionsDir: "./netlify/functions/",
+    functionsDir: "./functions/",
+    copy: ["src/scss/"],
   });
   try {
     return {

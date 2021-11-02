@@ -12,3 +12,6 @@ to = "/search/:query/"
 
   [redirects.query]
   query = ":query"
+
+[build]
+functions = "functions"
