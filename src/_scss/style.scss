@@ -51,7 +51,6 @@ p a {
       calc(var(--size) * 2) calc(var(--size) * -1) hsla(260, 75%, 64%, 0.5),
     var(--size) var(--size) calc(var(--size) * 2) calc(var(--size) * -1)
       hsla(196, 75%, 64%, 0.5);
-  color: var(--color__base--ish);
 }
 
 .button__secondary,

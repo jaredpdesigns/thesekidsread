@@ -23,8 +23,7 @@ eleventyComputed:
 <section class="flow__grid flow__align--v-start oomph__v--m padding__bottom--xxxl width__full">
   <figure class="type__align--center width__full">
     <img
-  class="fancyHover margin__left--auto margin__right--auto"
-  loading="lazy" alt="Cover for {{book.title}}"
+  class="fancyHover margin__left--auto margin__right--auto" alt="Cover for {{book.title}}"
   src="{{ book.img }}{% if 'https://images-na' in book.img %}._SL240_.jpg{% else %}.jpg?w=240{% endif %}"
   sizes="(min-width: 47rem) 480px, (min-width: 29rem) 320px, 240px"
   srcset="{{book.img }}{% if 'https://images-na' in book.img %}._SL320_.jpg{% else %}.jpg?w=320{% endif %} 320w, {{ book.img }}{% if 'https://images-na' in book.img %}._SL480_.jpg{% else %}.jpg?w=480{% endif %}.jpg 480w"
