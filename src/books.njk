@@ -4,7 +4,9 @@ pagination:
   data: books
   size: 1
   addAllPagesToCollections: true
-permalink: /books/{{ pagination.items[0].slug }}/
+permalink:
+  build: /books/{{ pagination.items[0].slug }}/
+  search: /search/:slug/
 class: detail
 eleventyComputed:
   title: "“{{ pagination.items[0].title }}“"
@@ -32,7 +34,7 @@ eleventyComputed:
   </figure>
   <h1 class="margin__top--l">{{ book.title }}</h1>
   <p class="color__type--base--ish type__size--l-l type__weight--semibold">By {% for author in book.author %}
-      <a href="/search?term={{ author | slugify }}">{{ author }}</a>
+      <a href="/search/{{ author | slugify }}/">{{ author }}</a>
       {{ ' & ' if not loop.last }}
     {% endfor %}
   </p>

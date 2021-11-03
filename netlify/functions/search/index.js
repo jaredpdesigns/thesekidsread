@@ -5,11 +5,11 @@ const { EleventyServerless } = require("@11ty/eleventy");
 require("./eleventy-bundler-modules.js");
 
 async function handler(event) {
-  let elev = new EleventyServerless("serverless", {
+  let elev = new EleventyServerless("search", {
     path: event.path,
     query: event.queryStringParameters,
-    inputDir: "./src",
-    functionsDir: "./functions/",
+    inputDir: "src",
+    functionsDir: "./netlify/functions/",
   });
 
   try {

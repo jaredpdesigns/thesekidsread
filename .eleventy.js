@@ -1,22 +1,18 @@
+// Dependencies
 const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
-const htmlmin = require("html-minifier");
-const sass = require("sass");
+const { minify } = require("terser");
 const fs = require("fs-extra");
+const htmlmin = require("html-minifier");
 
-// Components
-const Book = require("./src/_includes/book.js");
-const Icon = require("./src/_includes/icon.js");
-
-module.exports = (eleventyConfig) => {
+module.exports = function (eleventyConfig) {
   // Components
-  eleventyConfig.addShortcode("Icon", Icon);
-  eleventyConfig.addShortcode("Book", Book);
+  eleventyConfig.addShortcode("Book", require("./src/_includes/book.js"));
+  eleventyConfig.addShortcode("Icon", require("./src/_includes/icon.js"));
 
-  // Serverless functions
+  // Serverless
   eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
-    name: "serverless",
-    functionsDir: "./functions/",
-    copy: ["src/_style.scss"],
+    name: "search",
+    functionsDir: "./netlify/functions/",
   });
 
   // Filters
@@ -56,25 +52,19 @@ module.exports = (eleventyConfig) => {
       return [];
     }
   });
-
-  //Build Stuff
-  eleventyConfig.addPassthroughCopy({
-    static: "/",
+  eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
+    try {
+      const minified = await minify(code);
+      callback(null, minified.code);
+    } catch (err) {
+      console.error("Terser error: ", err);
+      callback(null, code);
+    }
   });
 
-  eleventyConfig.addWatchTarget("src/");
-
-  // Compile SCSS before a build
-  eleventyConfig.on("beforeBuild", () => {
-    let result = sass.renderSync({
-      file: "./src/_style.scss",
-      sourceMap: false,
-      outputStyle: "compressed",
-    });
-    fs.ensureDirSync("_site/css/");
-    fs.writeFile("_site/css/style.css", result.css, (err) => {
-      if (err) throw err;
-    });
+  // Build stuff
+  eleventyConfig.addPassthroughCopy({
+    static: "/",
   });
 
   // 404 handling
@@ -106,9 +96,7 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: {
-      input: "./src",
+      input: "src",
     },
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
   };
 };

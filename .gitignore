@@ -1,7 +1,7 @@
 node_modules
-package-lock.json
-.DS_Store
-.cache
+yarn.lock
 _site
-functions/serverless/**
-!functions/serverless/index.js
+.cache
+netlify/functions/search/*
+!netlify/functions/search/index.js
+.DS_Store
