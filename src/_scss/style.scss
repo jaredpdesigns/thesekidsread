@@ -4,9 +4,9 @@
   --color__hue--contrast--extra: 196, 24%, 12%;
   --color__gradient: linear-gradient(
     45deg,
-    hsla(260, 75%, 64%, 0.1875),
+    hsla(260, 75%, 64%, 0.25),
     hsla(164, 75%, 64%, 0),
-    hsla(196, 75%, 64%, 0.1875)
+    hsla(196, 75%, 64%, 0.25)
   );
   --type__family--primary: "proxima-nova", sans-serif;
   --type__family--secondary: "proxima-soft", sans-serif;
@@ -140,6 +140,7 @@ header {
       &:focus,
       &:focus-visible,
       &:hover {
+        color: var(--color__highlight);
         transform: scale(1.0125);
       }
     }
@@ -217,7 +218,12 @@ footer {
     grid-column: 1/-1;
     > section {
       grid-column: 1/-1;
-      justify-items: center;
+    }
+    .book {
+      width: var(--width__s);
+      @media (min-width: 63rem) {
+        width: var(--width__m);
+      }
     }
   }
 }
