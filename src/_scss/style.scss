@@ -1,19 +1,21 @@
 :root {
-  --color__hue--base: 196, 24%, 24%;
-  --color__hue--highlight: 260, 75%, 64%;
-  --color__hue--contrast--extra: 196, 24%, 12%;
+  --color__hue--base: 196deg 24% 24%;
+  --color__hue--highlight: 260deg 75% 64%;
+  --color__hue--highlight--secondary: 164deg 75% 64%;
+  --color__hue--highlight--tertiary: 196deg 75% 64%;
+  --color__hue--contrast--extra: 196deg 24% 12%;
   --color__gradient: linear-gradient(
     45deg,
-    hsla(260, 75%, 64%, 0.25),
-    hsla(164, 75%, 64%, 0),
-    hsla(196, 75%, 64%, 0.25)
+    hsl(var(--color__hue--highlight) / 0.25),
+    hsl(var(--color__hue--highlight--secondary) / 0),
+    hsl(var(--color__hue--highlight--tertiary) / 0.25)
   );
   --type__family--primary: "proxima-nova", sans-serif;
   --type__family--secondary: "proxima-soft", sans-serif;
   &[data-theme="dark"] {
-    --color__hue--base: 196, 100%, 100%;
-    --color__hue--contrast: 196, 24%, 8%;
-    --color__hue--contrast--extra: 196, 24%, 4%;
+    --color__hue--base: 196deg 100% 100%;
+    --color__hue--contrast: 196deg 24% 8%;
+    --color__hue--contrast--extra: 196deg 24% 4%;
   }
 }
 
@@ -48,9 +50,10 @@ p a {
 .button__secondary {
   --size: var(--size__m);
   box-shadow: calc(var(--size) * -1) calc(var(--size) * -1)
-      calc(var(--size) * 2) calc(var(--size) * -1) hsla(260, 75%, 64%, 0.5),
+      calc(var(--size) * 2) calc(var(--size) * -1)
+      hsl(var(--color__hue--highlight) / 0.75),
     var(--size) var(--size) calc(var(--size) * 2) calc(var(--size) * -1)
-      hsla(196, 75%, 64%, 0.5);
+      hsl(var(--color__hue--highlight--tertiary) / 0.75);
 }
 
 .button__secondary,
@@ -62,16 +65,16 @@ p a {
 
 .color__bg--blur {
   @supports (backdrop-filter: blur(32px)) {
-    background-color: hsla(196, 100%, 100%, 0.625);
+    background-color: hsl(196deg 100% 100% / 0.625);
     backdrop-filter: blur(32px);
     [data-theme="dark"] & {
-      background-color: hsla(196, 24%, 8%, 0.625);
+      background-color: hsl(196deg 24% 8% / 0.625);
     }
   }
   @supports not (backdrop-filter: blur(32px)) {
-    background-color: hsla(196, 100%, 100%, 0.98);
+    background-color: hsl(196deg 100% 100% / 0.98);
     [data-theme="dark"] & {
-      background-color: hsla(196, 24%, 8%, 0.98);
+      background-color: hsl(196deg 24% 8% / 0.98);
     }
   }
 }
