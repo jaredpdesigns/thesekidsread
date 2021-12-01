@@ -17,7 +17,7 @@
       {{ dynamicTitle }}
     </title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="author" content="Jared Pendergraft">
     <meta name="keywords" content="jared pendergraft, these kids read, jared pendergraft, kids books, great book for kids">
     <meta name="description" content="{{ dynamicDescription }}">
@@ -45,7 +45,7 @@
     </script>
   </head>
   <body class="flow__grid">
-    <header class="color__bg--blur flow__grid flow__align--v-center flow__gap--m padding__all--m">
+    <header class="color__bg--blur flow__grid flow__align--v-center flow__gap--m padding__bottom--m padding__top--m">
       <nav class="flow__grid flow__align--h-center flow__align--v-center flow__gap--m type__align--center">
         <a href="/" title="Return to overview">{% include 'logo.svg' %}</a>
         <section class="flow__inline flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m">
@@ -61,7 +61,7 @@
         <button aria-label="Submit search form" class="button__primary flow__flex--shrink-no position__absolute radius__bl--none radius__tl--none" type="submit">{% Icon 'search' %}</button>
       </form>
     </header>
-    <main>
+    <main class="notch">
       {% if eleventy.serverless.path.slug %}
         {% include 'search.njk' %}
       {% else %}
