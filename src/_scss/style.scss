@@ -25,7 +25,9 @@ html {
 
 body {
   grid-template-rows: auto 1fr auto;
-  min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+  min-height: calc(
+    100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top)
+  );
 }
 
 h1,
@@ -109,14 +111,12 @@ footer a,
 footer button {
   &:focus,
   &:hover {
-    color: var(--color__highlight);
     background-color: var(--color__highlight--ghost);
-  }
-  &:focus-visible {
-    box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
+    color: var(--color__highlight);
   }
   .loaded & {
-    transition: all 0.375s ease-in;
+    transition: 0.375s ease-in;
+    transition-property: background-color, color;
   }
 }
 
@@ -139,7 +139,8 @@ header {
       grid-template-columns: auto 1fr;
     }
     .loaded & a {
-      transition: all 0.375s ease-in;
+      transition: 0.375s ease-in;
+      transition-property: background-color, color, transform;
     }
     > a:first-child {
       justify-self: center;
@@ -158,8 +159,25 @@ header {
         justify-content: flex-end !important;
       }
     }
+    [aria-current="page"] {
+      position: relative;
+      &:after {
+        background-image: linear-gradient(
+          to right,
+          hsl(var(--color__hue--highlight) / 0.5),
+          hsl(var(--color__hue--highlight--tertiary) / 0.5)
+        );
+        border-radius: calc(var(--size__xxs) * 2);
+        bottom: 0;
+        content: "";
+        height: var(--size__xs);
+        position: absolute;
+        width: 100%;
+      }
+    }
   }
   form button {
+    --outline__offset: calc(var(--outline__size) * -1);
     bottom: 0;
     right: 0;
     top: 0;
@@ -189,9 +207,6 @@ footer nav {
       &[href=""] {
         color: var(--color__base--semi);
         pointer-events: none;
-        &:focus-visible {
-          box-shadow: inherit;
-        }
       }
     }
     + * {
@@ -262,10 +277,9 @@ footer nav {
   min-width: var(--width__xs);
   &:focus-visible {
     background-color: var(--color__highlight--ghost);
-    box-shadow: 0 0 0 var(--size__xs) var(--color__highlight--semi);
   }
   .loaded & {
-    transition: all 0.375s ease-in;
+    transition: background-color 0.375s ease-in;
   }
   img {
     aspect-ratio: 1/1;
