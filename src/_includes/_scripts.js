@@ -24,6 +24,12 @@ function setTheme() {
   );
 }
 
+function cleanSearch(el) {
+  const term = el.value.toLowerCase().replace(" ", "-");
+  const form = document.getElementById("search");
+  form.setAttribute("action", `/search/${term}/`);
+}
+
 window.onload = () => {
   getTheme();
   document.documentElement.classList.add("loaded");
