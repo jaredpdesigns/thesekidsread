@@ -24,13 +24,12 @@ function setTheme() {
   );
 }
 
-function cleanSearch(el) {
-  const term = el.value.toLowerCase().replace(" ", "-");
-  const form = document.getElementById("search");
-  form.setAttribute("action", `/search/${term}/`);
-}
-
 window.onload = () => {
   getTheme();
   document.documentElement.classList.add("loaded");
+  document.getElementById("searchForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const term = event.target[1].value.toLowerCase().replace(" ", "-");
+    window.location.href = `/search/${term}/`;
+  });
 };

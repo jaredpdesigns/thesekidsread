@@ -8,7 +8,7 @@ async function handler(event) {
     inputDir: "src",
     functionsDir: "./netlify/functions/",
   });
-
+  console.log("Path:", elev.path);
   try {
     return {
       statusCode: 200,
@@ -17,11 +17,11 @@ async function handler(event) {
       },
       body: await elev.render(),
     };
-    admin.app().delete();
   } catch (error) {
     if (elev.isServerlessUrl(event.path)) {
       console.log("Serverless Error:", error);
     }
+
     return {
       statusCode: error.httpStatusCode || 500,
       body: JSON.stringify(
@@ -32,8 +32,8 @@ async function handler(event) {
         2
       ),
     };
-    admin.app().delete();
   }
 }
 
-exports.handler = handler;
+const { builder } = require("@netlify/functions");
+exports.handler = builder(handler);
