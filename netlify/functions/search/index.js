@@ -8,7 +8,7 @@ async function handler(event) {
     inputDir: "src",
     functionsDir: "./netlify/functions/",
   });
-  console.log("Path:", elev.path);
+  admin.app().delete();
   try {
     return {
       statusCode: 200,
@@ -21,7 +21,7 @@ async function handler(event) {
     if (elev.isServerlessUrl(event.path)) {
       console.log("Serverless Error:", error);
     }
-
+    admin.app().delete();
     return {
       statusCode: error.httpStatusCode || 500,
       body: JSON.stringify(
