@@ -1,9 +1,9 @@
 [[redirects]]
-_generated_by_eleventy_serverless = "search"
-force = true
 from = "/search/:slug/"
-status = 200
 to = "/.netlify/functions/search"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "search"
 
 [build]
 publish = "_site"
