@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 {% set dynamicTitle %}
-{% if eleventy.serverless.path.slug %}”{{ eleventy.serverless.path.slug }}“ Search • These Kids Read
-  {% elseif title %}{{ title}} • These Kids Read
+{% if title %}{{ title}} • These Kids Read
   {% else %}These Kids Read
-  {% endif %}
+{% endif %}
 {% endset %}
 {% set dynamicDescription %}
-{% if eleventy.serverless.path.slug %}Search results for ”{{ eleventy.serverless.path.slug }}“
-  {% elseif description %}{{ description }}
-{% else %}Our family reads great books together
-  {% endif %}
+Our family reads great books together
 {% endset %}
 <html lang="en" class="color__bg--gradient">
   <head>
@@ -46,7 +42,7 @@
   </head>
   <body class="flow__grid">
     <header class="color__bg--blur flow__grid flow__align--v-center flow__gap--m padding__bottom--m padding__top--m">
-      <nav class="flow__grid flow__align--h-center flow__align--v-center flow__gap--m type__align--center">
+      <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap type__align--center width__xl">
         <a href="/" title="Return to overview" class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xxl radius__xs">{% include 'logo.svg' %}</a>
         <section class="color__type--base--ish flow__inline flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m type__family--secondary type__size--m-l type__weight--semibold">
           <a class="flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs" href="/about/" {% if page.url.includes('about') %} aria-current="page"{% endif %}>{% Icon 'book' %}About</a>
@@ -54,21 +50,11 @@
           <a class="flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs" href="mailto:thesekidsread@gmail.com?subject=You should read this book next…" title="Suggest a book for us to read">{% Icon 'suggest' %}Suggest</a>
         </section>
       </nav>
-      <form id="searchForm" class="width__m">
-        <fieldset class="control__input flow__flex">
-          <input aria-label="Input search query" class="radius__br--none radius__tr--none" id="term" name="term" type="text" placeholder="Search books…"/>
-          <button aria-label="Submit search form" class="button__primary flow__flex--shrink-no radius__bl--none radius__tl--none" type="submit">{% Icon 'search' %}</button>
-        </fieldset>
-      </form>
     </header>
     <main class="notch">
-      {% if eleventy.serverless.path.slug %}
-        {% include 'search.njk' %}
-      {% else %}
-        <article class="{{ class }}">
-          {{ content | safe }}
-        </article>
-      {% endif %}
+      <article class="{{ class }}">
+        {{ content | safe }}
+      </article>
     </main>
     <footer class="color__bg--blur padding__all--m">
       <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m width__l">

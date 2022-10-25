@@ -27,9 +27,4 @@ function setTheme() {
 window.onload = () => {
   getTheme();
   document.documentElement.classList.add("loaded");
-  document.getElementById("searchForm").addEventListener("submit", (event) => {
-    event.preventDefault();
-    const term = event.target[1].value.toLowerCase().replace(" ", "-");
-    window.location.href = `/search/${term}/`;
-  });
 };

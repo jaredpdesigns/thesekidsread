@@ -127,20 +127,24 @@ header {
   top: 0;
   @media (min-width: 63rem) {
     grid-gap: 0 !important;
-    grid-template-columns: 1fr var(--width__s);
+    grid-template-columns: 1fr auto;
   }
   @supports (padding: max(0px)) {
-    padding-left: max(var(--size__m), env(safe-area-inset-left));
-    padding-right: max(var(--size__m), env(safe-area-inset-right));
+    @media (min-width: 47rem) {
+      padding-inline: max(var(--size__m), env(safe-area-inset-left));
+    }
   }
   @supports not (padding: max(0px)) {
-    padding: var(--size__m);
+    padding-block: var(--size__m);
+    @media (min-width: 47rem) {
+      padding-inline: var(--size__m);
+    }
   }
   nav {
     @media (min-width: 29rem) {
-      grid-gap: 0 !important;
-      grid-template-columns: auto 1fr;
+      justify-content: space-between !important;
     }
+
     a {
       &:focus,
       &:focus-visible,
@@ -151,9 +155,6 @@ header {
     }
     > a:first-child {
       justify-self: center;
-      @media (min-width: 63rem) {
-        order: 2;
-      }
       &:focus,
       &:focus-visible,
       &:hover {

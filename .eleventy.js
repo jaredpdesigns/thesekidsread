@@ -1,5 +1,4 @@
 // Dependencies
-const { EleventyServerlessBundlerPlugin } = require("@11ty/eleventy");
 const { minify } = require("terser");
 const fs = require("fs-extra");
 const htmlmin = require("html-minifier");
@@ -8,12 +7,6 @@ module.exports = function (eleventyConfig) {
   // Components
   eleventyConfig.addShortcode("Book", require("./src/_includes/book.js"));
   eleventyConfig.addShortcode("Icon", require("./src/_includes/icon.js"));
-
-  // Serverless
-  eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
-    name: "search",
-    functionsDir: "./netlify/functions/",
-  });
 
   // Filters
   eleventyConfig.addFilter("random", (arr) => {
@@ -33,24 +26,6 @@ module.exports = function (eleventyConfig) {
     let cleaned = holder.flat();
     let unique = [...new Set(cleaned)];
     return unique;
-  });
-  eleventyConfig.addFilter("search", (query, arr) => {
-    if (query) {
-      const items = Object.values(arr).flat();
-      return items.filter(
-        (book) =>
-          book.author.some((item) => {
-            const cleaned = item
-              .normalize("NFD")
-              .replace(/[\u0300-\u036f]/g, "");
-            return cleaned.toLowerCase().includes(query.toLowerCase());
-          }) ||
-          book.description.toLowerCase().includes(query.toLowerCase()) ||
-          book.title.toLowerCase().includes(query.toLowerCase())
-      );
-    } else {
-      return [];
-    }
   });
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async (code, callback) => {
     try {

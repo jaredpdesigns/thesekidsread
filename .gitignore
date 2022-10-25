@@ -2,6 +2,4 @@ node_modules
 yarn.lock
 _site
 .cache
-netlify/functions/search/*
-!netlify/functions/search/index.js
 .DS_Store
