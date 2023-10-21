@@ -13,7 +13,7 @@ module.exports = function (book) {
   width="160"
 />
 </span>
-<figcaption class="oomph__v--s padding__all--m">
+<figcaption class="oomph__v--s padding__m">
 <h3 class="type__size--l-l">${book.title}</h3>
 <p class="color__type--base--ish type__size--m-m type__weight--semibold">By ${book.author.join(
     " & "

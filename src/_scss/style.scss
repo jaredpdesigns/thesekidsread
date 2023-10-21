@@ -1,7 +1,7 @@
 @import "https://unpkg.com/@jaredpdesigns/pasta";
 
 :root {
-  --color__hue--base: 196deg 24% 24%;
+  --color__hue--base: 196deg 24%;
   --color__hue--highlight: 260deg 75% 64%;
   --color__hue--highlight--secondary: 164deg 75% 64%;
   --color__hue--highlight--tertiary: 196deg 75% 64%;
@@ -14,16 +14,10 @@
   );
   --type__family--primary: "proxima-nova", sans-serif;
   --type__family--secondary: "proxima-soft", sans-serif;
-  &[data-theme="dark"] {
-    --color__hue--base: 196deg 100% 100%;
-    --color__hue--contrast: 196deg 24% 8%;
-    --color__hue--contrast--extra: 196deg 24% 4%;
-  }
 }
 
-:where(button) {
-  all: unset;
-  display: revert;
+:where(a) {
+  text-decoration: unset;
 }
 
 html {
@@ -76,13 +70,13 @@ p a {
   @supports (backdrop-filter: blur(32px)) {
     background-color: hsl(196deg 100% 100% / 0.625);
     backdrop-filter: blur(32px);
-    [data-theme="dark"] & {
+    @media screen and (prefers-color-scheme: dark) {
       background-color: hsl(196deg 24% 8% / 0.625);
     }
   }
   @supports not (backdrop-filter: blur(32px)) {
     background-color: hsl(196deg 100% 100% / 0.98);
-    [data-theme="dark"] & {
+    @media screen and (prefers-color-scheme: dark) {
       background-color: hsl(196deg 24% 8% / 0.98);
     }
   }
@@ -123,6 +117,11 @@ footer button {
     transition: 0.375s ease-in;
     transition-property: background-color, color;
   }
+}
+
+footer button {
+  background-color: transparent;
+  border: unset;
 }
 
 header {

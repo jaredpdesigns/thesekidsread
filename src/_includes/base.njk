@@ -42,9 +42,9 @@ Our family reads great books together
       <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap type__align--center width__xl">
         <a href="/" title="Return to overview" class="flow__inline flow__align--h-center flow__align--v-center flow__size--h-xxl radius__xs">{% include 'logo.svg' %}</a>
         <section class="color__type--base--ish flow__inline flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m type__family--secondary type__size--m-l type__weight--semibold">
-          <a class="flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs" href="/about/" {% if page.url.includes('about') %} aria-current="page"{% endif %}>{% Icon 'book' %}About</a>
-          <a class="flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs" href="/books/{{ books | random }}">{% Icon 'surprise' %}Surprise Me</a>
-          <a class="flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs" href="mailto:thesekidsread@gmail.com?subject=You should read this book next…" title="Suggest a book for us to read">{% Icon 'suggest' %}Suggest</a>
+          <a class="flow__inline flow__align--v-center flow__gap--s padding__xs radius__xs" href="/about/" {% if page.url.includes('about') %} aria-current="page"{% endif %}>{% Icon 'book' %}About</a>
+          <a class="flow__inline flow__align--v-center flow__gap--s padding__xs radius__xs" href="/books/{{ books | random }}">{% Icon 'surprise' %}Surprise Me</a>
+          <a class="flow__inline flow__align--v-center flow__gap--s padding__xs radius__xs" href="mailto:thesekidsread@gmail.com?subject=You should read this book next…" title="Suggest a book for us to read">{% Icon 'suggest' %}Suggest</a>
         </section>
       </nav>
     </header>
@@ -53,10 +53,9 @@ Our family reads great books together
         {{ content | safe }}
       </article>
     </main>
-    <footer class="color__bg--blur padding__all--m">
+    <footer class="color__bg--blur padding__m">
       <nav class="flow__flex flow__align--h-center flow__align--v-center flow__flex--wrap flow__gap--m width__l">
-        <a class="color__type--base--ish flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs type__family--secondary type__size--m-l type__weight--semibold" href="https://jaredpendergraft.com" target="_blank" rel="noopener">{% Icon 'heart' %}Made by My Dad</a>
-        <button class="color__type--base--ish flow__inline flow__align--v-center flow__gap--s padding__all--xs radius__xs type__family--secondary type__size--m-l type__weight--semibold" onclick="setTheme()">{% Icon 'theme' %}Toggle Theme</button>
+        <a class="color__type--base--ish flow__inline flow__align--v-center flow__gap--s padding__xs radius__xs type__family--secondary type__size--m-l type__weight--semibold" href="https://jaredpendergraft.com" target="_blank" rel="noopener">{% Icon 'heart' %}Made by My Dad</a>
       </nav>
     </footer>
   </body>
