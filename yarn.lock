@@ -1849,6 +1849,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^11.3.0":
+  version: 11.3.0
+  resolution: "fs-extra@npm:11.3.0"
+  dependencies:
+    graceful-fs: "npm:^4.2.0"
+    jsonfile: "npm:^6.0.1"
+    universalify: "npm:^2.0.0"
+  checksum: 10c0/5f95e996186ff45463059feb115a22fb048bdaf7e487ecee8a8646c78ed8fdca63630e3077d4c16ce677051f5e60d3355a06f3cd61f3ca43f48cc58822a44d0a
+  languageName: node
+  linkType: hard
+
 "fs-minipass@npm:^3.0.0":
   version: 3.0.3
   resolution: "fs-minipass@npm:3.0.3"
@@ -5487,6 +5498,7 @@ __metadata:
     "@netlify/functions": "npm:^1.0.0"
     autoprefixer: "npm:^10.4.7"
     cssnano: "npm:^5.1.8"
+    fs-extra: "npm:^11.3.0"
     html-minifier: "npm:^4.0.0"
     npm-run-all: "npm:^4.1.5"
     postcss: "npm:^8.4.14"
