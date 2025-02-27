@@ -3,3 +3,4 @@ yarn.lock
 _site
 .cache
 .DS_Store
+.yarn/

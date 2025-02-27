@@ -1,11 +1,10 @@
 @import "https://unpkg.com/@jaredpdesigns/pasta";
 
 :root {
-  --color__hue--base: 196deg 24%;
+  --color__set--highlight: hsl(260deg 75% 64%);
   --color__hue--highlight: 260deg 75% 64%;
   --color__hue--highlight--secondary: 164deg 75% 64%;
   --color__hue--highlight--tertiary: 196deg 75% 64%;
-  --color__hue--contrast--extra: 196deg 24% 12%;
   --color__gradient: linear-gradient(
     45deg,
     hsl(var(--color__hue--highlight) / 0.25),
