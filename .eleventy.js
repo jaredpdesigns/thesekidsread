@@ -39,7 +39,7 @@ module.exports = function (eleventyConfig) {
 
   // Build stuff
   eleventyConfig.addPassthroughCopy({
-    static: "/",
+    static: "/"
   });
 
   // 404 handling
@@ -52,8 +52,8 @@ module.exports = function (eleventyConfig) {
           res.write(content_404);
           res.end();
         });
-      },
-    },
+      }
+    }
   });
 
   // HTML minification
@@ -62,7 +62,7 @@ module.exports = function (eleventyConfig) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true,
+        collapseWhitespace: true
       });
       return minified;
     }
@@ -71,7 +71,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: "src",
-    },
+      input: "src"
+    }
   };
 };
