@@ -7,9 +7,9 @@
     "watch:eleventy": "eleventy --serve",
     "build:sass": "sass --no-source-map src/_scss:_site/css",
     "build:eleventy": "eleventy",
-    "postbuild": "postcss _site/css/*.css -u autoprefixer cssnano -r --no-map",
+    "build:postcss": "postcss _site/css/*.css -u autoprefixer cssnano -r --no-map",
     "dev": "npm-run-all build:sass --parallel watch:sass watch:eleventy",
-    "build": "npm-run-all build:sass build:eleventy"
+    "build": "npm-run-all build:sass build:eleventy build:postcss"
   },
   "author": "Jared Pendergraft <jaredpdesigns@gmail.com>",
   "license": "ISC",
